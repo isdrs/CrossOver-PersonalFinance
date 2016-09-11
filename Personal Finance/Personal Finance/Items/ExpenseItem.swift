@@ -12,4 +12,22 @@ import UIKit
 
 class ExpenseItem: IncomeItem {
 
+
+    var category: CategoryItem? = CategoryItem()
+
+
+    var ExpenseCategory: CategoryItem
+        {
+        get
+        {
+            return self.category!
+        }
+        set(newVal)
+        {
+            self.category = newVal
+        }
+    }
+
+    
+
 }

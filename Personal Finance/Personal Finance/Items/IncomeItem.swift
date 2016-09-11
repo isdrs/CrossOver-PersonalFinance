@@ -15,17 +15,16 @@ enum PlanType {
 
 class IncomeItem: NSObject {
 
-    private var id: Int?
+    private var id: Int? = 0
+    private var name: String? = ""
 
-    private var name: String?
+    private var amount: Float? = 0.0
 
-    private var amount: Float?
+    private var type: PlanType? = PlanType.Ad_hoc
 
-    private var type: PlanType?
+    private var date: NSDate? = NSDate()
 
-    private var date: NSDate?
-
-    private var repeatNumber: Int?
+    private var repeatNumber: Int? = 1
 
     private var eventsDate: [NSDate] = []
 
@@ -134,6 +133,14 @@ class IncomeItem: NSObject {
 
             eventsDate.append(calDate!)
         }
+    }
+
+    override init() {
+        super.init()
+    }
+
+    init(_id:Int) {
+        self.id = _id
     }
     
 }

@@ -16,11 +16,11 @@ enum TransActionType {
 
 class CategoryItem: NSObject {
 
-    private var id: Int?
+    private var id: Int? = 0
 
-    private var name: String?
+    private var name: String? = ""
 
-    private var type: TransActionType?
+    private var type: TransActionType? = TransActionType.Expense
 
     var ID: Int
         {
@@ -58,5 +58,24 @@ class CategoryItem: NSObject {
         }
         
     }
+
+    override init() {
+        super.init()
+    }
+
+
+    init(_id:Int, _name:String, _type:TransActionType) {
+
+        self.id = _id
+        self.name = _name
+        self.type = _type
+    }
     
 }
+
+
+
+
+
+
+
