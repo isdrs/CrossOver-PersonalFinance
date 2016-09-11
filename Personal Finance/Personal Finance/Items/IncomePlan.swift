@@ -15,7 +15,7 @@ enum PlanType {
 
 class IncomePlan: NSObject {
 
-    internal var id: Int? = 0
+    internal var id: String? = ""
 
     internal var desc: String? = ""
 
@@ -30,15 +30,11 @@ class IncomePlan: NSObject {
     internal var eventsDate: [NSDate] = []
 
 
-    var ID: Int
+    var ID: String
     {
         get
         {
             return self.id!
-        }
-        set(newVal)
-        {
-            self.id = newVal
         }
         
     }
@@ -136,11 +132,42 @@ class IncomePlan: NSObject {
         }
     }
 
-    override init() {
-        super.init()
+    func GenerateID()
+    {
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Second,.Minute,.Hour, .Day , .Month , .Year], fromDate: date)
+
+        let year =  components.year
+        let month = components.month
+        let day = components.day
+
+        let hour =  components.hour
+        let minute = components.minute
+        let second = components.second
+
+
+        let newId = String(year) + String(month) + String(day)
+
+        let newId1 = String(hour) + String(minute) + String(second)
+
+
+
+        self.id = newId + newId1
     }
 
-    init(_id:Int,_name:String,_amount:Float,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate) {
+    override init() {
+        super.init()
+        GenerateID()
+    }
+
+    init (_id:String)
+    {
+        super.init()
+        self.id = _id
+    }
+
+    init(_id:String,_name:String,_amount:Float,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate) {
         super.init()
         self.id = _id
         self.desc = _name
