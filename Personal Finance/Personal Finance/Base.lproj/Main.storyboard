@@ -210,6 +210,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gzh-ig-AHI"/>
+                    <connections>
+                        <outlet property="lblHomeAccountBalance" destination="XyT-0T-YIL" id="gMI-Ft-bZA"/>
+                        <outlet property="lblUserName" destination="bTM-ny-mks" id="nzr-dA-Wlx"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1945" y="533"/>
@@ -248,6 +252,9 @@
                                     </textField>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQY-qE-SiA">
                                         <rect key="frame" x="491" y="148" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="swhRecurringAction:" destination="Kzu-sf-7D1" eventType="valueChanged" id="3xd-aq-wLf"/>
+                                        </connections>
                                     </switch>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Day" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6j-TS-2wA">
                                         <rect key="frame" x="20" y="215" width="63" height="30"/>
@@ -276,6 +283,9 @@
                                             <constraint firstAttribute="width" constant="42" id="3bP-Po-P12"/>
                                         </constraints>
                                         <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="btnAddNewIncome:" destination="Kzu-sf-7D1" eventType="touchUpInside" id="QVQ-De-P8v"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recurring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO2-Nx-rQc">
                                         <rect key="frame" x="20" y="148" width="75" height="21"/>
@@ -315,6 +325,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Byo-2w-gjx"/>
+                    <connections>
+                        <outlet property="swhRecurringOutlet" destination="EQY-qE-SiA" id="tFO-pX-oLJ"/>
+                        <outlet property="txtIncomeAmount" destination="gwS-f0-9IO" id="0Oc-rT-irt"/>
+                        <outlet property="txtIncomeDay" destination="T6j-TS-2wA" id="ciG-57-i64"/>
+                        <outlet property="txtIncomeMonth" destination="1Mh-SO-C57" id="xpo-EW-R7U"/>
+                        <outlet property="txtIncomeName" destination="ptc-V1-iCE" id="Hha-Or-vMZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeD-dN-Y2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -369,6 +386,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyY-4u-eob">
                                         <rect key="frame" x="490" y="311" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="swhRecurringAction:" destination="znF-3C-koc" eventType="valueChanged" id="WwP-Dc-CN2"/>
+                                        </connections>
                                     </switch>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Day" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBd-Oa-7ds">
                                         <rect key="frame" x="19" y="378" width="63" height="30"/>
@@ -402,6 +422,10 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="213" id="HvM-QA-1X0"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="znF-3C-koc" id="7FS-pg-cZv"/>
+                                            <outlet property="delegate" destination="znF-3C-koc" id="1yc-MU-4QG"/>
+                                        </connections>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo5-Ij-SBi">
                                         <rect key="frame" x="259" y="506" width="42" height="30"/>
@@ -409,6 +433,9 @@
                                             <constraint firstAttribute="width" constant="42" id="MIc-TT-Pe4"/>
                                         </constraints>
                                         <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="btnAddNewExpence:" destination="znF-3C-koc" eventType="touchUpInside" id="uOH-F4-yPv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -445,6 +472,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fK2-0v-6k7"/>
+                    <connections>
+                        <outlet property="dpvExpenceCategory" destination="QqM-yD-0Eh" id="eTz-ph-XVx"/>
+                        <outlet property="swhRecurringOutlet" destination="wyY-4u-eob" id="PnL-bn-pjS"/>
+                        <outlet property="txtExpenceAmount" destination="bjG-Cr-u8L" id="AV4-Xk-Fns"/>
+                        <outlet property="txtExpenceDay" destination="eBd-Oa-7ds" id="ZFC-Ur-kr7"/>
+                        <outlet property="txtExpenceMonth" destination="UGN-Og-j2i" id="a5Q-z9-Lr2"/>
+                        <outlet property="txtExpenceName" destination="7Fb-XV-22q" id="yIJ-GW-XXu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4q-e5-EC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -498,6 +533,9 @@
                                                 <exclude reference="ozW-yH-QHf"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="btnEstimateAction:" destination="D6Q-I1-Nnh" eventType="touchUpInside" id="GUZ-Yn-LiW"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-lM-s8O">
                                         <rect key="frame" x="197" y="248" width="167" height="21"/>
@@ -513,7 +551,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JLY-i7-9Wy">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ECACell" id="JLY-i7-9Wy" customClass="ExpenceCategoryAmountCell" customModule="Personal_Finance" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JLY-i7-9Wy" id="HOO-Rt-PDo">
@@ -549,8 +587,16 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="lblCategoryAmount" destination="JU2-AG-Uhd" id="NZP-gy-efw"/>
+                                                    <outlet property="lblCategoryName" destination="kIB-64-bu0" id="uHb-GO-Fb6"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="D6Q-I1-Nnh" id="IFT-0T-aMD"/>
+                                            <outlet property="delegate" destination="D6Q-I1-Nnh" id="baa-u2-vTr"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -594,6 +640,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yqh-SK-mHw"/>
+                    <connections>
+                        <outlet property="tblExpenceCategoryAmount" destination="ebo-ct-ECZ" id="eRJ-zz-tR8"/>
+                        <outlet property="txtReportFrom" destination="o2m-C0-qCT" id="TYk-N1-Sct"/>
+                        <outlet property="txtReportUntil" destination="V7o-ag-hI5" id="chf-wb-MLE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hgj-cB-Zca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

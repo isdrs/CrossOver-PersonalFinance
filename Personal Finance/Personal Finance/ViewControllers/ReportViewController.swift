@@ -8,7 +8,12 @@
 
 import UIKit
 
-class ReportViewController: UIViewController {
+class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tblExpenceCategoryAmount: UITableView!
+    @IBOutlet weak var txtReportFrom: UITextField!
+    @IBOutlet weak var txtReportUntil: UITextField!
+    @IBAction func btnEstimateAction(sender: AnyObject) {
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,27 @@ class ReportViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ECACell") as! ExpenceCategoryAmountCell
+        
+        cell.lblCategoryName.text = "Category"
+        
+        cell.lblCategoryAmount.text = "1256 $"
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Expences"
+    }
     /*
     // MARK: - Navigation
 

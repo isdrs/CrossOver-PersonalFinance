@@ -8,8 +8,18 @@
 
 import UIKit
 
-class NewExpenceViewController: UIViewController {
+class NewExpenceViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    @IBOutlet weak var txtExpenceName: UITextField!
+    @IBOutlet weak var dpvExpenceCategory: UIPickerView!
+    @IBOutlet weak var swhRecurringOutlet: UISwitch!
+    @IBOutlet weak var txtExpenceDay: UITextField!
+    @IBOutlet weak var txtExpenceMonth: UITextField!
+    @IBOutlet weak var txtExpenceAmount: UITextField!
+    @IBAction func swhRecurringAction(sender: AnyObject) {
+    }
 
+    @IBAction func btnAddNewExpence(sender: AnyObject) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +31,18 @@ class NewExpenceViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 5
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "Category Name"
+    }
+    
     /*
     // MARK: - Navigation
 

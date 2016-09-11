@@ -9,6 +9,15 @@
 import UIKit
 
 class NewIncomeViewController: UIViewController {
+    @IBOutlet weak var txtIncomeName: UITextField!
+    @IBOutlet weak var swhRecurringOutlet: UISwitch!
+    @IBOutlet weak var txtIncomeDay: UITextField!
+    @IBOutlet weak var txtIncomeMonth: UITextField!
+    @IBOutlet weak var txtIncomeAmount: UITextField!
+    @IBAction func swhRecurringAction(sender: AnyObject) {
+    }
+    @IBAction func btnAddNewIncome(sender: AnyObject) {
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
