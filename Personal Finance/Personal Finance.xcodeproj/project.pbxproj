@@ -24,6 +24,7 @@
 		84F9F5F61D859A3B00F3AA47 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F51D859A3B00F3AA47 /* DBManager.swift */; };
 		8D1F66401D85AD16001F2178 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F663F1D85AD16001F2178 /* CategoryItem.swift */; };
 		8D1F66421D85ADDD001F2178 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66411D85ADDD001F2178 /* ExpenseItem.swift */; };
+		8D1F66441D85C752001F2178 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66431D85C752001F2178 /* AccountItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		84F9F5F51D859A3B00F3AA47 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBManager.swift; path = Managers/DBManager.swift; sourceTree = "<group>"; };
 		8D1F663F1D85AD16001F2178 /* CategoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryItem.swift; path = Items/CategoryItem.swift; sourceTree = "<group>"; };
 		8D1F66411D85ADDD001F2178 /* ExpenseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseItem.swift; path = Items/ExpenseItem.swift; sourceTree = "<group>"; };
+		8D1F66431D85C752001F2178 /* AccountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountItem.swift; path = Items/AccountItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				84F9F5F31D85957600F3AA47 /* IncomeItem.swift */,
 				8D1F663F1D85AD16001F2178 /* CategoryItem.swift */,
 				8D1F66411D85ADDD001F2178 /* ExpenseItem.swift */,
+				8D1F66431D85C752001F2178 /* AccountItem.swift */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				84F9F5EE1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift in Sources */,
 				84F9F5F21D8594D200F3AA47 /* ExpenceItem.swift in Sources */,
 				84F9F5E51D8581CA00F3AA47 /* BankInfoViewController.swift in Sources */,
+				8D1F66441D85C752001F2178 /* AccountItem.swift in Sources */,
 				84F9F5F61D859A3B00F3AA47 /* DBManager.swift in Sources */,
 				84F9F5F41D85957600F3AA47 /* IncomeItem.swift in Sources */,
 				84F9F5E31D8581A900F3AA47 /* HomeViewController.swift in Sources */,

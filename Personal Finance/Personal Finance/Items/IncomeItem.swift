@@ -15,18 +15,19 @@ enum PlanType {
 
 class IncomeItem: NSObject {
 
-    private var id: Int? = 0
-    private var name: String? = ""
+    internal var id: Int? = 0
 
-    private var amount: Float? = 0.0
+    internal var name: String? = ""
 
-    private var type: PlanType? = PlanType.Ad_hoc
+    internal var amount: Float? = 0.0
 
-    private var date: NSDate? = NSDate()
+    internal var type: PlanType? = PlanType.Ad_hoc
 
-    private var repeatNumber: Int? = 1
+    internal var firstDate: NSDate? = NSDate()
 
-    private var eventsDate: [NSDate] = []
+    internal var repeatNumber: Int? = 1
+
+    internal var eventsDate: [NSDate] = []
 
 
     var ID: Int
@@ -106,11 +107,11 @@ class IncomeItem: NSObject {
         {
         get
         {
-            return self.date!
+            return self.firstDate!
         }
         set(newVal)
         {
-            self.date = newVal
+            self.firstDate = newVal
 
             if self.repeatNumber == nil
             {
@@ -125,7 +126,7 @@ class IncomeItem: NSObject {
     }
 
 
-    private func CalcultePlansDate() -> Void{
+    internal func CalcultePlansDate() -> Void{
 
         for  index in 1...self.repeatNumber! {
 
@@ -139,8 +140,15 @@ class IncomeItem: NSObject {
         super.init()
     }
 
-    init(_id:Int) {
+    init(_id:Int,_name:String,_amount:Float,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate) {
+        super.init()
         self.id = _id
+        self.name = _name
+        self.amount = _amount
+        self.type = _type
+        self.repeatNumber = _repeatNumber
+        self.firstDate = _firstDate
+        CalcultePlansDate()
     }
     
 }

@@ -13,7 +13,7 @@ import UIKit
 class ExpenseItem: IncomeItem {
 
 
-    var category: CategoryItem? = CategoryItem()
+    internal var category: CategoryItem? = CategoryItem()
 
 
     var ExpenseCategory: CategoryItem
@@ -28,6 +28,23 @@ class ExpenseItem: IncomeItem {
         }
     }
 
-    
+    override init() {
+        super.init()
+    }
 
+    init(_id:Int,_name:String,_amount:Float,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate,_category:CategoryItem) {
+        super.init()
+
+        self.id = _id
+        self.name = _name
+        self.amount = _amount
+        self.type = _type
+        self.repeatNumber = _repeatNumber
+        self.firstDate = _firstDate
+        self.category = _category
+
+        CalcultePlansDate()
+    }
+    
+    
 }
