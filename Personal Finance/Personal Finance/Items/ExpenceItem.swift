@@ -10,9 +10,11 @@ import UIKit
 
 class ExpenceItem: BaseTransactionItem
 {
-    enum ExpenceCategoryEnum {
-        case Utility
-        case Food_Drink
+    enum ExpenceCategoryEnum : String
+    {
+        case Utilities = "Utilities"
+        case Food_Drink = "Foods & Drinks"
+        case Rent = "Rent"
     }
     
     private var expenceCategory: ExpenceCategoryEnum?
