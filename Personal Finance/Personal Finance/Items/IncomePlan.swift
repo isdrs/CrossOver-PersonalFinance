@@ -19,7 +19,7 @@ class IncomePlan: NSObject {
 
     internal var desc: String? = ""
 
-    internal var amount: Float? = 0.0
+    internal var amount: Double? = 0.0
 
     internal var type: PlanType? = PlanType.Ad_hoc
 
@@ -50,7 +50,7 @@ class IncomePlan: NSObject {
         }
 
     }
-    var Amount: Float
+    var Amount: Double
         {
         get
         {
@@ -122,6 +122,24 @@ class IncomePlan: NSObject {
     }
 
 
+    ///Calculate total amount of this plan until specific Date
+    func GetPlanRemainingTotalAmount(_until:NSDate) -> Double
+    {
+        var count = 0
+
+        let now = NSDate()
+
+        for plan in eventsDate
+        {
+            if plan.compare(now) == NSComparisonResult.OrderedDescending //means plan is after now
+            {
+                count = count + 1
+            }
+        }
+        return Double(count) * self.amount!
+    }
+    
+
     internal func CalcultePlansDate() -> Void{
 
         for  index in 1...self.repeatNumber! {
@@ -167,7 +185,7 @@ class IncomePlan: NSObject {
         self.id = _id
     }
 
-    init(_id:String,_name:String,_amount:Float,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate) {
+    init(_id:String,_name:String,_amount:Double,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate) {
         super.init()
         self.id = _id
         self.desc = _name

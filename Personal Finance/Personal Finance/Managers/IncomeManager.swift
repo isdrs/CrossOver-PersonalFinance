@@ -29,7 +29,7 @@ class IncomeManager: NSObject {
     {
         if DBManager.DeletePlan(_incomePlan)
         {
-            incomePlans.re
+            incomePlans.removeAtIndex(incomePlans.indexOf(_incomePlan)!)
 
             return true
         }
@@ -40,5 +40,16 @@ class IncomeManager: NSObject {
     {
         incomePlans = DBManager.GetIncomePlans()
     }
+
+    static func GetAllIncomePlansTotalAmount(_until:NSDate) -> Double
+    {
+        var totalSum = 0.0
+        for item in incomePlans
+        {
+            totalSum = totalSum + item.GetPlanRemainingTotalAmount(_until)
+        }
+        return totalSum
+    }
+    
 
 }

@@ -32,7 +32,7 @@ class ExpensePlan: IncomePlan {
         super.init()
     }
 
-    init(_id:Int,_name:String,_amount:Float,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate,_category:CategoryItem) {
+    init(_id:String,_name:String,_amount:Double,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate,_category:CategoryItem) {
         super.init()
 
         self.id = _id

@@ -14,9 +14,9 @@ class AccountItem: NSObject {
 
     private var name: String? = ""
 
-    private var balance: Float? = 0.0
+    private var balance: Double? = 0.0
 
-    var Balance: Float
+    var Balance: Double
         {
         get
         {
@@ -58,7 +58,7 @@ class AccountItem: NSObject {
     }
 
 
-    init(_accountNumber:String, _name:String, _balance:Float) {
+    init(_accountNumber:String, _name:String, _balance:Double) {
 
         super.init()
         self.balance = _balance
