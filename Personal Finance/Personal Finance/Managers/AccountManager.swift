@@ -12,4 +12,13 @@ import UIKit
 
 class AccountManager: NSObject {
 
+
+
+    
+
+    static func EstimateAccountBalance(_unitl:NSDate) -> Double
+    {
+        return 0.0
+    }
+
 }
