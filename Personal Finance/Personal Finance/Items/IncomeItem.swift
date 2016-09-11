@@ -119,14 +119,14 @@ class IncomeItem: NSObject {
                 self.type = PlanType.Ad_hoc
             }
 
-            CalculteIncomsDate()
+            CalcultePlansDate()
 
         }
 
     }
 
 
-    private func CalculteIncomsDate() -> Void{
+    private func CalcultePlansDate() -> Void{
 
         for  index in 1...self.repeatNumber! {
 
