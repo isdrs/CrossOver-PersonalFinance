@@ -418,7 +418,7 @@
                                         </constraints>
                                     </pickerView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.91913259589999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="7Fb-XV-22q" firstAttribute="top" secondItem="hK6-Nf-YO4" secondAttribute="bottom" constant="20" id="0JC-3L-qIm"/>
                                     <constraint firstAttribute="trailing" secondItem="wyY-4u-eob" secondAttribute="trailing" constant="20" id="2nj-Z0-AVC"/>
