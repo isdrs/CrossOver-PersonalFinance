@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		84F9F5BC1D85125200F3AA47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5BB1D85125200F3AA47 /* AppDelegate.swift */; };
-		84F9F5BE1D85125200F3AA47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5BD1D85125200F3AA47 /* ViewController.swift */; };
 		84F9F5C11D85125200F3AA47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F9F5BF1D85125200F3AA47 /* Main.storyboard */; };
 		84F9F5C41D85125200F3AA47 /* Personal_Finance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5C21D85125200F3AA47 /* Personal_Finance.xcdatamodeld */; };
 		84F9F5C61D85125200F3AA47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F9F5C51D85125200F3AA47 /* Assets.xcassets */; };
 		84F9F5C91D85125200F3AA47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F9F5C71D85125200F3AA47 /* LaunchScreen.storyboard */; };
 		84F9F5D41D85125200F3AA47 /* Personal_FinanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5D31D85125200F3AA47 /* Personal_FinanceTests.swift */; };
+		84F9F5E31D8581A900F3AA47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5E21D8581A900F3AA47 /* HomeViewController.swift */; };
+		84F9F5E51D8581CA00F3AA47 /* BankInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5E41D8581CA00F3AA47 /* BankInfoViewController.swift */; };
+		84F9F5E71D8581E000F3AA47 /* NewIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5E61D8581E000F3AA47 /* NewIncomeViewController.swift */; };
+		84F9F5E91D8581F000F3AA47 /* NewExpenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5E81D8581F000F3AA47 /* NewExpenceViewController.swift */; };
+		84F9F5EB1D8581FF00F3AA47 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5EA1D8581FF00F3AA47 /* ReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +33,6 @@
 /* Begin PBXFileReference section */
 		84F9F5B81D85125200F3AA47 /* Personal Finance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal Finance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F9F5BB1D85125200F3AA47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84F9F5BD1D85125200F3AA47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84F9F5C01D85125200F3AA47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84F9F5C31D85125200F3AA47 /* Personal_Finance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Personal_Finance.xcdatamodel; sourceTree = "<group>"; };
 		84F9F5C51D85125200F3AA47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +41,11 @@
 		84F9F5CF1D85125200F3AA47 /* Personal FinanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Personal FinanceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F9F5D31D85125200F3AA47 /* Personal_FinanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personal_FinanceTests.swift; sourceTree = "<group>"; };
 		84F9F5D51D85125200F3AA47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F9F5E21D8581A900F3AA47 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
+		84F9F5E41D8581CA00F3AA47 /* BankInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BankInfoViewController.swift; path = ViewControllers/BankInfoViewController.swift; sourceTree = "<group>"; };
+		84F9F5E61D8581E000F3AA47 /* NewIncomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewIncomeViewController.swift; path = ViewControllers/NewIncomeViewController.swift; sourceTree = "<group>"; };
+		84F9F5E81D8581F000F3AA47 /* NewExpenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewExpenceViewController.swift; path = ViewControllers/NewExpenceViewController.swift; sourceTree = "<group>"; };
+		84F9F5EA1D8581FF00F3AA47 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportViewController.swift; path = ViewControllers/ReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +87,9 @@
 		84F9F5BA1D85125200F3AA47 /* Personal Finance */ = {
 			isa = PBXGroup;
 			children = (
+				84F9F5E11D85818600F3AA47 /* ViewControllers */,
+				84F9F5E01D85817D00F3AA47 /* Managers */,
 				84F9F5BB1D85125200F3AA47 /* AppDelegate.swift */,
-				84F9F5BD1D85125200F3AA47 /* ViewController.swift */,
 				84F9F5BF1D85125200F3AA47 /* Main.storyboard */,
 				84F9F5C51D85125200F3AA47 /* Assets.xcassets */,
 				84F9F5C71D85125200F3AA47 /* LaunchScreen.storyboard */,
@@ -97,6 +106,25 @@
 				84F9F5D51D85125200F3AA47 /* Info.plist */,
 			);
 			path = "Personal FinanceTests";
+			sourceTree = "<group>";
+		};
+		84F9F5E01D85817D00F3AA47 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		84F9F5E11D85818600F3AA47 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84F9F5E21D8581A900F3AA47 /* HomeViewController.swift */,
+				84F9F5E41D8581CA00F3AA47 /* BankInfoViewController.swift */,
+				84F9F5E61D8581E000F3AA47 /* NewIncomeViewController.swift */,
+				84F9F5E81D8581F000F3AA47 /* NewExpenceViewController.swift */,
+				84F9F5EA1D8581FF00F3AA47 /* ReportViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +228,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F9F5BE1D85125200F3AA47 /* ViewController.swift in Sources */,
 				84F9F5C41D85125200F3AA47 /* Personal_Finance.xcdatamodeld in Sources */,
+				84F9F5E71D8581E000F3AA47 /* NewIncomeViewController.swift in Sources */,
+				84F9F5E91D8581F000F3AA47 /* NewExpenceViewController.swift in Sources */,
 				84F9F5BC1D85125200F3AA47 /* AppDelegate.swift in Sources */,
+				84F9F5E51D8581CA00F3AA47 /* BankInfoViewController.swift in Sources */,
+				84F9F5E31D8581A900F3AA47 /* HomeViewController.swift in Sources */,
+				84F9F5EB1D8581FF00F3AA47 /* ReportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +424,7 @@
 				84F9F5DA1D85125200F3AA47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84F9F5DB1D85125200F3AA47 /* Build configuration list for PBXNativeTarget "Personal FinanceTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +433,7 @@
 				84F9F5DD1D85125200F3AA47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
