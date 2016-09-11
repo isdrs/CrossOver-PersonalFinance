@@ -19,7 +19,62 @@ class DBManager: NSObject
 //    private static let TotalIncomeAmountKey: String = "Total_Income_Amount"
 //    
 //    private static let TotalExpenceAmountKey: String = "Total_Expence_Amount"
-    
+
+
+    static func GetIncomePlans() -> [IncomePlan]
+    {
+        return [IncomePlan]()
+    }
+
+    static func GetExpensePlans() -> [ExpensePlan]
+    {
+            return [ExpensePlan]()
+    }
+
+    static func GetCategoryItems() -> [CategoryItem]
+    {
+        return [CategoryItem]()
+    }
+
+    static func AddIncomePlan(_plan:IncomePlan)-> Bool
+    {
+        return true
+    }
+
+    static func AddExpensePlan(_plan:ExpensePlan) -> Bool{
+        return true
+    }
+
+
+    static func AddCategoryItem(_cat:CategoryItem) -> Bool{
+        return true
+    }
+
+
+    static func DeletePlan(_plan:IncomePlan) -> Bool
+    {
+        return true
+    }
+
+    static func DeleteCategory(_cat:CategoryItem) -> Bool
+    {
+        return true
+    }
+
+    static func AddBankAccountItem(_account:AccountItem) -> Bool
+    {
+        return true
+    }
+
+    static func DeleteBankAccountItem(_account:AccountItem) -> Bool
+    {
+        return true
+    }
+
+    static func GetBankAccountItem() -> AccountItem
+    {
+        return AccountItem()
+    }
 
     
     

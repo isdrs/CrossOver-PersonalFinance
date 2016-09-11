@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class ExpenseItem: IncomeItem {
+class ExpensePlan: IncomePlan {
 
 
     internal var category: CategoryItem? = CategoryItem()
@@ -36,7 +36,7 @@ class ExpenseItem: IncomeItem {
         super.init()
 
         self.id = _id
-        self.name = _name
+        self.desc = _name
         self.amount = _amount
         self.type = _type
         self.repeatNumber = _repeatNumber

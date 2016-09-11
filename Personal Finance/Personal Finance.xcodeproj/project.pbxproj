@@ -19,11 +19,10 @@
 		84F9F5E91D8581F000F3AA47 /* NewExpenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5E81D8581F000F3AA47 /* NewExpenceViewController.swift */; };
 		84F9F5EB1D8581FF00F3AA47 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5EA1D8581FF00F3AA47 /* ReportViewController.swift */; };
 		84F9F5EE1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5ED1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift */; };
-		84F9F5F21D8594D200F3AA47 /* ExpenceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F11D8594D200F3AA47 /* ExpenceItem.swift */; };
-		84F9F5F41D85957600F3AA47 /* IncomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F31D85957600F3AA47 /* IncomeItem.swift */; };
+		84F9F5F41D85957600F3AA47 /* IncomePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F31D85957600F3AA47 /* IncomePlan.swift */; };
 		84F9F5F61D859A3B00F3AA47 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F51D859A3B00F3AA47 /* DBManager.swift */; };
 		8D1F66401D85AD16001F2178 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F663F1D85AD16001F2178 /* CategoryItem.swift */; };
-		8D1F66421D85ADDD001F2178 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66411D85ADDD001F2178 /* ExpenseItem.swift */; };
+		8D1F66421D85ADDD001F2178 /* ExpensePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66411D85ADDD001F2178 /* ExpensePlan.swift */; };
 		8D1F66441D85C752001F2178 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66431D85C752001F2178 /* AccountItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,11 +53,10 @@
 		84F9F5E81D8581F000F3AA47 /* NewExpenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewExpenceViewController.swift; path = ViewControllers/NewExpenceViewController.swift; sourceTree = "<group>"; };
 		84F9F5EA1D8581FF00F3AA47 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportViewController.swift; path = ViewControllers/ReportViewController.swift; sourceTree = "<group>"; };
 		84F9F5ED1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenceCategoryAmountCell.swift; path = Items/ExpenceCategoryAmountCell.swift; sourceTree = "<group>"; };
-		84F9F5F11D8594D200F3AA47 /* ExpenceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenceItem.swift; path = Items/ExpenceItem.swift; sourceTree = "<group>"; };
-		84F9F5F31D85957600F3AA47 /* IncomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncomeItem.swift; path = Items/IncomeItem.swift; sourceTree = "<group>"; };
+		84F9F5F31D85957600F3AA47 /* IncomePlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncomePlan.swift; path = Items/IncomePlan.swift; sourceTree = "<group>"; };
 		84F9F5F51D859A3B00F3AA47 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBManager.swift; path = Managers/DBManager.swift; sourceTree = "<group>"; };
 		8D1F663F1D85AD16001F2178 /* CategoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryItem.swift; path = Items/CategoryItem.swift; sourceTree = "<group>"; };
-		8D1F66411D85ADDD001F2178 /* ExpenseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseItem.swift; path = Items/ExpenseItem.swift; sourceTree = "<group>"; };
+		8D1F66411D85ADDD001F2178 /* ExpensePlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpensePlan.swift; path = Items/ExpensePlan.swift; sourceTree = "<group>"; };
 		8D1F66431D85C752001F2178 /* AccountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountItem.swift; path = Items/AccountItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,10 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				84F9F5ED1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift */,
-				84F9F5F11D8594D200F3AA47 /* ExpenceItem.swift */,
-				84F9F5F31D85957600F3AA47 /* IncomeItem.swift */,
+				84F9F5F31D85957600F3AA47 /* IncomePlan.swift */,
 				8D1F663F1D85AD16001F2178 /* CategoryItem.swift */,
-				8D1F66411D85ADDD001F2178 /* ExpenseItem.swift */,
+				8D1F66411D85ADDD001F2178 /* ExpensePlan.swift */,
 				8D1F66431D85C752001F2178 /* AccountItem.swift */,
 			);
 			name = Items;
@@ -259,15 +256,14 @@
 			files = (
 				84F9F5C41D85125200F3AA47 /* Personal_Finance.xcdatamodeld in Sources */,
 				84F9F5E71D8581E000F3AA47 /* NewIncomeViewController.swift in Sources */,
-				8D1F66421D85ADDD001F2178 /* ExpenseItem.swift in Sources */,
+				8D1F66421D85ADDD001F2178 /* ExpensePlan.swift in Sources */,
 				84F9F5E91D8581F000F3AA47 /* NewExpenceViewController.swift in Sources */,
 				84F9F5BC1D85125200F3AA47 /* AppDelegate.swift in Sources */,
 				84F9F5EE1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift in Sources */,
-				84F9F5F21D8594D200F3AA47 /* ExpenceItem.swift in Sources */,
 				84F9F5E51D8581CA00F3AA47 /* BankInfoViewController.swift in Sources */,
 				8D1F66441D85C752001F2178 /* AccountItem.swift in Sources */,
 				84F9F5F61D859A3B00F3AA47 /* DBManager.swift in Sources */,
-				84F9F5F41D85957600F3AA47 /* IncomeItem.swift in Sources */,
+				84F9F5F41D85957600F3AA47 /* IncomePlan.swift in Sources */,
 				84F9F5E31D8581A900F3AA47 /* HomeViewController.swift in Sources */,
 				8D1F66401D85AD16001F2178 /* CategoryItem.swift in Sources */,
 				84F9F5EB1D8581FF00F3AA47 /* ReportViewController.swift in Sources */,

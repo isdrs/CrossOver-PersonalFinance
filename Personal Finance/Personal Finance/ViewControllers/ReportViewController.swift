@@ -35,7 +35,8 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ECACell") as! ExpenceCategoryAmountCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ECACell") as! ExpenseCategoryAmountCell
+
         
         cell.lblCategoryName.text = "Category"
         

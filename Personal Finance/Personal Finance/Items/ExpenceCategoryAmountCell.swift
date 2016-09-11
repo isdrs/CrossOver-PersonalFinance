@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExpenceCategoryAmountCell: UITableViewCell {
+class ExpenseCategoryAmountCell: UITableViewCell {
     @IBOutlet weak var lblCategoryName: UILabel!
     @IBOutlet weak var lblCategoryAmount: UILabel!
 }

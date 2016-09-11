@@ -13,11 +13,11 @@ enum PlanType {
     case Recurring
 }
 
-class IncomeItem: NSObject {
+class IncomePlan: NSObject {
 
     internal var id: Int? = 0
 
-    internal var name: String? = ""
+    internal var desc: String? = ""
 
     internal var amount: Float? = 0.0
 
@@ -46,11 +46,11 @@ class IncomeItem: NSObject {
         {
         get
         {
-            return self.name!
+            return self.desc!
         }
         set(newVal)
         {
-            self.name = newVal
+            self.desc = newVal
         }
 
     }
@@ -143,7 +143,7 @@ class IncomeItem: NSObject {
     init(_id:Int,_name:String,_amount:Float,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate) {
         super.init()
         self.id = _id
-        self.name = _name
+        self.desc = _name
         self.amount = _amount
         self.type = _type
         self.repeatNumber = _repeatNumber
