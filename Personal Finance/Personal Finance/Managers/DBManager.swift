@@ -21,27 +21,20 @@ class DBManager: NSObject
 //    private static let TotalExpenceAmountKey: String = "Total_Expence_Amount"
 
 
-    static func GetIncomePlans() -> [IncomePlan]
+    static func GetPlans() -> [PlanItem]
     {
-        return [IncomePlan]()
+        return [PlanItem]()
     }
 
-    static func GetExpensePlans() -> [ExpensePlan]
-    {
-            return [ExpensePlan]()
-    }
+
 
     static func GetCategoryItems() -> [CategoryItem]
     {
         return [CategoryItem]()
     }
 
-    static func AddIncomePlan(_plan:IncomePlan)-> Bool
-    {
-        return true
-    }
 
-    static func AddExpensePlan(_plan:ExpensePlan) -> Bool{
+    static func AddPlan(_plan:PlanItem) -> Bool{
         return true
     }
 
@@ -51,7 +44,7 @@ class DBManager: NSObject
     }
 
 
-    static func DeletePlan(_plan:IncomePlan) -> Bool
+    static func DeletePlan(_plan:PlanItem) -> Bool
     {
         return true
     }

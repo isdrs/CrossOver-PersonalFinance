@@ -13,7 +13,8 @@ enum PlanType {
     case Recurring
 }
 
-class IncomePlan: NSObject {
+
+class PlanItem: NSObject {
 
     internal var id: String? = ""
 
@@ -29,6 +30,20 @@ class IncomePlan: NSObject {
 
     internal var eventsDate: [NSDate] = []
 
+    internal var category: CategoryItem? = CategoryItem()
+
+
+    var PlanCategory: CategoryItem
+        {
+        get
+        {
+            return self.category!
+        }
+        set(newVal)
+        {
+            self.category = newVal
+        }
+    }
 
     var ID: String
     {
@@ -174,6 +189,7 @@ class IncomePlan: NSObject {
         self.id = newId + newId1
     }
 
+    
     override init() {
         super.init()
         GenerateID()
@@ -185,7 +201,7 @@ class IncomePlan: NSObject {
         self.id = _id
     }
 
-    init(_id:String,_name:String,_amount:Double,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate) {
+    init(_id:String,_name:String,_amount:Double,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate,_category:CategoryItem) {
         super.init()
         self.id = _id
         self.desc = _name
@@ -193,6 +209,7 @@ class IncomePlan: NSObject {
         self.type = _type
         self.repeatNumber = _repeatNumber
         self.firstDate = _firstDate
+        self.category = _category
         CalcultePlansDate()
     }
     

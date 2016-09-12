@@ -20,7 +20,7 @@ class CategoryItem: NSObject {
 
     private var name: String? = ""
 
-    private var type: TransActionType? = TransActionType.Expense
+    private var type: TransActionType? = TransActionType.Income
 
     var ID: Int
         {
