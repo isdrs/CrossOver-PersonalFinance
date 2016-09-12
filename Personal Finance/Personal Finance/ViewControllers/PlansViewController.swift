@@ -12,7 +12,8 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tblPlans: UITableView!
     @IBOutlet weak var tbrPlans: UITabBar!
     
-    let allItemTag = 1001
+    var isIncome = true
+    
     let incomeItemTag = 1002
     let expenseItemTag = 1003
     
@@ -24,8 +25,7 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         allPlans = DBManager.GetPlans()
         
-        myPlans = allPlans
-    
+        myPlans = FilterPlans()
         // Do any additional setup after loading the view.
     }
     
@@ -33,20 +33,20 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         switch item.tag
         {
-        case allItemTag:
-            myPlans = allPlans
         case incomeItemTag:
-            myPlans = FilterPlans(true)
+            isIncome = true
         case expenseItemTag:
-            myPlans = FilterPlans(false)
+            isIncome = false
         default:
             break
         }
         
+        myPlans = FilterPlans()
+        
         tblPlans.reloadData()
     }
     
-    func FilterPlans(isIncome: Bool) -> [PlanItem] {
+    func FilterPlans() -> [PlanItem] {
         var filteredPlans = [PlanItem]()
         
         for plan in allPlans! {
@@ -88,6 +88,10 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if isIncome {
+            return "Incomes"
+        }
+        
         return "Expences"
     }
     /*

@@ -9,6 +9,7 @@
 import UIKit
 
 class BankInfoViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

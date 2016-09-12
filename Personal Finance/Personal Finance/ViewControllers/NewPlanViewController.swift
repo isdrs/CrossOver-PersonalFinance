@@ -9,13 +9,14 @@
 import UIKit
 
 class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    @IBOutlet weak var txtExpenceName: UITextField!
-    @IBOutlet weak var dpvExpenceCategory: UIPickerView!
+    @IBOutlet weak var txtPlanName: UITextField!
+    @IBOutlet weak var dpvPlanCategory: UIPickerView!
+    @IBOutlet weak var dpvDate: UIDatePicker!
     @IBOutlet weak var swhIsIncomeOutlet: UISwitch!
     @IBOutlet weak var swhRecurringOutlet: UISwitch!
-    @IBOutlet weak var txtExpenceDay: UITextField!
-    @IBOutlet weak var txtExpenceMonth: UITextField!
-    @IBOutlet weak var txtExpenceAmount: UITextField!
+    @IBOutlet weak var txtPlanAmount: UITextField!
+    @IBAction func swhRecurringAction(sender: UISwitch) {
+    }
 
     @IBAction func btnAddNewExpence(sender: AnyObject) {
     }
@@ -34,13 +35,17 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         if myPlan != nil
         {
-            txtExpenceName.text = myPlan?.Name
+            txtPlanName.text = myPlan?.Name
             
-            dpvExpenceCategory.selectRow((myCategries?.indexOf((myPlan?.PlanCategory)!))!, inComponent: 0, animated: false)
+            dpvPlanCategory.selectRow((myCategries!.indexOf((myPlan!.PlanCategory)))!, inComponent: 0, animated: false)
             
-            swhIsIncomeOutlet.setOn((myPlan?.PlanCategory.Type.rawValue.TransactionTypeValue())! , animated: false)
+            swhIsIncomeOutlet.setOn((myPlan!.PlanCategory.Type.rawValue.TransactionTypeValue()) , animated: false)
             
-            swhRecurringOutlet.setOn((myPlan?.RepeatitionType.rawValue.PlanTypeValue())!, animated: false)
+            swhRecurringOutlet.setOn((myPlan!.RepeatitionType.rawValue.PlanTypeValue()), animated: false)
+            
+            dpvDate.date = myPlan!.FirstTimeDate
+            
+            txtPlanAmount.text = String(myPlan!.Amount)
             
         }
         
@@ -50,7 +55,7 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     override func viewWillAppear(animated: Bool) {
         myCategries = DBManager.GetCategoryItems()
         
-        dpvExpenceCategory.reloadComponent(0)
+        dpvPlanCategory.reloadComponent(0)
     }
     
     override func didReceiveMemoryWarning() {
