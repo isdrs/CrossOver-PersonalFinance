@@ -328,10 +328,13 @@
                                 <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="All Plans" id="UrJ-Bd-gYe"/>
-                                    <tabBarItem title="Income Plans" id="vL2-GA-mun"/>
-                                    <tabBarItem title="Expence Plans" id="kXf-6z-CpI"/>
+                                    <tabBarItem tag="1001" title="All Plans" id="UrJ-Bd-gYe"/>
+                                    <tabBarItem tag="1002" title="Income Plans" id="vL2-GA-mun"/>
+                                    <tabBarItem tag="1003" title="Expence Plans" id="kXf-6z-CpI"/>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="jTQ-rT-WXs" id="LeJ-qs-CJh"/>
+                                </connections>
                             </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

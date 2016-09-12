@@ -8,14 +8,55 @@
 
 import UIKit
 
-class PlansViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PlansViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
     @IBOutlet weak var tblPlans: UITableView!
     @IBOutlet weak var tbrPlans: UITabBar!
+    
+    let allItemTag = 1001
+    let incomeItemTag = 1002
+    let expenseItemTag = 1003
+    
+    var allPlans : [PlanItem]?
+    var myPlans : [PlanItem]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        allPlans = DBManager.GetPlans()
+        
+        myPlans = allPlans
+    
         // Do any additional setup after loading the view.
+    }
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        
+        switch item.tag
+        {
+        case allItemTag:
+            myPlans = allPlans
+        case incomeItemTag:
+            myPlans = FilterPlans(true)
+        case expenseItemTag:
+            myPlans = FilterPlans(false)
+        default:
+            break
+        }
+        
+        tblPlans.reloadData()
+    }
+    
+    func FilterPlans(isIncome: Bool) -> [PlanItem] {
+        var filteredPlans = [PlanItem]()
+        
+        for plan in allPlans! {
+            
+            if plan.PlanCategory.Type.rawValue.TransactionTypeValue() == isIncome {
+                filteredPlans.append(plan)
+            }
+        }
+        
+        return filteredPlans
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,20 +69,20 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return myPlans!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PlansCell") as! PlansCell
         
         
-        cell.lblName.text = "Food"
+        cell.lblName.text = myPlans![indexPath.row].Name
         
-        cell.lblType.text = "Expence"
+        cell.lblType.text = myPlans![indexPath.row].PlanCategory.Type.rawValue.TransactionTypeName()
         
-        cell.lblDate.text = "2016/09/11"
+        cell.lblDate.text = ""
         
-        cell.lblAmount.text = "50 $"
+        cell.lblAmount.text = String(myPlans![indexPath.row].Amount) + " $"
         
         return cell
     }

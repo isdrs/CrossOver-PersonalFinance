@@ -67,3 +67,16 @@ extension Int {
         }
     }
 }
+
+extension Int {
+    func TransactionTypeName() -> String {
+        switch self {
+        case 1:
+            return "Income"
+        case 2:
+            return "Expense"
+        default:
+            return ""
+        }
+    }
+}
