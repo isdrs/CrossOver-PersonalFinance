@@ -157,7 +157,9 @@ class PlanItem: NSObject {
 
     internal func CalcultePlansDate() -> Void{
 
-        for  index in 1...self.repeatNumber {
+        eventsDate.append(self.FirstTimeDate)
+
+        for  index in 1...self.repeatNumber - 1 {
 
             let calDate = NSCalendar.currentCalendar().dateByAddingUnit(.Month, value: index, toDate: self.FirstTimeDate, options: [])
 
@@ -202,7 +204,9 @@ class PlanItem: NSObject {
     }
 
     init(_id:String,_name:String,_amount:Double,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate,_category:CategoryItem) {
+
         super.init()
+
         self.id = _id
         self.name = _name
         self.amount = _amount
@@ -210,6 +214,7 @@ class PlanItem: NSObject {
         self.repeatNumber = _repeatNumber
         self.firstDate = _firstDate
         self.category = _category
+
         CalcultePlansDate()
     }
     
