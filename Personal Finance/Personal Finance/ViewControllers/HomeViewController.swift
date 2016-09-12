@@ -11,6 +11,20 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var lblHomeAccountBalance: UILabel!
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "loadIncomes"
+        {
+            let plansVC = segue.destinationViewController as! PlansViewController
+            plansVC.isIncome = true
+        }
+        else if segue.identifier == "loadExpenses"
+        {
+            let plansVC = segue.destinationViewController as! PlansViewController
+            plansVC.isIncome = false
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
