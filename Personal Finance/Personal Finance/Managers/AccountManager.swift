@@ -13,7 +13,14 @@ import UIKit
 class AccountManager: NSObject {
 
 
-
+    static func UpdateBalance(_account:AccountItem) -> Bool
+    {
+        if DBManager.UpdateAccountBalance(_account)
+        {
+            return true
+        }
+        return false
+    }
     
 
     static func EstimateAccountBalance(_unitl:NSDate) -> Double
