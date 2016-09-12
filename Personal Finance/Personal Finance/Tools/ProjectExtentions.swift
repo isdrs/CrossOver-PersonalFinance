@@ -21,7 +21,7 @@ extension UIViewController {
 }
 
 extension NSNumber {
-    func PlanTypeValue() -> PlanType {
+    func PlanTypeValue() -> PlanRepetitionType {
         switch self.intValue {
         case 1:
             return .Ad_hoc
@@ -32,7 +32,7 @@ extension NSNumber {
         }
     }
     
-    func TransactionTypeValue() -> TransActionType {
+    func TransactionTypeValue() -> PlanType {
         switch self.intValue {
         case 1:
             return .Income

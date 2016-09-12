@@ -40,7 +40,7 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             
             swhIsIncomeOutlet.setOn((myPlan?.PlanCategory.Type.rawValue.TransactionTypeValue())! , animated: false)
             
-            swhRecurringOutlet.setOn((myPlan?.Type.rawValue.PlanTypeValue())!, animated: false)
+            swhRecurringOutlet.setOn((myPlan?.RepeatitionType.rawValue.PlanTypeValue())!, animated: false)
             
         }
         
