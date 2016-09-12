@@ -9,9 +9,9 @@
 import UIKit
 
 
-enum TransActionType {
-    case Income
-    case Expense
+enum TransActionType : Int {
+    case Income = 1
+    case Expense = 2
 }
 
 class CategoryItem: NSObject {
@@ -62,6 +62,14 @@ class CategoryItem: NSObject {
     override init() {
         super.init()
     }
+    
+    init(_name:String, _type:TransActionType) {
+        super.init()
+        
+        self.id = GenerateID()
+        self.name = _name
+        self.type = _type
+    }
 
 
     init(_id:Int, _name:String, _type:TransActionType) {
@@ -69,6 +77,11 @@ class CategoryItem: NSObject {
         self.id = _id
         self.name = _name
         self.type = _type
+    }
+    
+    private func GenerateID() -> Int
+    {
+        return DBManager.GetCategoryItems().count + 1
     }
     
 }

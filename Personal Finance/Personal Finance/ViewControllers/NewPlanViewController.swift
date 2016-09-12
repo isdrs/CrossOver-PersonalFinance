@@ -16,20 +16,43 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var txtExpenceDay: UITextField!
     @IBOutlet weak var txtExpenceMonth: UITextField!
     @IBOutlet weak var txtExpenceAmount: UITextField!
-    @IBAction func swhIsIncomeAction(sender: AnyObject) {
-    }
-    @IBAction func swhRecurringAction(sender: AnyObject) {
-    }
 
     @IBAction func btnAddNewExpence(sender: AnyObject) {
     }
+    @IBAction func NewCtegoryAction(sender: AnyObject)
+    {
+        
+        
+    }
+    
+    var myPlan : PlanItem?
+    
+    var myCategries : [CategoryItem]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if myPlan != nil
+        {
+            txtExpenceName.text = myPlan?.Name
+            
+            dpvExpenceCategory.selectRow((myCategries?.indexOf((myPlan?.PlanCategory)!))!, inComponent: 0, animated: false)
+            
+            swhIsIncomeOutlet.setOn((myPlan?.PlanCategory.Type.rawValue.TransactionTypeValue())! , animated: false)
+            
+            swhRecurringOutlet.setOn((myPlan?.Type.rawValue.PlanTypeValue())!, animated: false)
+            
+        }
+        
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        myCategries = DBManager.GetCategoryItems()
+        
+        dpvExpenceCategory.reloadComponent(0)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,11 +63,11 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 5
+        return myCategries!.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "Category Name"
+        return myCategries![row].Name
     }
     
     /*

@@ -20,6 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.sharedManager().enable = true
         
+        if DBManager.GetBankAccountItem().AccountNumber != ""
+        {
+            let identifier = "HomeViewController"
+            
+            let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+            
+            let rootViewController:UIViewController = storyboard.instantiateViewControllerWithIdentifier(identifier) as UIViewController
+            
+            navigationController.viewControllers = [rootViewController]
+            
+            self.window?.rootViewController = navigationController
+        }
+        
         return true
     }
 

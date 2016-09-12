@@ -8,29 +8,29 @@
 
 import UIKit
 
-enum PlanType {
-    case Ad_hoc
-    case Recurring
+enum PlanType : Int {
+    case Ad_hoc = 1
+    case Recurring = 2
 }
 
 
 class PlanItem: NSObject {
 
-    internal var id: String? = ""
+    private var id: String = ""
 
-    internal var desc: String? = ""
+    private var name: String = ""
 
-    internal var amount: Double? = 0.0
+    private var amount: Double = 0.0
 
-    internal var type: PlanType? = PlanType.Ad_hoc
+    private var type: PlanType = PlanType.Ad_hoc
 
-    internal var firstDate: NSDate? = NSDate()
+    private var firstDate: NSDate = NSDate()
 
-    internal var repeatNumber: Int? = 1
+    private var repeatNumber: Int = -1
 
-    internal var eventsDate: [NSDate] = []
+    private var eventsDate: [NSDate] = []
 
-    internal var category: CategoryItem? = CategoryItem()
+    private var category: CategoryItem? = CategoryItem()
 
 
     var PlanCategory: CategoryItem
@@ -49,7 +49,7 @@ class PlanItem: NSObject {
     {
         get
         {
-            return self.id!
+            return self.id
         }
         
     }
@@ -57,11 +57,11 @@ class PlanItem: NSObject {
         {
         get
         {
-            return self.desc!
+            return self.name
         }
         set(newVal)
         {
-            self.desc = newVal
+            self.name = newVal
         }
 
     }
@@ -69,7 +69,7 @@ class PlanItem: NSObject {
         {
         get
         {
-            return self.amount!
+            return self.amount
         }
         set(newVal)
         {
@@ -81,7 +81,7 @@ class PlanItem: NSObject {
         {
         get
         {
-            return self.type!
+            return self.type
         }
         set(newVal)
         {
@@ -97,7 +97,7 @@ class PlanItem: NSObject {
         {
         get
         {
-            return self.repeatNumber!
+            return self.repeatNumber
         }
         set(newVal)
         {
@@ -118,13 +118,13 @@ class PlanItem: NSObject {
         {
         get
         {
-            return self.firstDate!
+            return self.firstDate
         }
         set(newVal)
         {
             self.firstDate = newVal
 
-            if self.repeatNumber == nil
+            if self.repeatNumber == -1
             {
                 self.repeatNumber = 1
                 self.type = PlanType.Ad_hoc
@@ -151,13 +151,13 @@ class PlanItem: NSObject {
                 count = count + 1
             }
         }
-        return Double(count) * self.amount!
+        return Double(count) * self.amount
     }
     
 
     internal func CalcultePlansDate() -> Void{
 
-        for  index in 1...self.repeatNumber! {
+        for  index in 1...self.repeatNumber {
 
             let calDate = NSCalendar.currentCalendar().dateByAddingUnit(.Month, value: index, toDate: self.FirstTimeDate, options: [])
 
@@ -204,7 +204,7 @@ class PlanItem: NSObject {
     init(_id:String,_name:String,_amount:Double,_type:PlanType,_repeatNumber:Int,_firstDate:NSDate,_category:CategoryItem) {
         super.init()
         self.id = _id
-        self.desc = _name
+        self.name = _name
         self.amount = _amount
         self.type = _type
         self.repeatNumber = _repeatNumber
