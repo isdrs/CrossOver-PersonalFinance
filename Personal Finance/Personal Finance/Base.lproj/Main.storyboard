@@ -223,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="425" y="533"/>
         </scene>
-        <!--View Controller-->
+        <!--Plans View Controller-->
         <scene sceneID="o87-Er-hhG">
             <objects>
-                <viewController id="jTQ-rT-WXs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlansViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jTQ-rT-WXs" customClass="PlansViewController" customModule="Personal_Finance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RFf-oI-bwn"/>
                         <viewControllerLayoutGuide type="bottom" id="A9r-3r-dt1"/>
@@ -235,15 +235,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqK-KX-D0U">
-                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="All Plans" id="UrJ-Bd-gYe"/>
-                                    <tabBarItem title="Income Plans" id="vL2-GA-mun"/>
-                                    <tabBarItem title="Expence Plans" id="kXf-6z-CpI"/>
-                                </items>
-                            </tabBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABQ-iT-eO6">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
@@ -251,15 +242,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="E6u-rN-DQ8">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlansCell" id="E6u-rN-DQ8" customClass="PlansCell" customModule="Personal_Finance" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E6u-rN-DQ8" id="fl1-ag-in3">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMk-zN-kYS">
-                                                            <rect key="frame" x="13" y="0.0" width="172" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMk-zN-kYS">
+                                                            <rect key="frame" x="13" y="-5" width="200" height="26"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -291,13 +282,13 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="cFO-gs-Qsz" firstAttribute="centerY" secondItem="703-Cq-pLB" secondAttribute="centerY" id="59v-rT-acC"/>
-                                                        <constraint firstItem="sMk-zN-kYS" firstAttribute="top" secondItem="fl1-ag-in3" secondAttribute="topMargin" constant="-8" id="5R4-xe-hcI"/>
+                                                        <constraint firstItem="sMk-zN-kYS" firstAttribute="top" secondItem="fl1-ag-in3" secondAttribute="topMargin" constant="-13" id="5R4-xe-hcI"/>
                                                         <constraint firstItem="703-Cq-pLB" firstAttribute="top" secondItem="fl1-ag-in3" secondAttribute="topMargin" id="TJa-8l-AH4"/>
                                                         <constraint firstItem="sMk-zN-kYS" firstAttribute="leading" secondItem="fl1-ag-in3" secondAttribute="leadingMargin" constant="5" id="WBz-qN-TTe"/>
                                                         <constraint firstItem="703-Cq-pLB" firstAttribute="bottom" secondItem="fl1-ag-in3" secondAttribute="bottomMargin" id="a7g-H7-ra7"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="703-Cq-pLB" secondAttribute="trailing" constant="-8" id="cLi-Tk-HAs"/>
                                                         <constraint firstItem="703-Cq-pLB" firstAttribute="leading" secondItem="cFO-gs-Qsz" secondAttribute="trailing" constant="43" id="f8v-Ce-QqP"/>
-                                                        <constraint firstItem="cFO-gs-Qsz" firstAttribute="leading" secondItem="sMk-zN-kYS" secondAttribute="trailing" constant="43" id="gmX-Es-iPW"/>
+                                                        <constraint firstItem="cFO-gs-Qsz" firstAttribute="leading" secondItem="sMk-zN-kYS" secondAttribute="trailing" constant="15" id="gmX-Es-iPW"/>
                                                         <constraint firstItem="rxm-3J-LZg" firstAttribute="leading" secondItem="fl1-ag-in3" secondAttribute="leadingMargin" constant="5" id="hvS-ia-vpe"/>
                                                         <constraint firstItem="cFO-gs-Qsz" firstAttribute="centerX" secondItem="fl1-ag-in3" secondAttribute="centerX" id="jbu-FQ-XCJ"/>
                                                         <constraint firstItem="rxm-3J-LZg" firstAttribute="top" secondItem="sMk-zN-kYS" secondAttribute="bottom" constant="1" id="l2g-rN-tRM"/>
@@ -305,6 +296,12 @@
                                                         <constraint firstAttribute="bottomMargin" secondItem="rxm-3J-LZg" secondAttribute="bottom" constant="-8" id="s7s-iH-smi"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="lblAmount" destination="703-Cq-pLB" id="isk-Qv-hTl"/>
+                                                    <outlet property="lblDate" destination="cFO-gs-Qsz" id="Dik-4F-mDj"/>
+                                                    <outlet property="lblName" destination="sMk-zN-kYS" id="ftc-az-xJz"/>
+                                                    <outlet property="lblType" destination="rxm-3J-LZg" id="1iN-ap-KGM"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -319,8 +316,23 @@
                                     <constraint firstAttribute="bottom" secondItem="4Dp-sh-CzO" secondAttribute="bottom" id="b2l-TD-JaH"/>
                                     <constraint firstItem="4Dp-sh-CzO" firstAttribute="centerX" secondItem="ABQ-iT-eO6" secondAttribute="centerX" id="f9V-2K-OQU"/>
                                     <constraint firstItem="4Dp-sh-CzO" firstAttribute="leading" secondItem="ABQ-iT-eO6" secondAttribute="leading" id="poU-zn-6DM"/>
+                                    <constraint firstItem="4Dp-sh-CzO" firstAttribute="top" secondItem="ABQ-iT-eO6" secondAttribute="topMargin" constant="-8" id="uIv-7I-0UX"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TNd-Uc-5z4"/>
+                                    </mask>
+                                </variation>
                             </view>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqK-KX-D0U">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="All Plans" id="UrJ-Bd-gYe"/>
+                                    <tabBarItem title="Income Plans" id="vL2-GA-mun"/>
+                                    <tabBarItem title="Expence Plans" id="kXf-6z-CpI"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -340,6 +352,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tblPlans" destination="4Dp-sh-CzO" id="ic1-7b-tJk"/>
+                        <outlet property="tbrPlans" destination="EqK-KX-D0U" id="swB-Ar-Iqn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcA-VD-J2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -398,15 +414,10 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U68-hN-yHW">
                                         <rect key="frame" x="490" y="281" width="51" height="31"/>
                                         <connections>
+                                            <action selector="swhIsIncomeAction:" destination="znF-3C-koc" eventType="valueChanged" id="OQt-3B-Kgu"/>
                                             <action selector="swhRecurringAction:" destination="znF-3C-koc" eventType="valueChanged" id="IJI-ch-KpL"/>
                                         </connections>
                                     </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEC-ds-Bai">
-                                        <rect key="frame" x="19" y="281" width="57" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="QqM-yD-0Eh">
                                         <rect key="frame" x="174" y="147" width="213" height="126"/>
                                         <constraints>
@@ -435,6 +446,12 @@
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recurring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvJ-pr-hBN">
                                         <rect key="frame" x="19" y="330" width="75" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" IsIncome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEC-ds-Bai">
+                                        <rect key="frame" x="19" y="281" width="74" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -480,6 +497,7 @@
                     <navigationItem key="navigationItem" id="fK2-0v-6k7"/>
                     <connections>
                         <outlet property="dpvExpenceCategory" destination="QqM-yD-0Eh" id="eTz-ph-XVx"/>
+                        <outlet property="swhIsIncomeOutlet" destination="U68-hN-yHW" id="5S0-Sz-r0I"/>
                         <outlet property="swhRecurringOutlet" destination="wyY-4u-eob" id="PnL-bn-pjS"/>
                         <outlet property="txtExpenceAmount" destination="bjG-Cr-u8L" id="AV4-Xk-Fns"/>
                         <outlet property="txtExpenceDay" destination="eBd-Oa-7ds" id="ZFC-Ur-kr7"/>

@@ -11,10 +11,13 @@ import UIKit
 class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var txtExpenceName: UITextField!
     @IBOutlet weak var dpvExpenceCategory: UIPickerView!
+    @IBOutlet weak var swhIsIncomeOutlet: UISwitch!
     @IBOutlet weak var swhRecurringOutlet: UISwitch!
     @IBOutlet weak var txtExpenceDay: UITextField!
     @IBOutlet weak var txtExpenceMonth: UITextField!
     @IBOutlet weak var txtExpenceAmount: UITextField!
+    @IBAction func swhIsIncomeAction(sender: AnyObject) {
+    }
     @IBAction func swhRecurringAction(sender: AnyObject) {
     }
 

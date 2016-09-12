@@ -24,6 +24,8 @@
 		8429DCE61D866A7B00FA6E77 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCD61D866A7B00FA6E77 /* IQToolbar.swift */; };
 		8429DCE71D866A7B00FA6E77 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCD71D866A7B00FA6E77 /* IQUIView+IQKeyboardToolbar.swift */; };
 		8429DCEA1D866B4E00FA6E77 /* ProjectExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCE91D866B4E00FA6E77 /* ProjectExtentions.swift */; };
+		8429DCEC1D8670B900FA6E77 /* PlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCEB1D8670B900FA6E77 /* PlansViewController.swift */; };
+		8429DCEE1D86719000FA6E77 /* PlansCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCED1D86719000FA6E77 /* PlansCell.swift */; };
 		84F9F5BC1D85125200F3AA47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5BB1D85125200F3AA47 /* AppDelegate.swift */; };
 		84F9F5C11D85125200F3AA47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F9F5BF1D85125200F3AA47 /* Main.storyboard */; };
 		84F9F5C41D85125200F3AA47 /* Personal_Finance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5C21D85125200F3AA47 /* Personal_Finance.xcdatamodeld */; };
@@ -72,6 +74,8 @@
 		8429DCD61D866A7B00FA6E77 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		8429DCD71D866A7B00FA6E77 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		8429DCE91D866B4E00FA6E77 /* ProjectExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectExtentions.swift; path = Tools/ProjectExtentions.swift; sourceTree = "<group>"; };
+		8429DCEB1D8670B900FA6E77 /* PlansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlansViewController.swift; path = ViewControllers/PlansViewController.swift; sourceTree = "<group>"; };
+		8429DCED1D86719000FA6E77 /* PlansCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlansCell.swift; path = Items/PlansCell.swift; sourceTree = "<group>"; };
 		84F9F5B81D85125200F3AA47 /* Personal Finance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal Finance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F9F5BB1D85125200F3AA47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F9F5C01D85125200F3AA47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				84F9F5E41D8581CA00F3AA47 /* BankInfoViewController.swift */,
 				84F9F5E81D8581F000F3AA47 /* NewPlanViewController.swift */,
 				84F9F5EA1D8581FF00F3AA47 /* ReportViewController.swift */,
+				8429DCEB1D8670B900FA6E77 /* PlansViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				84F9F5F31D85957600F3AA47 /* PlanItem.swift */,
 				8D1F663F1D85AD16001F2178 /* CategoryItem.swift */,
 				8D1F66431D85C752001F2178 /* AccountItem.swift */,
+				8429DCED1D86719000FA6E77 /* PlansCell.swift */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -364,8 +370,10 @@
 				8D1F66461D85CEEF001F2178 /* PlanManager.swift in Sources */,
 				84F9F5E91D8581F000F3AA47 /* NewPlanViewController.swift in Sources */,
 				8429DCDB1D866A7B00FA6E77 /* IQUIView+Hierarchy.swift in Sources */,
+				8429DCEE1D86719000FA6E77 /* PlansCell.swift in Sources */,
 				84F9F5BC1D85125200F3AA47 /* AppDelegate.swift in Sources */,
 				8429DCD91D866A7B00FA6E77 /* IQUIScrollView+Additions.swift in Sources */,
+				8429DCEC1D8670B900FA6E77 /* PlansViewController.swift in Sources */,
 				8429DCEA1D866B4E00FA6E77 /* ProjectExtentions.swift in Sources */,
 				8429DCE21D866A7B00FA6E77 /* IQTextView.swift in Sources */,
 				8429DCDA1D866A7B00FA6E77 /* IQUITextFieldView+Additions.swift in Sources */,
