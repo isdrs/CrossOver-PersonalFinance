@@ -73,6 +73,8 @@
 		8D1F66441D85C752001F2178 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66431D85C752001F2178 /* AccountItem.swift */; };
 		8D1F66461D85CEEF001F2178 /* PlanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66451D85CEEF001F2178 /* PlanManager.swift */; };
 		8D1F664A1D85CF3E001F2178 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66491D85CF3E001F2178 /* AccountManager.swift */; };
+		8D36EE5A1D87336600F87C6C /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D36EE591D87336600F87C6C /* ShinobiCharts.framework */; };
+		8D36EE5C1D87337B00F87C6C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D36EE5B1D87337B00F87C6C /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +149,8 @@
 		8D1F66431D85C752001F2178 /* AccountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountItem.swift; path = Items/AccountItem.swift; sourceTree = "<group>"; };
 		8D1F66451D85CEEF001F2178 /* PlanManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlanManager.swift; path = Managers/PlanManager.swift; sourceTree = "<group>"; };
 		8D1F66491D85CF3E001F2178 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountManager.swift; path = Managers/AccountManager.swift; sourceTree = "<group>"; };
+		8D36EE591D87336600F87C6C /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
+		8D36EE5B1D87337B00F87C6C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D36EE5C1D87337B00F87C6C /* libc++.tbd in Frameworks */,
+				8D36EE5A1D87336600F87C6C /* ShinobiCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +253,7 @@
 		84F9F5AF1D85125200F3AA47 = {
 			isa = PBXGroup;
 			children = (
+				8D36EE5B1D87337B00F87C6C /* libc++.tbd */,
 				84F9F5BA1D85125200F3AA47 /* Personal Finance */,
 				84F9F5D21D85125200F3AA47 /* Personal FinanceTests */,
 				84F9F5B91D85125200F3AA47 /* Products */,
@@ -265,6 +272,7 @@
 		84F9F5BA1D85125200F3AA47 /* Personal Finance */ = {
 			isa = PBXGroup;
 			children = (
+				8D36EE591D87336600F87C6C /* ShinobiCharts.framework */,
 				84BB862F1D86BB3000267519 /* ManagedObjects */,
 				8429DCF71D8688EF00FA6E77 /* IQKeyboardManagerSwift */,
 				8429DCE81D866B2800FA6E77 /* Tools */,
@@ -622,11 +630,14 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Personal",
 					Finance/Frameworks,
+					"$(PROJECT_DIR)/Personal",
+					Finance,
 				);
 				INFOPLIST_FILE = "Personal Finance/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Crossover.Personal-Finance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Personal Finance/ShinobiCharts.framework/Headers/ShinobiChart-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -639,11 +650,14 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Personal",
 					Finance/Frameworks,
+					"$(PROJECT_DIR)/Personal",
+					Finance,
 				);
 				INFOPLIST_FILE = "Personal Finance/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Crossover.Personal-Finance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Personal Finance/ShinobiCharts.framework/Headers/ShinobiChart-Bridging-Header.h";
 			};
 			name = Release;
 		};
