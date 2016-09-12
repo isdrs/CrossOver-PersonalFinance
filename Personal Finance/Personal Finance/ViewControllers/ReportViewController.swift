@@ -10,8 +10,7 @@ import UIKit
 
 class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tblExpenceCategoryAmount: UITableView!
-    @IBOutlet weak var txtReportFrom: UITextField!
-    @IBOutlet weak var txtReportUntil: UITextField!
+    @IBOutlet weak var dpvDate: UIDatePicker!
     @IBAction func btnEstimateAction(sender: AnyObject) {
     }
 

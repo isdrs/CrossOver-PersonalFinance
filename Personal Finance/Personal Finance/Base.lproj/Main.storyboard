@@ -724,6 +724,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yqh-SK-mHw"/>
                     <connections>
+                        <outlet property="dpvDate" destination="lqw-AN-25c" id="DsU-z7-uIl"/>
                         <outlet property="tblExpenceCategoryAmount" destination="ebo-ct-ECZ" id="eRJ-zz-tR8"/>
                     </connections>
                 </viewController>
