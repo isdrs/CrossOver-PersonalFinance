@@ -20,6 +20,7 @@ class NewExpenceViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
     @IBAction func btnAddNewExpence(sender: AnyObject) {
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
