@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-enum TransActionType : Int {
+enum PlanType : Int {
     case Income = 1
     case Expense = 2
 }
@@ -20,7 +19,7 @@ class CategoryItem: NSObject {
 
     private var name: String? = ""
 
-    private var type: TransActionType? = TransActionType.Income
+    private var type: PlanType? = PlanType.Income
 
     var ID: Int
         {
@@ -46,7 +45,7 @@ class CategoryItem: NSObject {
         }
 
     }
-    var Type: TransActionType
+    var Type: PlanType
         {
         get
         {
@@ -63,7 +62,7 @@ class CategoryItem: NSObject {
         super.init()
     }
     
-    init(_name:String, _type:TransActionType) {
+    init(_name:String, _type:PlanType) {
         super.init()
         
         self.id = GenerateID()
@@ -72,7 +71,7 @@ class CategoryItem: NSObject {
     }
 
 
-    init(_id:Int, _name:String, _type:TransActionType) {
+    init(_id:Int, _name:String, _type:PlanType) {
 
         self.id = _id
         self.name = _name

@@ -40,7 +40,7 @@ class DBManager: NSObject
             {
                 for plan in myPlans {
                     
-                    let planItem = PlanItem(_id: plan.id!, _name: plan.desc!, _amount: plan.amount!.doubleValue, _type: plan.type!.PlanTypeValue(), _repeatNumber: plan.repeatnumber!.integerValue, _firstDate: plan.firstdate!, _category: GetCategoryItems(plan.category!.integerValue) )
+                    let planItem = PlanItem(_id: plan.id!, _name: plan.desc!, _amount: plan.amount!.doubleValue, _repeatitiontype: plan.type!.PlanTypeValue(), _repeatNumber: plan.repeatnumber!.integerValue, _firstDate: plan.firstdate!, _category: GetCategoryItems(plan.category!.integerValue) )
                     
                     planItems.append(planItem)
                 }
@@ -142,7 +142,7 @@ class DBManager: NSObject
         plans.desc = _plan.Name
         plans.firstdate = _plan.FirstTimeDate
         plans.repeatnumber = _plan.RepeatNumber
-        plans.type = _plan.Type.rawValue
+        plans.type = _plan.RepeatitionType.rawValue
         
         //4
         do {
@@ -197,7 +197,7 @@ class DBManager: NSObject
         plan.desc = _plan.Name
         plan.firstdate = _plan.FirstTimeDate
         plan.repeatnumber = _plan.RepeatNumber
-        plan.type = _plan.Type.rawValue
+        plan.type = _plan.RepeatitionType.rawValue
         
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

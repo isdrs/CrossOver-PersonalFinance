@@ -44,12 +44,11 @@ class PlanManager: NSObject {
     static func GetAllIncomePlansTotalAmount(_until:NSDate) -> Double
     {
         var totalSum = 0.0
-        for item in totalPlans
+        for item in GetPlansByType(PlanType.Income)
         {
-            if item.PlanCategory.Type == TransActionType.Income
-            {
+
                 totalSum = totalSum + item.GetPlanRemainingTotalAmount(_until)
-            }
+
         }
         return totalSum
     }
@@ -57,16 +56,27 @@ class PlanManager: NSObject {
     static func GetAllExpensePlansTotalAmount(_until:NSDate) -> Double
     {
         var totalSum = 0.0
-        for item in totalPlans
+        for item in GetPlansByType(PlanType.Expense)
         {
-            if item.PlanCategory.Type == TransActionType.Expense
-            {
                 totalSum = totalSum + item.GetPlanRemainingTotalAmount(_until)
-            }
         }
         return totalSum
     }
-    
+
+
+    static func GetPlansByType(_type:PlanType) -> [PlanItem]
+    {
+        var plans : [PlanItem] = []
+
+        for plan in totalPlans
+        {
+            if plan.PlanCategory.Type.rawValue == _type.rawValue
+            {
+                plans.append(plan)
+            }
+        }
+        return plans
+    }
 
 }
 
