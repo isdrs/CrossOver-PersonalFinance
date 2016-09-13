@@ -453,10 +453,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQb-Xi-byH">
                                         <rect key="frame" x="395" y="108" width="46" height="48"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="D3B-jl-HoV"/>
                                             <constraint firstAttribute="width" constant="46" id="g6q-DY-wmD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="+"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="0.0" green="1" blue="0.016062608867891903" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="NewCtegoryAction:" destination="znF-3C-koc" eventType="touchUpInside" id="qNa-pH-11D"/>
                                             <segue destination="dq8-q4-vuQ" kind="push" identifier="loadNewCat" id="cLe-15-Pp9"/>
