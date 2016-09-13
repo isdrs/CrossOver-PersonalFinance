@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AF5B0F665E0D08EFB331DD9ABCF219C7E30EF0A4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F2286F1E0BEE5EB24D1E90DF9AB830756485DAC8" : 0,
+    "AF5B0F665E0D08EFB331DD9ABCF219C7E30EF0A4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4D858ADC-EB82-43D5-8BA8-929887EA52E3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F2286F1E0BEE5EB24D1E90DF9AB830756485DAC8" : "..\/Salam%20Project\/salamios",
+    "AF5B0F665E0D08EFB331DD9ABCF219C7E30EF0A4" : "CrossOver-PersonalFinance\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Personal Finance",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Personal Finance\/Personal Finance.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/isdrs\/CrossOver-PersonalFinance.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AF5B0F665E0D08EFB331DD9ABCF219C7E30EF0A4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/46.209.144.154:22\/srv\/gitios\/salamios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F2286F1E0BEE5EB24D1E90DF9AB830756485DAC8"
+    }
+  ]
+}
