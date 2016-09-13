@@ -40,7 +40,7 @@ class DBManager: NSObject
             {
                 for plan in myPlans {
                     
-                    let planItem = PlanItem(_id: plan.id!, _name: plan.desc!, _amount: plan.amount!.doubleValue, _repeatitiontype: plan.type!.PlanTypeValue(), _repeatNumber: plan.repeatnumber!.integerValue, _firstDate: plan.firstdate!, _category: GetCategoryItem(plan.category!) )
+                    let planItem = PlanItem(_id: plan.id!, _name: plan.desc!, _amount: plan.amount!.doubleValue, _repeatitiontype: plan.type!.PlanTypeValue(), _repeatNumber: plan.repeatnumber!.integerValue, _firstDate: plan.firstdate!, _category: GetCategoryItemByID(plan.categoryid!.integerValue) )
                     
                     planItems.append(planItem)
                 }
@@ -71,6 +71,41 @@ class DBManager: NSObject
         category.type = myCat.Type.rawValue
 
         return category
+    }
+    
+    static func GetCategoryItemByID(catID: Int) -> CategoryItem
+    {
+    
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        //2
+        let fetchRequest = NSFetchRequest(entityName: CategoryEntityName)
+        
+        fetchRequest.predicate = NSPredicate(format: "id == %@", String(catID))
+        
+        //3
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            
+            if let myCats = results as? [Categories]
+            {
+                if myCats.count > 0
+                {
+                    for myCat in myCats
+                    {
+                        return CategoryItem(_id: myCat.id!.integerValue, _name: myCat.name!, _type: myCat.type!.TransactionTypeValue())
+                    }
+                    
+                }
+            }
+            
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+        
+        return CategoryItem()
     }
 
     static func GetCategoryItems() -> [CategoryItem]
@@ -128,7 +163,7 @@ class DBManager: NSObject
         
         plans.id = _plan.ID
         plans.amount = _plan.Amount
-        plans.category = GetCategories(_plan.PlanCategory)
+        plans.categoryid = _plan.PlanCategory.ID
         plans.desc = _plan.Name
         plans.firstdate = _plan.FirstTimeDate
         plans.repeatnumber = _plan.RepeatNumber

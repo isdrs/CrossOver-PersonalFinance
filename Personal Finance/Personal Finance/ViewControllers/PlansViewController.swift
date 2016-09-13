@@ -30,10 +30,6 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
         tblPlans.reloadData()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        tblPlans.reloadData()
-    }
-    
     func FilterPlans() -> [PlanItem] {
         if isIncome
         {

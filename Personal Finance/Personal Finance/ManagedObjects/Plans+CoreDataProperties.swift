@@ -20,6 +20,6 @@ extension Plans {
     @NSManaged var id: String?
     @NSManaged var repeatnumber: NSNumber?
     @NSManaged var type: NSNumber?
-    @NSManaged var category: Categories?
+    @NSManaged var categoryid: NSNumber?
 
 }
