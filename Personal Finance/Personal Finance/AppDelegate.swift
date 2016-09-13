@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.sharedManager().enable = true
         
-        if DBManager.GetBankAccountItem().AccountNumber != ""
+        if FinanceController.CheckBankAccountExist()
         {
             let identifier = "HomeViewController"
             

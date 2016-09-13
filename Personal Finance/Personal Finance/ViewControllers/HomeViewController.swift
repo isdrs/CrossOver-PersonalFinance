@@ -29,6 +29,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
 
         FinanceController.UpdateAllList()
         // Do any additional setup after loading the view.

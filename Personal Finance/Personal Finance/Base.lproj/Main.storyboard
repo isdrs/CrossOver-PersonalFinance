@@ -24,7 +24,12 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bank Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="WxO-53-1Z7">
                                         <rect key="frame" x="0.0" y="163" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account Number" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKr-Um-VQD">
+                                        <rect key="frame" x="0.0" y="201" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWx-l3-E9p">
                                         <rect key="frame" x="215" y="228" width="131" height="107"/>
@@ -33,18 +38,12 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="SFJ-sV-yxF" kind="push" identifier="loadHome" id="9vX-V1-hWL"/>
+                                            <action selector="btnSaveAndContinueAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fzG-Ai-rKw"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account Number" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKr-Um-VQD">
-                                        <rect key="frame" x="0.0" y="201" width="560" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
-                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="gKr-Um-VQD" firstAttribute="top" secondItem="WxO-53-1Z7" secondAttribute="bottom" constant="14" id="Cw6-0M-iI0"/>
                                     <constraint firstItem="WxO-53-1Z7" firstAttribute="leading" secondItem="anW-bX-xDh" secondAttribute="leading" id="EJQ-99-KaJ"/>
                                     <constraint firstItem="gWx-l3-E9p" firstAttribute="centerX" secondItem="gKr-Um-VQD" secondAttribute="centerX" id="JXQ-aY-I4e"/>
                                     <constraint firstItem="gKr-Um-VQD" firstAttribute="centerY" secondItem="anW-bX-xDh" secondAttribute="centerY" constant="38.5" id="S0I-Pf-42i"/>
@@ -55,11 +54,6 @@
                                     <constraint firstAttribute="trailing" secondItem="gKr-Um-VQD" secondAttribute="trailing" id="gwM-hp-1aL"/>
                                     <constraint firstAttribute="trailing" secondItem="WxO-53-1Z7" secondAttribute="trailing" id="ta1-HF-dee"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Cw6-0M-iI0"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,6 +65,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bank Info" id="fv0-0r-JWr"/>
+                    <connections>
+                        <outlet property="lblAccountNumber" destination="gKr-Um-VQD" id="iuv-Sm-YYV"/>
+                        <outlet property="lblBankName" destination="WxO-53-1Z7" id="8jL-Wu-os7"/>
+                        <segue destination="SFJ-sV-yxF" kind="push" identifier="loadHome" id="8Xe-nk-cVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,7 +261,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E6u-rN-DQ8" id="fl1-ag-in3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxm-3J-LZg">
@@ -471,7 +470,7 @@
                                             <constraint firstAttribute="height" constant="110" id="uqJ-kA-Eu3"/>
                                         </constraints>
                                         <date key="date" timeIntervalSinceReferenceDate="495391244.67604101">
-                                            <!--1395-06-22 16:40:44 +0000-->
+                                            <!--۱۳۹۵-۰۶-۲۲ ۱۶:۴۰:۴۴ +0000-->
                                         </date>
                                     </datePicker>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat No" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-A9-LFY">
@@ -599,7 +598,7 @@
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E36-Co-abk" id="7Kh-85-zWm">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hin-DZ-77R">
@@ -700,7 +699,7 @@
                                             <constraint firstAttribute="height" constant="131" id="RhQ-Wz-0fo"/>
                                         </constraints>
                                         <date key="date" timeIntervalSinceReferenceDate="495386680.555035">
-                                            <!--1395-06-22 15:24:40 +0000-->
+                                            <!--۱۳۹۵-۰۶-۲۲ ۱۵:۲۴:۴۰ +0000-->
                                         </date>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOC-Ks-Bhx">

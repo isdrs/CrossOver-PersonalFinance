@@ -9,7 +9,31 @@
 import UIKit
 
 class BankInfoViewController: UIViewController {
-    
+    @IBOutlet weak var lblBankName: UITextField!
+    @IBOutlet weak var lblAccountNumber: UITextField!
+    @IBAction func btnSaveAndContinueAction(sender: AnyObject)
+    {
+        if lblBankName.text != "" && lblAccountNumber.text != ""
+        {
+            let bank = lblBankName.text
+            
+            let account = lblAccountNumber.text
+            
+            
+            if FinanceController.AddBankAccount(bank!, _accountNumber: account!)
+            {
+                self.performSegueWithIdentifier("loadHome", sender: sender)
+            }
+            else
+            {
+                SCLAlertView().showError("Error", subTitle: "Cannot save bank account")
+            }
+        }
+        else
+        {
+            SCLAlertView().showNotice("Notice", subTitle: "Please fill all fields correctly")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

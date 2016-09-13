@@ -13,17 +13,25 @@ class FinanceController{
 
     static func CheckBankAccountExist() -> Bool
     {
+        if DBManager.GetBankAccountItem().AccountNumber == "" {
+            return false
+        }
+        
         return true
     }
 
 
-    static func AddBankAccount(_accountName:String,_accountNumber:String) -> AccountItem
+    static func AddBankAccount(_accountName:String,_accountNumber:String) -> Bool
     {
         let balance = UpdateBalance(_accountNumber)
 
         let updateAccount = AccountItem(_accountNumber: _accountNumber, _name: _accountName, _balance: balance)
+        
+        if DBManager.AddBankAccountItem(updateAccount) {
+            return true
+        }
 
-        return updateAccount
+        return false
 
     }
 
