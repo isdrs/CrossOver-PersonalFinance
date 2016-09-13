@@ -40,6 +40,14 @@ class FinanceController{
 
         return 1000.0
     }
+    
+    static func GetAccount() -> AccountItem {
+        if  CheckBankAccountExist(){
+            return DBManager.GetBankAccountItem()
+        }
+        
+        return AccountItem()
+    }
 
 
     static func GetIncomePlans() -> [PlanItem]

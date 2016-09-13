@@ -33,6 +33,13 @@ class HomeViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: false)
 
         FinanceController.UpdateAllList()
+        
+        let myAccount = FinanceController.GetAccount()
+        
+        lblUserName.text = myAccount.Name
+        
+        lblHomeAccountBalance.text = String(myAccount.Balance)
+        
         // Do any additional setup after loading the view.
     }
 
