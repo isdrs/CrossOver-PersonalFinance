@@ -79,8 +79,6 @@ class AccountManager: NSObject {
                 exPensePlans![item.PlanCategory.Name] = totalAmount
             }
 
-
-
         }
         for cat in exPensePlans!.keys
         {

@@ -130,7 +130,6 @@ class FinanceController{
         }
         return false
     }
-
     
 
     static func GetExpenseTotalEstimateAmountInCategory(_unitl:NSDate) -> [String:Double]
