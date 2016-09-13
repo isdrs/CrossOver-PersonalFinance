@@ -262,7 +262,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E6u-rN-DQ8" id="fl1-ag-in3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxm-3J-LZg">
@@ -456,12 +456,11 @@
                                             <constraint firstAttribute="height" constant="48" id="D3B-jl-HoV"/>
                                             <constraint firstAttribute="width" constant="46" id="g6q-DY-wmD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="+">
-                                            <color key="titleColor" red="0.0" green="1" blue="0.016062608867891903" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="NewCtegoryAction:" destination="znF-3C-koc" eventType="touchUpInside" id="qNa-pH-11D"/>
                                             <segue destination="dq8-q4-vuQ" kind="push" identifier="loadNewCat" id="cLe-15-Pp9"/>
                                         </connections>
                                     </button>
@@ -472,7 +471,7 @@
                                             <constraint firstAttribute="height" constant="110" id="uqJ-kA-Eu3"/>
                                         </constraints>
                                         <date key="date" timeIntervalSinceReferenceDate="495391244.67604101">
-                                            <!--۱۳۹۵-۰۶-۲۲ ۱۶:۴۰:۴۴ +0000-->
+                                            <!--1395-06-22 16:40:44 +0000-->
                                         </date>
                                     </datePicker>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat No" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-A9-LFY">
@@ -527,7 +526,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Cdm-Ph-qC7" firstAttribute="top" secondItem="fVe-Tl-2hi" secondAttribute="bottom" constant="28" id="b3k-qm-hhI"/>
                             <constraint firstItem="fVe-Tl-2hi" firstAttribute="centerY" secondItem="SO8-Sz-PNX" secondAttribute="centerY" id="glb-Ww-Thj"/>
@@ -600,13 +599,13 @@
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E36-Co-abk" id="7Kh-85-zWm">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hin-DZ-77R">
                                                     <rect key="frame" x="8" y="8" width="42" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sa9-O3-ibJ">
@@ -615,7 +614,7 @@
                                                         <constraint firstAttribute="width" constant="110" id="ktV-sa-tae"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -701,7 +700,7 @@
                                             <constraint firstAttribute="height" constant="131" id="RhQ-Wz-0fo"/>
                                         </constraints>
                                         <date key="date" timeIntervalSinceReferenceDate="495386680.555035">
-                                            <!--۱۳۹۵-۰۶-۲۲ ۱۵:۲۴:۴۰ +0000-->
+                                            <!--1395-06-22 15:24:40 +0000-->
                                         </date>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOC-Ks-Bhx">

@@ -9,6 +9,7 @@
 import UIKit
 
 class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
     @IBOutlet weak var txtPlanName: UITextField!
     @IBOutlet weak var dpvPlanCategory: UIPickerView!
     @IBOutlet weak var dpvDate: UIDatePicker!
@@ -18,9 +19,16 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var txtRepeatNo: UITextField!
     @IBOutlet weak var btnAddOrUpdateOutlet: UIButton!
 
+
+
+    var planCategories : [CategoryItem]?
+
+
     @IBAction func swhIsIncome(sender: AnyObject)
     {
-        planCategories = FilterPlans()
+        let _type = swhIsIncomeOutlet.on ? PlanType.Income : PlanType.Expense
+
+        planCategories = FinanceController.GetCategoriesByType(_type)
         
         dpvPlanCategory.reloadComponent(0)
     }
@@ -38,69 +46,81 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
 
     @IBAction func btnAddOrUpdateNewPlan(sender: AnyObject) {
-    }
 
-    @IBAction func NewCtegoryAction(sender: AnyObject)
-    {
-        
-        
-    }
-    
-    var myPlan : PlanItem?
-    
-    var allCategries : [CategoryItem]?
-    
-    var planCategories : [CategoryItem]?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-        if myPlan != nil
+        let planName = txtPlanName.text
+
+        let amount = Double(txtPlanAmount.text!)
+
+        let selectedCat = planCategories?.count > 0 ? planCategories![dpvPlanCategory.selectedRowInComponent(0)] as CategoryItem : CategoryItem()
+
+        let isRecurring = swhRecurringOutlet.on ? PlanRepetitionType.Recurring  : PlanRepetitionType.Ad_hoc
+
+        let repeatNo = isRecurring == PlanRepetitionType.Recurring ? (Int(txtRepeatNo.text!)) : 1
+
+        let startTime = dpvDate.date
+
+        if planName == "" || amount == nil  || repeatNo == nil || selectedCat.ID == -1
         {
-            txtPlanName.text = myPlan?.Name
-            
-            dpvPlanCategory.selectRow((allCategries!.indexOf((myPlan!.PlanCategory)))!, inComponent: 0, animated: false)
-            
-            swhIsIncomeOutlet.setOn((myPlan!.PlanCategory.Type.rawValue.TransactionTypeValue()) , animated: false)
-            
-            swhRecurringOutlet.setOn((myPlan!.RepeatitionType.rawValue.PlanTypeValue()), animated: false)
-            
-            if swhRecurringOutlet.on {
-                txtRepeatNo.hidden = false
-                txtRepeatNo.text = String(myPlan!.RepeatNumber)
+            SCLAlertView().showError("Warning", subTitle: "Please fill all info")
+
+        }
+        else
+        {
+            if FinanceController.AddPlan(planName!, _amount: amount!, _repeatitiontype: isRecurring, _repeatNumber: repeatNo!, _firstDate: startTime, _cat : selectedCat)
+            {
+                SCLAlertView().showInfo("Done", subTitle: "Plan has been added")
+                txtPlanName.text = ""
+                txtRepeatNo.text = ""
+                txtPlanAmount.text = ""
             }
             else
             {
-                txtRepeatNo.hidden = true
+                SCLAlertView().showError("Error", subTitle: "Something goes wrong")
             }
-            
-            dpvDate.date = myPlan!.FirstTimeDate
-            
-            txtPlanAmount.text = String(myPlan!.Amount)
-            
         }
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    func FilterPlans() -> [CategoryItem] {
 
-        var filteredCats = [CategoryItem]()
-        
-        for cat in allCategries! {
-            
-            if cat.Type.rawValue.TransactionTypeValue() == swhIsIncomeOutlet.on {
-                filteredCats.append(cat)
-            }
-        }
-        
-        return filteredCats
+
+    }
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.hideKeyboardWhenTappedAround()
+
+//        if myPlan != nil
+//        {
+//            txtPlanName.text = myPlan?.Name
+//            
+//
+//            
+//            swhIsIncomeOutlet.setOn((myPlan!.PlanCategory.Type.rawValue.TransactionTypeValue()) , animated: false)
+//            
+//            swhRecurringOutlet.setOn((myPlan!.RepeatitionType.rawValue.PlanTypeValue()), animated: false)
+//            
+//            if swhRecurringOutlet.on {
+//                txtRepeatNo.hidden = false
+//                txtRepeatNo.text = String(myPlan!.RepeatNumber)
+//            }
+//            else
+//            {
+//                txtRepeatNo.hidden = true
+//            }
+//            
+//            dpvDate.date = myPlan!.FirstTimeDate
+//            
+//            txtPlanAmount.text = String(myPlan!.Amount)
+//            
+//        }
+
+        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(animated: Bool) {
-        allCategries = DBManager.GetCategoryItems()
-        
-        planCategories = FilterPlans()
+
+         let _type = swhIsIncomeOutlet.on ? PlanType.Income : PlanType.Expense
+
+        planCategories = FinanceController.GetCategoriesByType(_type)
         
         dpvPlanCategory.reloadComponent(0)
     }
@@ -121,6 +141,7 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return planCategories![row].Name
     }
+
     
     /*
     // MARK: - Navigation

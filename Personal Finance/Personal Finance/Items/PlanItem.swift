@@ -162,11 +162,14 @@ class PlanItem: NSObject {
 
         eventsDate.append(self.FirstTimeDate)
 
+        if self.repeatNumber > 1
+        {
         for  index in 1...self.repeatNumber - 1 {
 
             let calDate = NSCalendar.currentCalendar().dateByAddingUnit(.Month, value: index, toDate: self.FirstTimeDate, options: [])
 
             eventsDate.append(calDate!)
+        }
         }
     }
 

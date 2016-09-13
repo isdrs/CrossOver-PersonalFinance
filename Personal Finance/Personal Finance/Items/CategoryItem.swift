@@ -15,7 +15,7 @@ enum PlanType : Int {
 
 class CategoryItem: NSObject {
 
-    private var id: Int? = 0
+    private var id: Int? = -1
 
     private var name: String? = ""
 

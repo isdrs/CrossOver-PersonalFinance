@@ -29,7 +29,8 @@ class PlanManager: NSObject {
     {
         if DBManager.DeletePlan(_incomePlan)
         {
-            totalPlans.removeAtIndex(totalPlans.indexOf(_incomePlan)!)
+
+            totalPlans = DBManager.GetPlans()
 
             return true
         }
@@ -104,7 +105,7 @@ class CategoryManager: NSObject {
     {
         if DBManager.DeleteCategory(_delCat)
         {
-            catItems.removeAtIndex(catItems.indexOf(_delCat)!)
+            catItems = DBManager.GetCategoryItems()
 
             return true
         }

@@ -15,15 +15,18 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
     var isIncome = true
     
     let incomeItemTag = 1002
+
     let expenseItemTag = 1003
     
-    var allPlans : [PlanItem]?
+
     var myPlans : [PlanItem]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.hideKeyboardWhenTappedAround()
-        allPlans = DBManager.GetPlans()
+
+
         
         myPlans = FilterPlans()
         // Do any additional setup after loading the view.
@@ -47,16 +50,12 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func FilterPlans() -> [PlanItem] {
-        var filteredPlans = [PlanItem]()
-        
-        for plan in allPlans! {
-            
-            if plan.PlanCategory.Type.rawValue.TransactionTypeValue() == isIncome {
-                filteredPlans.append(plan)
-            }
+        if isIncome
+        {
+            return  FinanceController.GetIncomePlans()
         }
-        
-        return filteredPlans
+        return FinanceController.GetExpensePlans()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,9 +91,10 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            if DBManager.DeletePlan(myPlans![indexPath.row])
+
+            if FinanceController.DeletePlan(myPlans![indexPath.row].ID)
             {
-                myPlans!.removeAtIndex(indexPath.row)
+                myPlans = FilterPlans()
                 
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             }

@@ -25,12 +25,14 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func btnAddAction(sender: AnyObject)
     {
-        
-        if txtCatName.text != ""
-        {
-            let newCat = CategoryItem(_name: txtCatName.text!, _type: swhIsIncome.on ? .Income : .Expense)
-            
-            if DBManager.AddCategoryItem(newCat)
+
+            let catName = txtCatName.text!
+
+            let _type = swhIsIncome.on ? PlanType.Income : PlanType.Expense
+
+
+
+            if catName != ""
             {
                 txtCatName.text = ""
                 
@@ -42,13 +44,8 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
             }
             else
             {
-                SCLAlertView().showError("Error", subTitle: "Cannot Save Category")
+                SCLAlertView().showError("Warning", subTitle: "Please fill category name")
             }
-        }
-        else
-        {
-            SCLAlertView().showNotice("Notice", subTitle: "Please enter your name")
-        }
     }
 
     override func viewDidLoad() {
