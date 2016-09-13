@@ -128,6 +128,13 @@ class FinanceController{
         return estimatedBalance
     }
 
+    static func UpdateAllList()
+    {
+        PlanManager.UpdatePlans()
+
+        CategoryManager.UpdateCategories()
+    }
+
 }
 
 
