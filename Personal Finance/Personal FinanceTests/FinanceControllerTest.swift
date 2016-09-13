@@ -69,18 +69,10 @@ class FinanceControllerTest: XCTestCase {
 //        return incomeCats
 //    }
 
-    func testAddCategory()
+
+    func testDeleteCategory()
     {
-        XCTAssertTrue(FinanceController.AddCategory("c1", _catType: PlanType.Expense))
-    }
-
-    func testDeleteCategory(_id:Int) -> Bool
-    {
-        let cat = CategoryManager.GetCategoryById(_id)
-
-        let res = CategoryManager.DeleteCategory(cat)
-
-        return res
+        XCTAssertTrue(FinanceController.DeleteCategory(12))
     }
 
     func testGetCategoriesByType(_type:PlanType) -> [CategoryItem]
@@ -94,54 +86,11 @@ class FinanceControllerTest: XCTestCase {
         return CategoryManager.GetCategoryById(_catId)
     }
 
-    func testAddPlan(_name:String,_amount:Double,_repeatitiontype:PlanRepetitionType,
-                        _repeatNumber:Int,_firstDate:NSDate,_cat:CategoryItem) -> Bool
+    func testAddPlan() 
     {
-        let newPlan = PlanItem()
-        newPlan.Name = _name
-        newPlan.Amount = _amount
-        newPlan.RepeatitionType = _repeatitiontype
-        newPlan.RepeatNumber = _repeatNumber
-        newPlan.FirstTimeDate = _firstDate
-
-        newPlan.PlanCategory = _cat
-
-        if PlanManager.AddPlan(newPlan)
-        {
-            return true
-        }
-        return false
+        XCTAssertTrue(FinanceController.AddPlan("P1", _amount: 150, _repeatitiontype: PlanRepetitionType.Recurring, _repeatNumber: 5, _firstDate: NSDate(), _cat: CategoryItem(_id: 12, _name: "c1", _type: PlanType.Income)))
     }
 
-
-    func testGetExpenseTotalEstimateAmountInCategory(_unitl:NSDate) -> [String:Double]
-    {
-        let totalExpense = AccountManager.GetTotalStimatedExpenenInCategory(_unitl)
-
-        return totalExpense
-
-    }
-
-    func testGetIncomeTotalEstimateAmountInCategory(_unitl:NSDate) -> [String:Double]
-    {
-        let totalIncomes = AccountManager.GetTotalStimatedIncomeInCategory(_unitl)
-
-        return totalIncomes
-    }
-
-    func testGetTotalEstimateBalance(_until:NSDate) -> Double
-    {
-        let estimatedBalance = AccountManager.GetEstimateAccountBalance(_until)
-        
-        return estimatedBalance
-    }
-    
-    func testUpdateAllList()
-    {
-        PlanManager.UpdatePlans()
-        
-        CategoryManager.UpdateCategories()
-    }
 
 
     

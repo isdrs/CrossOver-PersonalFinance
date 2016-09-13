@@ -92,6 +92,7 @@ class FinanceController{
 
         return res
     }
+    
     static func DeleteCategory(_id:Int) -> Bool
     {
         let cat = CategoryManager.GetCategoryById(_id)
