@@ -646,15 +646,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Personal",
-					Finance/Frameworks,
-					"$(PROJECT_DIR)/Personal",
 					Finance,
-					"$(PROJECT_DIR)/Personal",
-					Finance,
-					"$(PROJECT_DIR)/Personal",
-					Finance,
-					"$(PROJECT_DIR)/Personal",
-					Finance/Frameworks,
 				);
 				INFOPLIST_FILE = "Personal Finance/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -673,15 +665,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Personal",
-					Finance/Frameworks,
-					"$(PROJECT_DIR)/Personal",
 					Finance,
-					"$(PROJECT_DIR)/Personal",
-					Finance,
-					"$(PROJECT_DIR)/Personal",
-					Finance,
-					"$(PROJECT_DIR)/Personal",
-					Finance/Frameworks,
 				);
 				INFOPLIST_FILE = "Personal Finance/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
