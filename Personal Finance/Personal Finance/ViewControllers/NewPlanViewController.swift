@@ -15,8 +15,25 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var swhIsIncomeOutlet: UISwitch!
     @IBOutlet weak var swhRecurringOutlet: UISwitch!
     @IBOutlet weak var txtPlanAmount: UITextField!
+    @IBOutlet weak var txtRepeatNo: UITextField!
     @IBOutlet weak var btnAddOrUpdateOutlet: UIButton!
-    @IBAction func swhRecurringAction(sender: UISwitch) {
+    @IBAction func swhIsIncome(sender: AnyObject)
+    {
+        planCategories = FilterPlans()
+        
+        dpvPlanCategory.reloadComponent(0)
+    }
+    @IBAction func swhRecurringAction(sender: UISwitch)
+    {
+        if swhRecurringOutlet.on
+        {
+            txtRepeatNo.hidden = false
+            txtRepeatNo.text = ""
+        }
+        else
+        {
+            txtRepeatNo.hidden = true
+        }
     }
 
     @IBAction func btnAddOrUpdateNewPlan(sender: AnyObject) {
@@ -29,7 +46,9 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     var myPlan : PlanItem?
     
-    var myCategries : [CategoryItem]?
+    var allCategries : [CategoryItem]?
+    
+    var planCategories : [CategoryItem]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +57,20 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         {
             txtPlanName.text = myPlan?.Name
             
-            dpvPlanCategory.selectRow((myCategries!.indexOf((myPlan!.PlanCategory)))!, inComponent: 0, animated: false)
+            dpvPlanCategory.selectRow((allCategries!.indexOf((myPlan!.PlanCategory)))!, inComponent: 0, animated: false)
             
             swhIsIncomeOutlet.setOn((myPlan!.PlanCategory.Type.rawValue.TransactionTypeValue()) , animated: false)
             
             swhRecurringOutlet.setOn((myPlan!.RepeatitionType.rawValue.PlanTypeValue()), animated: false)
+            
+            if swhRecurringOutlet.on {
+                txtRepeatNo.hidden = false
+                txtRepeatNo.text = String(myPlan!.RepeatNumber)
+            }
+            else
+            {
+                txtRepeatNo.hidden = true
+            }
             
             dpvDate.date = myPlan!.FirstTimeDate
             
@@ -52,9 +80,24 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         // Do any additional setup after loading the view.
     }
+    
+    func FilterPlans() -> [CategoryItem] {
+        var filteredCats = [CategoryItem]()
+        
+        for cat in allCategries! {
+            
+            if cat.Type.rawValue.TransactionTypeValue() == swhIsIncomeOutlet.on {
+                filteredCats.append(cat)
+            }
+        }
+        
+        return filteredCats
+    }
 
     override func viewWillAppear(animated: Bool) {
-        myCategries = DBManager.GetCategoryItems()
+        allCategries = DBManager.GetCategoryItems()
+        
+        planCategories = FilterPlans()
         
         dpvPlanCategory.reloadComponent(0)
     }
@@ -69,11 +112,11 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return myCategries!.count
+        return planCategories!.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return myCategries![row].Name
+        return planCategories![row].Name
     }
     
     /*
