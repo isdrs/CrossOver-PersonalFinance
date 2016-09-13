@@ -78,6 +78,7 @@
 		8D1F66441D85C752001F2178 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66431D85C752001F2178 /* AccountItem.swift */; };
 		8D1F66461D85CEEF001F2178 /* PlanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66451D85CEEF001F2178 /* PlanManager.swift */; };
 		8D1F664A1D85CF3E001F2178 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66491D85CF3E001F2178 /* AccountManager.swift */; };
+		8D732DE91D87FDC000B3520B /* NewPlanViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D732DE81D87FDC000B3520B /* NewPlanViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		8D1F66431D85C752001F2178 /* AccountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountItem.swift; path = Items/AccountItem.swift; sourceTree = "<group>"; };
 		8D1F66451D85CEEF001F2178 /* PlanManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlanManager.swift; path = Managers/PlanManager.swift; sourceTree = "<group>"; };
 		8D1F66491D85CF3E001F2178 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountManager.swift; path = Managers/AccountManager.swift; sourceTree = "<group>"; };
+		8D732DE81D87FDC000B3520B /* NewPlanViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlanViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 			children = (
 				84F9F5D31D85125200F3AA47 /* Personal_FinanceTests.swift */,
 				84F9F5D51D85125200F3AA47 /* Info.plist */,
+				8D732DE81D87FDC000B3520B /* NewPlanViewControllerTest.swift */,
 			);
 			path = "Personal FinanceTests";
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				84BB86521D86E52B00267519 /* AccountItem.swift in Sources */,
 				84BB863B1D86BE9A00267519 /* Plans+CoreDataProperties.swift in Sources */,
 				84BB86531D86E52F00267519 /* ExpenceCategoryAmountCell.swift in Sources */,
+				8D732DE91D87FDC000B3520B /* NewPlanViewControllerTest.swift in Sources */,
 				84BB86551D86E5F500267519 /* ProjectExtentions.swift in Sources */,
 				84BB865A1D86E60D00267519 /* ReportViewController.swift in Sources */,
 				84BB86451D86D88600267519 /* SCLAlertView.swift in Sources */,
@@ -642,6 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -660,6 +665,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
