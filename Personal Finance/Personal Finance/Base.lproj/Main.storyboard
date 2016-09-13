@@ -619,6 +619,7 @@
                                             <constraints>
                                                 <constraint firstItem="Hin-DZ-77R" firstAttribute="bottom" secondItem="7Kh-85-zWm" secondAttribute="bottomMargin" id="0U1-O0-Qdq"/>
                                                 <constraint firstItem="Sa9-O3-ibJ" firstAttribute="centerY" secondItem="7Kh-85-zWm" secondAttribute="centerY" id="26K-Zs-adX"/>
+                                                <constraint firstItem="Sa9-O3-ibJ" firstAttribute="trailing" secondItem="7Kh-85-zWm" secondAttribute="trailingMargin" id="7fn-u6-qq9"/>
                                                 <constraint firstItem="Sa9-O3-ibJ" firstAttribute="centerX" secondItem="7Kh-85-zWm" secondAttribute="centerX" constant="217" id="9L2-sC-t2Q"/>
                                                 <constraint firstItem="Hin-DZ-77R" firstAttribute="top" secondItem="7Kh-85-zWm" secondAttribute="topMargin" id="SNm-Ql-DnR"/>
                                                 <constraint firstItem="Hin-DZ-77R" firstAttribute="leading" secondItem="7Kh-85-zWm" secondAttribute="leadingMargin" id="X5N-1E-JyS"/>
