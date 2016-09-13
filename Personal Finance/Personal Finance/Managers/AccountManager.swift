@@ -38,24 +38,77 @@ class AccountManager: NSObject {
         return estimateBalance
     }
 
-    static func GetTotalStimatedExpenen(_until:NSDate) -> [PlanItem: Double]
+    static func GetTotalExpense(_until:NSDate) -> Double
     {
-        var exPensePlans : [PlanItem : Double] = [:]
+        var totalAmount = 0.0
+
+        for item in PlanManager.GetPlansByType(PlanType.Expense)
+        {
+            totalAmount = totalAmount + item.GetPlanRemainingTotalAmount(_until)
+        }
+        return totalAmount
+    }
+
+    static func GetTotalIncome(_until:NSDate) -> Double
+    {
+        var totalAmount = 0.0
+
+        for item in PlanManager.GetPlansByType(PlanType.Income)
+        {
+            totalAmount = totalAmount + item.GetPlanRemainingTotalAmount(_until)
+        }
+        return totalAmount
+    }
+
+    static func GetTotalStimatedExpenenInCategory(_until:NSDate) -> [String: Double]
+    {
+        var exPensePlans : [String : Double] = [:]
+
+        let totalExpense = GetTotalExpense(_until)
+
         for item in PlanManager.GetPlansByType(PlanType.Expense)
         {
             let totalAmount = item.GetPlanRemainingTotalAmount(_until)
-            exPensePlans[item] = totalAmount
+
+            
+
+            if let catvalue = exPensePlans[item.PlanCategory.Name] as? Double?
+            {
+                exPensePlans[item.PlanCategory.Name] = catvalue! + totalAmount
+            }
+            else
+            {
+                exPensePlans[item.PlanCategory.Name] = totalAmount
+            }
+
+
+
+        }
+        for cat in exPensePlans.keys
+        {
+            exPensePlans[cat] = (exPensePlans[cat]! * 100.0 ) / totalExpense
         }
         return exPensePlans
     }
 
-    static func GetTotalStimatedIncome(_until:NSDate) -> [PlanItem: Double]
+    static func GetTotalStimatedIncomeInCategory(_until:NSDate) -> [String: Double]
     {
-        var inComePlans : [PlanItem : Double] = [:]
+        var inComePlans : [String : Double] = [:]
+
+        let totalIncome = GetTotalIncome(_until)
+
         for item in PlanManager.GetPlansByType(PlanType.Income)
         {
             let totalAmount = item.GetPlanRemainingTotalAmount(_until)
-            inComePlans[item] = totalAmount
+
+            let value = inComePlans[item.PlanCategory.Name]!.hashValue == 1 ?  inComePlans[item.PlanCategory.Name]!  : 0.0
+
+            inComePlans[item.PlanCategory.Name] = value + totalAmount
+        }
+
+        for cat in inComePlans.keys
+        {
+            inComePlans[cat] = (inComePlans[cat]! * 100.0 ) / totalIncome
         }
         return inComePlans
     }
