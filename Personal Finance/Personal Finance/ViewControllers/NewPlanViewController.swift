@@ -52,7 +52,7 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         if myPlan != nil
         {
             txtPlanName.text = myPlan?.Name

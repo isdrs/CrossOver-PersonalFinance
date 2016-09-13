@@ -23,7 +23,7 @@ class AccountManager: NSObject {
     }
     
 
-    static func EstimateAccountBalance(_unitl:NSDate) -> Double
+    static func GetEstimateAccountBalance(_unitl:NSDate) -> Double
     {
         let balance = 0.0
 
@@ -36,7 +36,7 @@ class AccountManager: NSObject {
         return estimateBalance
     }
 
-    static func GetTotalStimatedExpenenByCategory(_until:NSDate) -> [PlanItem: Double]
+    static func GetTotalStimatedExpenen(_until:NSDate) -> [PlanItem: Double]
     {
         var exPensePlans : [PlanItem : Double] = [:]
         for item in PlanManager.GetPlansByType(PlanType.Expense)
@@ -47,7 +47,7 @@ class AccountManager: NSObject {
         return exPensePlans
     }
 
-    static func GetTotalStimatedIncomeByCategory(_until:NSDate) -> [PlanItem: Double]
+    static func GetTotalStimatedIncome(_until:NSDate) -> [PlanItem: Double]
     {
         var inComePlans : [PlanItem : Double] = [:]
         for item in PlanManager.GetPlansByType(PlanType.Income)

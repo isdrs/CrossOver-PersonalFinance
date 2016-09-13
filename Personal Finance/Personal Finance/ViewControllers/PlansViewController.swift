@@ -22,7 +22,7 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         allPlans = DBManager.GetPlans()
         
         myPlans = FilterPlans()

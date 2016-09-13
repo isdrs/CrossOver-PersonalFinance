@@ -35,20 +35,117 @@ class FinanceController{
 
     static func GetIncomePlans() -> [PlanItem]
     {
-        return [PlanItem]()
+        let incomePlans = PlanManager.GetPlansByType(PlanType.Income)
+
+        return incomePlans
     }
 
     static func GetExpensePlans() -> [PlanItem]
     {
-        return [PlanItem]()
+        let expensePlans = PlanManager.GetPlansByType(PlanType.Expense)
+
+        return expensePlans
     }
 
-    static func DeletePlan() -> Bool
+    static func DeletePlan(_id:String) -> Bool
     {
-        return true
+        let plan = PlanItem(_id: _id)
+
+        let res = PlanManager.DeletePlan(plan)
+
+        return res
     }
 
+    static func GetExpenseCategory() -> [CategoryItem]
+    {
+        let expenseCats = CategoryManager.GetCategoryByType(PlanType.Expense)
+        return expenseCats
+    }
 
+    static func GetIncomeCategory() -> [CategoryItem]
+    {
+        let incomeCats = CategoryManager.GetCategoryByType(PlanType.Income)
+        return incomeCats
+    }
 
+    static func AddCategory(_catName:String,_catType:PlanType) -> Bool
+    {
+        let cat = CategoryItem(_name: _catName, _type: _catType)
+
+        let res = CategoryManager.AddCategory(cat)
+
+        return res
+    }
+    static func DeleteCategory(_id:Int) -> Bool
+    {
+        let cat = CategoryManager.GetCategoryById(_id)
+
+        let res = CategoryManager.DeleteCategory(cat)
+
+        return res
+    }
+
+    static func AddPlan(_name:String,_amount:Double,_repeatitiontype:PlanRepetitionType,
+                        _repeatNumber:Int,_firstDate:NSDate,_categoryId:Int) -> Bool
+    {
+        let newPlan = PlanItem()
+        newPlan.Name = _name
+        newPlan.Amount = _amount
+        newPlan.RepeatitionType = _repeatitiontype
+        newPlan.RepeatNumber = _repeatNumber
+        newPlan.FirstTimeDate = _firstDate
+
+        let cat = CategoryManager.GetCategoryById(_categoryId)
+
+        newPlan.PlanCategory = cat
+
+        if PlanManager.AddPlan(newPlan)
+        {
+            return true
+        }
+        return false
+    }
+
+    static func GetExpenseTotalEstimateAmount(_unitl:NSDate) -> [PlanItem:Double]
+    {
+        let totalExpense = AccountManager.GetTotalStimatedExpenen(_unitl)
+
+        return totalExpense
+
+    }
+
+    static func GetIncomeTotalEstimateAmount(_unitl:NSDate) -> [PlanItem:Double]
+    {
+        let totalIncomes = AccountManager.GetTotalStimatedIncome(_unitl)
+
+        return totalIncomes
+    }
+
+    static func GetTotalEstimateBalance(_until:NSDate) -> Double
+    {
+        let estimatedBalance = AccountManager.GetEstimateAccountBalance(_until)
+
+        return estimatedBalance
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

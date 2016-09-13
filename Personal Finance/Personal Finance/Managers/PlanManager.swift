@@ -115,6 +115,33 @@ class CategoryManager: NSObject {
     {
         catItems = DBManager.GetCategoryItems()
     }
+
+    static func GetCategoryById(_id:Int) -> CategoryItem
+    {
+        for cat in catItems
+        {
+            if cat.ID == _id
+            {
+                return cat
+            }
+        }
+        return CategoryItem()
+    }
+
+    static func GetCategoryByType(_type:PlanType) -> [CategoryItem]
+    {
+        var cats = [CategoryItem]()
+
+        for cat in catItems
+        {
+            if cat.Type.rawValue == _type.rawValue
+            {
+                cats.append(cat)
+            }
+        }
+
+        return cats
+    }
     
 }
 
