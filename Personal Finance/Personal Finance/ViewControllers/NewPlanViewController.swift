@@ -87,33 +87,7 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         super.viewDidLoad()
 
         self.hideKeyboardWhenTappedAround()
-
-//        if myPlan != nil
-//        {
-//            txtPlanName.text = myPlan?.Name
-//            
-//
-//            
-//            swhIsIncomeOutlet.setOn((myPlan!.PlanCategory.Type.rawValue.TransactionTypeValue()) , animated: false)
-//            
-//            swhRecurringOutlet.setOn((myPlan!.RepeatitionType.rawValue.PlanTypeValue()), animated: false)
-//            
-//            if swhRecurringOutlet.on {
-//                txtRepeatNo.hidden = false
-//                txtRepeatNo.text = String(myPlan!.RepeatNumber)
-//            }
-//            else
-//            {
-//                txtRepeatNo.hidden = true
-//            }
-//            
-//            dpvDate.date = myPlan!.FirstTimeDate
-//            
-//            txtPlanAmount.text = String(myPlan!.Amount)
-//            
-//        }
-
-        // Do any additional setup after loading the view.
+    
     }
 
     override func viewWillAppear(animated: Bool) {

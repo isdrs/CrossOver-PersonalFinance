@@ -11,7 +11,8 @@ import UIKit
 class ReportViewController: UIViewController{
 
     var expensePlans : [String:Double] = [:]
-    let incomePlans : [String:Double] = [:]
+
+    var incomePlans : [String:Double] = [:]
 
     @IBOutlet weak var lblEstimate: UILabel!
 
