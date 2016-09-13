@@ -576,6 +576,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yaw-LZ-RMo">
                                 <rect key="frame" x="531" y="125" width="51" height="31"/>
+                                <connections>
+                                    <action selector="swhIsIncomeAction:" destination="dq8-q4-vuQ" eventType="valueChanged" id="Ces-a1-mge"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfN-cq-PNb">
                                 <rect key="frame" x="277" y="178" width="46" height="30"/>

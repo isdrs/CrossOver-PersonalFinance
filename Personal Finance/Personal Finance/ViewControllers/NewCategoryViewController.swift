@@ -16,6 +16,11 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tblCategories: UITableView!
     
     var categories : [CategoryItem]?
+    var myCats : [CategoryItem]?
+    @IBAction func swhIsIncomeAction(sender: AnyObject)
+    {
+        LoadData()
+    }
     
     
     @IBAction func btnAddAction(sender: AnyObject)
@@ -27,6 +32,12 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
             
             if DBManager.AddCategoryItem(newCat)
             {
+                txtCatName.text = ""
+                
+                txtCatName.endEditing(true)
+                
+                categories!.append(newCat)
+                
                 LoadData()
             }
             else
@@ -44,6 +55,8 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
+        categories = DBManager.GetCategoryItems()
+        
         LoadData()
         
         // Do any additional setup after loading the view.
@@ -51,9 +64,21 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
     
     func LoadData()
     {
-        categories = DBManager.GetCategoryItems()
-        
         tblCategories.reloadData()
+    }
+    
+    func FilterPlans() -> [CategoryItem] {
+        
+        var filteredCats = [CategoryItem]()
+        
+        for cat in categories! {
+            
+            if cat.Type.rawValue.TransactionTypeValue() == swhIsIncome.on {
+                filteredCats.append(cat)
+            }
+        }
+        
+        return filteredCats
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -61,7 +86,10 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories!.count
+        
+        myCats = FilterPlans()
+        
+        return myCats!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -71,17 +99,20 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
         cell.layer.borderColor = UIColor.lightGrayColor().CGColor  // set cell border color here
         cell.layer.borderWidth = 1
         
-        cell.lblCatName.text = categories![indexPath.row].Name
-        cell.lblCatType.text = categories![indexPath.row].Type.rawValue.TransactionTypeName()
+        cell.lblCatName.text = myCats![indexPath.row].Name
+        cell.lblCatType.text = myCats![indexPath.row].Type.rawValue.TransactionTypeName()
         
         return cell
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            if DBManager.DeleteCategory(categories![indexPath.row])
+            if DBManager.DeleteCategory(myCats![indexPath.row])
             {
-                categories!.removeAtIndex(indexPath.row)
+                
+                let index = categories!.indexOf(myCats![indexPath.row])!
+                
+                categories!.removeAtIndex(index)
                 
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             }
