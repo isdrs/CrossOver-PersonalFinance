@@ -38,13 +38,38 @@ class AccountManager: NSObject {
         return estimateBalance
     }
 
+    static func GetTotalExpense(_until:NSDate) -> Double
+    {
+        var totalAmount = 0.0
+
+        for item in PlanManager.GetPlansByType(PlanType.Expense)
+        {
+            totalAmount = totalAmount + item.GetPlanRemainingTotalAmount(_until)
+        }
+        return totalAmount
+    }
+
+    static func GetTotalIncome(_until:NSDate) -> Double
+    {
+        var totalAmount = 0.0
+
+        for item in PlanManager.GetPlansByType(PlanType.Income)
+        {
+            totalAmount = totalAmount + item.GetPlanRemainingTotalAmount(_until)
+        }
+        return totalAmount
+    }
+
     static func GetTotalStimatedExpenen(_until:NSDate) -> [PlanItem: Double]
     {
         var exPensePlans : [PlanItem : Double] = [:]
+
+        let totalExpense = GetTotalExpense(_until)
+
         for item in PlanManager.GetPlansByType(PlanType.Expense)
         {
             let totalAmount = item.GetPlanRemainingTotalAmount(_until)
-            exPensePlans[item] = totalAmount
+            exPensePlans[item] = (totalAmount * 100.0 ) / totalExpense
         }
         return exPensePlans
     }
@@ -52,10 +77,13 @@ class AccountManager: NSObject {
     static func GetTotalStimatedIncome(_until:NSDate) -> [PlanItem: Double]
     {
         var inComePlans : [PlanItem : Double] = [:]
+
+        let totalIncome = GetTotalIncome(_until)
+
         for item in PlanManager.GetPlansByType(PlanType.Income)
         {
             let totalAmount = item.GetPlanRemainingTotalAmount(_until)
-            inComePlans[item] = totalAmount
+            inComePlans[item] = (totalAmount * 100.0 ) / totalIncome
         }
         return inComePlans
     }

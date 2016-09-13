@@ -36,6 +36,11 @@ class ReportViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let date = NSDate().dateByAddingTimeInterval(10000000)
+
+        expensePlans = FinanceController.GetExpenseTotalEstimateAmount(date)
+
+
         self.hideKeyboardWhenTappedAround()
 
         chart.datasource = self
@@ -97,6 +102,7 @@ extension ReportViewController : SChartDatasource
         let series = SChartPieSeries()
 
         series.style().labelFont = UIFont.systemFontOfSize(15)
+
         series.selectedStyle().protrusion = 30
 
         series.gesturePanningEnabled = true

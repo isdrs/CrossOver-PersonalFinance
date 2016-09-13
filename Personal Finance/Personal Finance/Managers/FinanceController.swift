@@ -131,6 +131,8 @@ class FinanceController{
         return false
     }
 
+    
+
     static func GetExpenseTotalEstimateAmount(_unitl:NSDate) -> [PlanItem:Double]
     {
         let totalExpense = AccountManager.GetTotalStimatedExpenen(_unitl)
