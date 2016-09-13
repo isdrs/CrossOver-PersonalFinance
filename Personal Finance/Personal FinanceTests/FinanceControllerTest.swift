@@ -41,8 +41,6 @@ class FinanceControllerTest: XCTestCase {
         XCTAssertTrue(FinanceController.AddPlan("TestPlan", _amount: Double(114), _repeatitiontype: .Ad_hoc, _repeatNumber: 0, _firstDate: NSDate(), _cat: category))
         
     }
-    
-
 
     func testGetAccount()  {
         XCTAssertNotNil(FinanceController.GetAccount(), "Most have account")
