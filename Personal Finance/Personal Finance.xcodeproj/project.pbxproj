@@ -26,8 +26,8 @@
 		8429DD1A1D8688EF00FA6E77 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD0A1D8688EF00FA6E77 /* IQTitleBarButtonItem.swift */; };
 		8429DD1B1D8688EF00FA6E77 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD0B1D8688EF00FA6E77 /* IQToolbar.swift */; };
 		8429DD1C1D8688EF00FA6E77 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD0C1D8688EF00FA6E77 /* IQUIView+IQKeyboardToolbar.swift */; };
-		84AD60FE1D87CB5F00D4ADB4 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AD60FD1D87CB5F00D4ADB4 /* ShinobiCharts.framework */; };
-		84AD60FF1D87CB5F00D4ADB4 /* ShinobiCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84AD60FD1D87CB5F00D4ADB4 /* ShinobiCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84AD61011D87D5DF00D4ADB4 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AD61001D87D5DF00D4ADB4 /* ShinobiCharts.framework */; };
+		84AD61021D87D5DF00D4ADB4 /* ShinobiCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84AD61001D87D5DF00D4ADB4 /* ShinobiCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84BB863A1D86BE9A00267519 /* Plans+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86321D86BE9A00267519 /* Plans+CoreDataProperties.swift */; };
 		84BB863B1D86BE9A00267519 /* Plans+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86321D86BE9A00267519 /* Plans+CoreDataProperties.swift */; };
 		84BB863C1D86BE9A00267519 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86331D86BE9A00267519 /* Plans.swift */; };
@@ -97,7 +97,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				84AD60FF1D87CB5F00D4ADB4 /* ShinobiCharts.framework in Embed Frameworks */,
+				84AD61021D87D5DF00D4ADB4 /* ShinobiCharts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -125,7 +125,7 @@
 		8429DD0A1D8688EF00FA6E77 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
 		8429DD0B1D8688EF00FA6E77 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		8429DD0C1D8688EF00FA6E77 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
-		84AD60FD1D87CB5F00D4ADB4 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = "Personal Finance/Frameworks/ShinobiCharts.framework"; sourceTree = "<group>"; };
+		84AD61001D87D5DF00D4ADB4 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = "Personal Finance/Frameworks/ShinobiCharts.framework"; sourceTree = "<group>"; };
 		84BB86321D86BE9A00267519 /* Plans+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Plans+CoreDataProperties.swift"; path = "ManagedObjects/Plans+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84BB86331D86BE9A00267519 /* Plans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plans.swift; path = ManagedObjects/Plans.swift; sourceTree = "<group>"; };
 		84BB86341D86BE9A00267519 /* Categories+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Categories+CoreDataProperties.swift"; path = "ManagedObjects/Categories+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84AD60FE1D87CB5F00D4ADB4 /* ShinobiCharts.framework in Frameworks */,
+				84AD61011D87D5DF00D4ADB4 /* ShinobiCharts.framework in Frameworks */,
 				8D1BDC4C1D87B0CD0041920A /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +258,7 @@
 		84F9F5AF1D85125200F3AA47 = {
 			isa = PBXGroup;
 			children = (
-				84AD60FD1D87CB5F00D4ADB4 /* ShinobiCharts.framework */,
+				84AD61001D87D5DF00D4ADB4 /* ShinobiCharts.framework */,
 				8D1BDC4B1D87B0CD0041920A /* libc++.tbd */,
 				84F9F5BA1D85125200F3AA47 /* Personal Finance */,
 				84F9F5D21D85125200F3AA47 /* Personal FinanceTests */,
