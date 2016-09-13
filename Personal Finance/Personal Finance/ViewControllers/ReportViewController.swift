@@ -30,6 +30,7 @@ class ReportViewController: UIViewController{
         lblEstimate.text = String(totalEstimate)
 
         chart.reloadData()
+        
 
     }
 
