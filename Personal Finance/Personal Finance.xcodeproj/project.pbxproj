@@ -38,6 +38,7 @@
 		84AD611C1D88764C00D4ADB4 /* Plans+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD61191D88764C00D4ADB4 /* Plans+CoreDataProperties.swift */; };
 		84AD611D1D88764C00D4ADB4 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD611A1D88764C00D4ADB4 /* Plans.swift */; };
 		84AD611E1D88764C00D4ADB4 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD611A1D88764C00D4ADB4 /* Plans.swift */; };
+		84AD61201D887A8D00D4ADB4 /* FinanceControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD611F1D887A8D00D4ADB4 /* FinanceControllerTest.swift */; };
 		84BB86441D86D88600267519 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86421D86D88600267519 /* SCLAlertView.swift */; };
 		84BB86451D86D88600267519 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86421D86D88600267519 /* SCLAlertView.swift */; };
 		84BB86461D86D88600267519 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86431D86D88600267519 /* SCLExtensions.swift */; };
@@ -151,6 +152,7 @@
 		84AD610E1D882F4C00D4ADB4 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categories.swift; path = ManagedObjects/Categories.swift; sourceTree = "<group>"; };
 		84AD61191D88764C00D4ADB4 /* Plans+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Plans+CoreDataProperties.swift"; path = "ManagedObjects/Plans+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84AD611A1D88764C00D4ADB4 /* Plans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plans.swift; path = ManagedObjects/Plans.swift; sourceTree = "<group>"; };
+		84AD611F1D887A8D00D4ADB4 /* FinanceControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceControllerTest.swift; sourceTree = "<group>"; };
 		84BB86421D86D88600267519 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = Tools/SCLAlertView.swift; sourceTree = "<group>"; };
 		84BB86431D86D88600267519 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = Tools/SCLExtensions.swift; sourceTree = "<group>"; };
 		84BB864E1D86E01F00267519 /* NewCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewCategoryViewController.swift; path = ViewControllers/NewCategoryViewController.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				84F9F5D31D85125200F3AA47 /* Personal_FinanceTests.swift */,
 				84F9F5D51D85125200F3AA47 /* Info.plist */,
 				8D732DE81D87FDC000B3520B /* NewPlanViewControllerTest.swift */,
+				84AD611F1D887A8D00D4ADB4 /* FinanceControllerTest.swift */,
 			);
 			path = "Personal FinanceTests";
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				84BB86601D86E63100267519 /* Personal_Finance.xcdatamodeld in Sources */,
 				8D732DF81D88055B00B3520B /* IQTitleBarButtonItem.swift in Sources */,
 				8D732DF31D88054A00B3520B /* IQKeyboardManagerConstants.swift in Sources */,
+				84AD61201D887A8D00D4ADB4 /* FinanceControllerTest.swift in Sources */,
 				84BB86471D86D88600267519 /* SCLExtensions.swift in Sources */,
 				84BB865B1D86E61000267519 /* PlansViewController.swift in Sources */,
 				8D732DF41D88054A00B3520B /* IQKeyboardManagerConstantsInternal.swift in Sources */,
@@ -726,8 +730,8 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Personal",
-					Finance,
+					"$(PROJECT_DIR)",
+					"\"$(PROJECT_DIR)/Personal Finance\"",
 				);
 				INFOPLIST_FILE = "Personal FinanceTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -744,8 +748,8 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Personal",
-					Finance,
+					"$(PROJECT_DIR)",
+					"\"$(PROJECT_DIR)/Personal Finance\"",
 				);
 				INFOPLIST_FILE = "Personal FinanceTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
