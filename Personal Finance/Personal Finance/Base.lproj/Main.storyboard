@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Bank Info View Controller-->
+        <!--Bank Info-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="BankInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="BankInfoViewController" customModule="Personal_Finance" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,45 +22,41 @@
                                 <rect key="frame" x="20" y="72" width="560" height="355"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bank Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="WxO-53-1Z7">
-                                        <rect key="frame" x="0.0" y="196" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="163" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWx-l3-E9p">
-                                        <rect key="frame" x="215" y="305" width="131" height="30"/>
+                                        <rect key="frame" x="215" y="228" width="131" height="107"/>
                                         <state key="normal" title="Save And Continue"/>
                                         <connections>
                                             <segue destination="SFJ-sV-yxF" kind="push" identifier="loadHome" id="9vX-V1-hWL"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account Number" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKr-Um-VQD">
-                                        <rect key="frame" x="0.0" y="240" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="201" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your bank account info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdA-Wd-ACt">
-                                        <rect key="frame" x="203" y="26" width="154" height="43"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="154" id="BSV-XJ-6qW"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="gKr-Um-VQD" firstAttribute="top" secondItem="WxO-53-1Z7" secondAttribute="bottom" constant="14" id="Cw6-0M-iI0"/>
                                     <constraint firstItem="WxO-53-1Z7" firstAttribute="leading" secondItem="anW-bX-xDh" secondAttribute="leading" id="EJQ-99-KaJ"/>
-                                    <constraint firstItem="YdA-Wd-ACt" firstAttribute="top" secondItem="anW-bX-xDh" secondAttribute="topMargin" constant="18" id="HQQ-2t-9O0"/>
                                     <constraint firstItem="gWx-l3-E9p" firstAttribute="centerX" secondItem="gKr-Um-VQD" secondAttribute="centerX" id="JXQ-aY-I4e"/>
-                                    <constraint firstItem="gWx-l3-E9p" firstAttribute="top" secondItem="gKr-Um-VQD" secondAttribute="bottom" constant="35" id="SnU-8u-Vu6"/>
+                                    <constraint firstItem="gKr-Um-VQD" firstAttribute="centerY" secondItem="anW-bX-xDh" secondAttribute="centerY" constant="38.5" id="S0I-Pf-42i"/>
+                                    <constraint firstItem="gWx-l3-E9p" firstAttribute="top" secondItem="gKr-Um-VQD" secondAttribute="bottom" constant="-3" id="SnU-8u-Vu6"/>
                                     <constraint firstAttribute="bottom" secondItem="gWx-l3-E9p" secondAttribute="bottom" constant="20" id="VNC-ZD-ceD"/>
+                                    <constraint firstItem="WxO-53-1Z7" firstAttribute="centerY" secondItem="anW-bX-xDh" secondAttribute="centerY" id="cnm-WZ-n9t"/>
                                     <constraint firstItem="gKr-Um-VQD" firstAttribute="leading" secondItem="anW-bX-xDh" secondAttribute="leading" id="eC1-H6-r3y"/>
                                     <constraint firstAttribute="trailing" secondItem="gKr-Um-VQD" secondAttribute="trailing" id="gwM-hp-1aL"/>
-                                    <constraint firstItem="YdA-Wd-ACt" firstAttribute="centerX" secondItem="WxO-53-1Z7" secondAttribute="centerX" id="hSO-gi-f2u"/>
                                     <constraint firstAttribute="trailing" secondItem="WxO-53-1Z7" secondAttribute="trailing" id="ta1-HF-dee"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Cw6-0M-iI0"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -71,13 +67,13 @@
                             <constraint firstItem="anW-bX-xDh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wXM-Gb-BWV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fv0-0r-JWr"/>
+                    <navigationItem key="navigationItem" title="Bank Info" id="fv0-0r-JWr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1160" y="431"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="H1u-oe-jui">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SFJ-sV-yxF" customClass="HomeViewController" customModule="Personal_Finance" customModuleProvider="target" sceneMemberID="viewController">
@@ -204,7 +200,7 @@
                             <constraint firstItem="FGK-08-7x2" firstAttribute="top" secondItem="sbn-6a-O3k" secondAttribute="bottom" constant="35" id="sjY-8e-8ZJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Gzh-ig-AHI"/>
+                    <navigationItem key="navigationItem" title="Home" id="Gzh-ig-AHI"/>
                     <connections>
                         <outlet property="lblHomeAccountBalance" destination="XyT-0T-YIL" id="gMI-Ft-bZA"/>
                         <outlet property="lblUserName" destination="bTM-ny-mks" id="nzr-dA-Wlx"/>
@@ -232,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="483" y="431"/>
         </scene>
-        <!--Plans View Controller-->
+        <!--Plans List-->
         <scene sceneID="o87-Er-hhG">
             <objects>
                 <viewController storyboardIdentifier="PlansViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jTQ-rT-WXs" customClass="PlansViewController" customModule="Personal_Finance" customModuleProvider="target" sceneMemberID="viewController">
@@ -356,7 +352,7 @@
                             <constraint firstItem="ABQ-iT-eO6" firstAttribute="leading" secondItem="EqK-KX-D0U" secondAttribute="leading" id="yk3-n9-a3p"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lAM-BZ-sSQ">
+                    <navigationItem key="navigationItem" title="Plans List" id="lAM-BZ-sSQ">
                         <barButtonItem key="rightBarButtonItem" title="New Plan" id="kD6-ob-fqw">
                             <connections>
                                 <segue destination="znF-3C-koc" kind="push" identifier="loadNewPlan" id="kca-So-fOC"/>
@@ -372,7 +368,7 @@
             </objects>
             <point key="canvasLocation" x="2547" y="431"/>
         </scene>
-        <!--New Plan View Controller-->
+        <!--New Plan-->
         <scene sceneID="MeG-7J-GGs">
             <objects>
                 <viewController storyboardIdentifier="NewPlanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="znF-3C-koc" customClass="NewPlanViewController" customModule="Personal_Finance" customModuleProvider="target" sceneMemberID="viewController">
@@ -502,7 +498,7 @@
                             <constraint firstItem="fVe-Tl-2hi" firstAttribute="leading" secondItem="SO8-Sz-PNX" secondAttribute="leadingMargin" id="xhS-Q4-VSi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fK2-0v-6k7"/>
+                    <navigationItem key="navigationItem" title="New Plan" id="fK2-0v-6k7"/>
                     <connections>
                         <outlet property="btnAddOrUpdateOutlet" destination="fo5-Ij-SBi" id="ggv-6l-BZd"/>
                         <outlet property="dpvDate" destination="1bF-UC-Xer" id="jzy-ou-TDh"/>
@@ -517,7 +513,7 @@
             </objects>
             <point key="canvasLocation" x="3222" y="431"/>
         </scene>
-        <!--New Category View Controller-->
+        <!--New Category-->
         <scene sceneID="Y4G-1S-FDo">
             <objects>
                 <viewController storyboardIdentifier="NewCategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dq8-q4-vuQ" customClass="NewCategoryViewController" customModule="Personal_Finance" customModuleProvider="target" sceneMemberID="viewController">
@@ -568,7 +564,7 @@
                             <constraint firstItem="Yaw-LZ-RMo" firstAttribute="top" secondItem="rvg-8f-D9H" secondAttribute="bottom" constant="23" id="xCX-mn-pqo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1Bn-MS-Cc4"/>
+                    <navigationItem key="navigationItem" title="New Category" id="1Bn-MS-Cc4"/>
                     <connections>
                         <outlet property="swhIsIncome" destination="Yaw-LZ-RMo" id="wVm-73-xJl"/>
                         <outlet property="txtCatName" destination="rvg-8f-D9H" id="tun-L5-lqr"/>
@@ -578,7 +574,7 @@
             </objects>
             <point key="canvasLocation" x="3222" y="1207"/>
         </scene>
-        <!--Report View Controller-->
+        <!--Report-->
         <scene sceneID="rdz-YD-RYT">
             <objects>
                 <viewController storyboardIdentifier="ReportViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D6Q-I1-Nnh" customClass="ReportViewController" customModule="Personal_Finance" customModuleProvider="target" sceneMemberID="viewController">
@@ -602,16 +598,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lqw-AN-25c">
-                                        <rect key="frame" x="129" y="81" width="302" height="109"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="302" id="3W2-V9-PxZ"/>
-                                            <constraint firstAttribute="height" constant="109" id="RhQ-Wz-0fo"/>
-                                        </constraints>
-                                        <date key="date" timeIntervalSinceReferenceDate="495386680.555035">
-                                            <!--۱۳۹۵-۰۶-۲۲ ۱۵:۲۴:۴۰ +0000-->
-                                        </date>
-                                    </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOC-Ks-Bhx">
                                         <rect key="frame" x="250" y="205" width="60" height="30"/>
                                         <constraints>
@@ -627,12 +613,6 @@
                                             <action selector="btnEstimateAction:" destination="D6Q-I1-Nnh" eventType="touchUpInside" id="GUZ-Yn-LiW"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Until" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5E-si-BSH">
-                                        <rect key="frame" x="235" y="52" width="92" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZP-Ko-Qkz" customClass="ShinobiChart">
                                         <rect key="frame" x="143" y="284" width="276" height="276"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -641,19 +621,26 @@
                                             <constraint firstAttribute="height" constant="276" id="RxR-Au-mza"/>
                                         </constraints>
                                     </view>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lqw-AN-25c">
+                                        <rect key="frame" x="129" y="66" width="302" height="131"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="302" id="3W2-V9-PxZ"/>
+                                            <constraint firstAttribute="height" constant="131" id="RhQ-Wz-0fo"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="495386680.555035">
+                                            <!--۱۳۹۵-۰۶-۲۲ ۱۵:۲۴:۴۰ +0000-->
+                                        </date>
+                                    </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="b5E-si-BSH" firstAttribute="centerX" secondItem="4iP-Uy-fgO" secondAttribute="centerX" constant="1" id="0Wx-Ad-fx9"/>
                                     <constraint firstItem="3ZP-Ko-Qkz" firstAttribute="centerX" secondItem="4iP-Uy-fgO" secondAttribute="centerX" constant="1" id="6Q6-fc-jgB"/>
                                     <constraint firstAttribute="bottom" secondItem="3ZP-Ko-Qkz" secondAttribute="bottom" id="96d-cl-3jI"/>
-                                    <constraint firstItem="lqw-AN-25c" firstAttribute="top" secondItem="b5E-si-BSH" secondAttribute="bottom" constant="8" symbolic="YES" id="G8k-4S-WxD"/>
-                                    <constraint firstItem="AOC-Ks-Bhx" firstAttribute="top" secondItem="lqw-AN-25c" secondAttribute="bottom" constant="15" id="KT5-Hl-Yb7"/>
+                                    <constraint firstItem="AOC-Ks-Bhx" firstAttribute="top" secondItem="lqw-AN-25c" secondAttribute="bottom" constant="8" id="KT5-Hl-Yb7"/>
                                     <constraint firstItem="ovf-lM-s8O" firstAttribute="centerX" secondItem="AOC-Ks-Bhx" secondAttribute="centerX" id="XQB-NJ-k32"/>
                                     <constraint firstItem="3ZP-Ko-Qkz" firstAttribute="top" secondItem="ovf-lM-s8O" secondAttribute="bottom" constant="8" symbolic="YES" id="Zxd-mW-vMo"/>
                                     <constraint firstItem="lqw-AN-25c" firstAttribute="centerX" secondItem="AOC-Ks-Bhx" secondAttribute="centerX" id="qwa-s8-aOa"/>
                                     <constraint firstItem="AOC-Ks-Bhx" firstAttribute="centerX" secondItem="4iP-Uy-fgO" secondAttribute="centerX" id="riJ-LT-yze"/>
-                                    <constraint firstItem="b5E-si-BSH" firstAttribute="top" secondItem="4iP-Uy-fgO" secondAttribute="top" constant="52" id="wyN-xX-hcg"/>
                                     <constraint firstItem="lqw-AN-25c" firstAttribute="centerX" secondItem="4iP-Uy-fgO" secondAttribute="centerX" id="xjh-Yc-XsZ"/>
                                     <constraint firstItem="ovf-lM-s8O" firstAttribute="top" secondItem="AOC-Ks-Bhx" secondAttribute="bottom" constant="20" id="yN0-hz-Y3c"/>
                                 </constraints>
@@ -672,7 +659,7 @@
                             <constraint firstItem="4iP-Uy-fgO" firstAttribute="centerX" secondItem="cS4-YF-mb1" secondAttribute="centerX" id="yIy-Io-uRn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Yqh-SK-mHw"/>
+                    <navigationItem key="navigationItem" title="Report" id="Yqh-SK-mHw"/>
                     <connections>
                         <outlet property="chart" destination="3ZP-Ko-Qkz" id="RLH-aP-Bof"/>
                         <outlet property="dpvDate" destination="lqw-AN-25c" id="DsU-z7-uIl"/>
