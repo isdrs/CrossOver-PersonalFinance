@@ -147,7 +147,7 @@ class PlanItem: NSObject {
 
         for plan in eventsDate
         {
-            if isEqualOrAfterDate(plan)
+            if isEqualOrAfterDate(plan, _until: _until)
             {
                 count = count + 1
             }
@@ -155,17 +155,16 @@ class PlanItem: NSObject {
         return Double(count) * self.amount
     }
 
-    private func isEqualOrAfterDate(_until:NSDate) -> Bool
+    private func isEqualOrAfterDate(_planDate:NSDate, _until:NSDate) -> Bool
     {
 
 
-        let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
-        var components = calendar.components([.Day , .Month , .Year], fromDate: date)
+        var components = calendar.components([.Day , .Month , .Year], fromDate: _planDate)
 
-        let nowYear =  components.year
-        let nowMonth = components.month
-        let nowDay = components.day
+        let planYear =  components.year
+        let planMonth = components.month
+        let planDay = components.day
 
 
         components = calendar.components([.Day , .Month , .Year], fromDate: _until)
@@ -174,19 +173,19 @@ class PlanItem: NSObject {
         let untilMonth = components.month
         let untilDay = components.day
 
-        if untilYear > nowYear
+        if untilYear > planYear
         {
             return true
         }
-        else if untilYear == nowYear
+        else if untilYear == planYear
         {
-            if untilMonth > nowMonth
+            if untilMonth > planMonth
             {
                 return true
             }
-            else if untilMonth == nowMonth
+            else if untilMonth == planMonth
             {
-                if untilDay >= nowDay
+                if untilDay >= planDay
                 {
                     return true
                 }

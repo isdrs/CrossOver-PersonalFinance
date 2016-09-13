@@ -28,7 +28,8 @@ class ReportViewController: UIViewController{
         let totalEstimate = FinanceController.GetTotalEstimateBalance(_until)
 
         lblEstimate.text = String(totalEstimate)
-        
+
+        chart.reloadData()
 
     }
 
