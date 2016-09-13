@@ -10,16 +10,31 @@ import UIKit
 
 class ReportViewController: UIViewController{
 
-    let languageData = ProgrammingLanguageDataStore.generate()
+    var expensePlans : [PlanItem:Double] = [:]
+    let incomePlans : [PlanItem:Double] = [:]
+
+    @IBOutlet weak var lblEstimate: UILabel!
 
     @IBOutlet weak var chart: ShinobiChart!
     
     @IBOutlet weak var dpvDate: UIDatePicker!
+
     @IBAction func btnEstimateAction(sender: AnyObject) {
+
+        let _until = dpvDate.date
+
+        expensePlans = FinanceController.GetExpenseTotalEstimateAmount(_until)
+
+        let totalEstimate = FinanceController.GetTotalEstimateBalance(_until)
+
+        lblEstimate.text = String(totalEstimate)
+        
+
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.hideKeyboardWhenTappedAround()
 
         chart.datasource = self
@@ -48,19 +63,7 @@ class ReportViewController: UIViewController{
 }
 
 
-struct ProgrammingLanguage {
-    let name: String
-    let popularity: Double
-}
 
-class ProgrammingLanguageDataStore {
-    class func generate() -> [ProgrammingLanguage]
-    {
-        return [ProgrammingLanguage(name: "C#",popularity: 50) ,
-                ProgrammingLanguage(name: "C++",popularity: 20) ,
-                ProgrammingLanguage(name: "Java",popularity: 30) ]
-    }
-}
 
 extension ReportViewController : SChartDatasource
 {
@@ -71,19 +74,20 @@ extension ReportViewController : SChartDatasource
 
 
     func sChart(chart: ShinobiChart, dataPointAtIndex dataIndex: Int, forSeriesAtIndex seriesIndex: Int) -> SChartData {
-        let language = languageData[dataIndex]
+
+        let plan = expensePlans.keys.first
 
         let dataPoint = SChartRadialDataPoint()
 
-        dataPoint.name = language.name
-        dataPoint.value = language.popularity
+        dataPoint.name = plan!.Name
+        dataPoint.value = expensePlans[plan!]
 
         return dataPoint
     }
 
 
     func sChart(chart: ShinobiChart, numberOfDataPointsForSeriesAtIndex seriesIndex: Int) -> Int {
-        return languageData.count
+        return expensePlans.count
     }
 
     func sChart(chart: ShinobiChart, seriesAtIndex index: Int) -> SChartSeries {
