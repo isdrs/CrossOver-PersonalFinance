@@ -20,24 +20,29 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func btnAddAction(sender: AnyObject)
     {
-        
-        if txtCatName.text != ""
-        {
-            let newCat = CategoryItem(_name: txtCatName.text!, _type: swhIsIncome.on ? .Income : .Expense)
-            
-            if DBManager.AddCategoryItem(newCat)
+
+            let catName = txtCatName.text!
+
+            let _type = swhIsIncome.on ? PlanType.Income : PlanType.Expense
+
+
+
+            if catName != ""
             {
-                LoadData()
+            
+                if FinanceController.AddCategory(catName, _catType: _type)
+                {
+                    LoadData()
+                }
+                else
+                {
+                    SCLAlertView().showError("Error", subTitle: "Cannot Save Category")
+                }
             }
             else
             {
-                SCLAlertView().showError("Error", subTitle: "Cannot Save Category")
+                SCLAlertView().showError("Warning", subTitle: "Please fill category name")
             }
-        }
-        else
-        {
-            SCLAlertView().showNotice("Notice", subTitle: "Please enter your name")
-        }
     }
 
     override func viewDidLoad() {
@@ -51,7 +56,9 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
     
     func LoadData()
     {
-        categories = DBManager.GetCategoryItems()
+        let _type = swhIsIncome.on ? PlanType.Income : PlanType.Expense
+        
+        categories = FinanceController.GetCategoriesByType(_type)
         
         tblCategories.reloadData()
     }
@@ -79,9 +86,14 @@ class NewCategoryViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            if DBManager.DeleteCategory(categories![indexPath.row])
+
+            let cat = categories![indexPath.row]
+
+            if FinanceController.DeleteCategory(cat.ID)
             {
-                categories!.removeAtIndex(indexPath.row)
+                let _type = swhIsIncome.on ? PlanType.Income : PlanType.Expense
+
+                categories = FinanceController.GetCategoriesByType(_type)
                 
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             }

@@ -30,8 +30,9 @@ class FinanceController{
     static func UpdateBalance(_accountNumber:String) -> Double
     {
 
-        return 0.0
+        return 1000.0
     }
+
 
     static func GetIncomePlans() -> [PlanItem]
     {
@@ -85,10 +86,9 @@ class FinanceController{
         return res
     }
 
-    static func GetCategoriesByType(isIncome:Bool) -> [CategoryItem]
+    static func GetCategoriesByType(_type:PlanType) -> [CategoryItem]
     {
-        let _type = isIncome ? PlanType.Income :  PlanType.Expense
-
+      
         return CategoryManager.GetCategoryByType(_type)
     }
 

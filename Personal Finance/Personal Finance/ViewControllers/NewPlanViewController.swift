@@ -26,7 +26,9 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 
     @IBAction func swhIsIncome(sender: AnyObject)
     {
-        planCategories = FinanceController.GetCategoriesByType(swhIsIncomeOutlet.on)
+        let _type = swhIsIncomeOutlet.on ? PlanType.Income : PlanType.Expense
+
+        planCategories = FinanceController.GetCategoriesByType(_type)
         
         dpvPlanCategory.reloadComponent(0)
     }
@@ -116,7 +118,9 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 
     override func viewWillAppear(animated: Bool) {
 
-        planCategories = FinanceController.GetCategoriesByType(swhIsIncomeOutlet.on)
+         let _type = swhIsIncomeOutlet.on ? PlanType.Income : PlanType.Expense
+
+        planCategories = FinanceController.GetCategoriesByType(_type)
         
         dpvPlanCategory.reloadComponent(0)
     }
