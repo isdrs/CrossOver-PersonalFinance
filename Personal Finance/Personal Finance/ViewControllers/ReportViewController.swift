@@ -132,7 +132,7 @@ extension ReportViewController : SChartDatasource
 extension ReportViewController : SChartDelegate
 {
     func sChart(chart: ShinobiChart, alterLabel label: UILabel, forDatapoint datapoint: SChartRadialDataPoint, atSliceIndex index: Int, inRadialSeries series: SChartRadialSeries) {
-        label.text = datapoint.name! + "(" + String(datapoint.value!) + ")"
+        label.text = datapoint.name! + " (" + String(datapoint.value!) + "%)"
     }
 }
 
