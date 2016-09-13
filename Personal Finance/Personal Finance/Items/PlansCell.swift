@@ -11,6 +11,5 @@ import UIKit
 class PlansCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblType: UILabel!
-    @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblAmount: UILabel!
 }

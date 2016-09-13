@@ -134,7 +134,7 @@ class CategoryManager: NSObject {
 
         for cat in catItems
         {
-            if cat.Type.rawValue == _type.rawValue
+            if cat.Type == _type
             {
                 cats.append(cat)
             }

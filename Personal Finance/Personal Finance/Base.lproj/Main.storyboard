@@ -249,49 +249,40 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="703-Cq-pLB">
-                                                            <rect key="frame" x="416" y="8" width="184" height="27"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMk-zN-kYS">
+                                                            <rect key="frame" x="13" y="0.0" width="166" height="27"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="166" id="JwQ-Xp-Ozf"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFO-gs-Qsz">
-                                                            <rect key="frame" x="228" y="11" width="145" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="703-Cq-pLB">
+                                                            <rect key="frame" x="409" y="8" width="183" height="27"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="145" id="KOs-90-iGH"/>
+                                                                <constraint firstAttribute="width" constant="183" id="jd2-xl-IFv"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMk-zN-kYS">
-                                                            <rect key="frame" x="13" y="0.0" width="200" height="27"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0" green="1" blue="0.91913259589999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="cFO-gs-Qsz" firstAttribute="centerY" secondItem="703-Cq-pLB" secondAttribute="centerY" id="59v-rT-acC"/>
                                                         <constraint firstItem="sMk-zN-kYS" firstAttribute="top" secondItem="fl1-ag-in3" secondAttribute="topMargin" constant="-8" id="5R4-xe-hcI"/>
                                                         <constraint firstItem="703-Cq-pLB" firstAttribute="top" secondItem="fl1-ag-in3" secondAttribute="topMargin" id="TJa-8l-AH4"/>
                                                         <constraint firstItem="sMk-zN-kYS" firstAttribute="leading" secondItem="fl1-ag-in3" secondAttribute="leadingMargin" constant="5" id="WBz-qN-TTe"/>
                                                         <constraint firstItem="703-Cq-pLB" firstAttribute="bottom" secondItem="fl1-ag-in3" secondAttribute="bottomMargin" id="a7g-H7-ra7"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="703-Cq-pLB" secondAttribute="trailing" constant="-8" id="cLi-Tk-HAs"/>
-                                                        <constraint firstItem="703-Cq-pLB" firstAttribute="leading" secondItem="cFO-gs-Qsz" secondAttribute="trailing" constant="43" id="f8v-Ce-QqP"/>
-                                                        <constraint firstItem="cFO-gs-Qsz" firstAttribute="leading" secondItem="sMk-zN-kYS" secondAttribute="trailing" constant="15" id="gmX-Es-iPW"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="703-Cq-pLB" secondAttribute="trailing" id="cLi-Tk-HAs"/>
                                                         <constraint firstItem="rxm-3J-LZg" firstAttribute="leading" secondItem="fl1-ag-in3" secondAttribute="leadingMargin" constant="5" id="hvS-ia-vpe"/>
-                                                        <constraint firstItem="cFO-gs-Qsz" firstAttribute="centerX" secondItem="fl1-ag-in3" secondAttribute="centerX" id="jbu-FQ-XCJ"/>
                                                         <constraint firstItem="rxm-3J-LZg" firstAttribute="top" secondItem="sMk-zN-kYS" secondAttribute="bottom" constant="-4" id="l2g-rN-tRM"/>
-                                                        <constraint firstItem="cFO-gs-Qsz" firstAttribute="centerY" secondItem="fl1-ag-in3" secondAttribute="centerY" id="qT6-xu-CgL"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="rxm-3J-LZg" secondAttribute="bottom" constant="-8" id="s7s-iH-smi"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.91913259589999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <outlet property="lblAmount" destination="703-Cq-pLB" id="isk-Qv-hTl"/>
-                                                    <outlet property="lblDate" destination="cFO-gs-Qsz" id="Dik-4F-mDj"/>
                                                     <outlet property="lblName" destination="sMk-zN-kYS" id="ftc-az-xJz"/>
                                                     <outlet property="lblType" destination="rxm-3J-LZg" id="1iN-ap-KGM"/>
                                                 </connections>

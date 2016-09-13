@@ -23,6 +23,10 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        tblPlans.reloadData()
+    }
+    
     func FilterPlans() -> [PlanItem] {
         if isIncome
         {
@@ -58,8 +62,6 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.lblName.text = myPlans![indexPath.row].Name
         
         cell.lblType.text = myPlans![indexPath.row].PlanCategory.Type.rawValue.TransactionTypeName()
-        
-        cell.lblDate.text = ""
         
         cell.lblAmount.text = String(myPlans![indexPath.row].Amount) + " $"
         
