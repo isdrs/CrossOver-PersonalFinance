@@ -83,47 +83,27 @@ class AccountManager: NSObject {
         }
         for cat in exPensePlans!.keys
         {
-            if exPensePlans![cat] == 0.0
-            {
-                exPensePlans?.removeValueForKey(cat)
-            }
-            else
-            {
-                let newValue = (exPensePlans![cat]! * 100.0 ) / totalExpense
 
-                exPensePlans![cat] = round(newValue)
-            }
+            var newValue = (exPensePlans![cat]! * 100.0 ) / totalExpense
+
+               newValue = round(newValue)
+
+                if newValue == 0
+                {
+                    exPensePlans?.removeValueForKey(cat)
+                }
+                else
+                {
+                    exPensePlans![cat] = newValue
+                }
         }
         return exPensePlans!
     }
-
-    static func GetTotalStimatedIncomeInCategory(_until:NSDate) -> [String: Double]
-    {
-        var inComePlans : [String : Double] = [:]
-
-        let totalIncome = GetTotalIncome(_until)
-
-        for item in PlanManager.GetPlansByType(PlanType.Income)
-        {
-            let totalAmount = item.GetPlanRemainingTotalAmount(_until)
-
-            let value = inComePlans[item.PlanCategory.Name]!.hashValue == 1 ?  inComePlans[item.PlanCategory.Name]!  : 0.0
-
-            inComePlans[item.PlanCategory.Name] = value + totalAmount
-        }
-
-        for cat in inComePlans.keys
-        {
-            if inComePlans[cat] == 0.0
-            {
-                inComePlans.removeValueForKey(cat)
-            }
-            else
-            {
-                inComePlans[cat] = (inComePlans[cat]! * 100.0 ) / totalIncome
-            }
-        }
-        return inComePlans
-    }
-
 }
+
+
+
+
+
+
+

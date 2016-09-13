@@ -86,7 +86,7 @@ class FinanceControllerTest: XCTestCase {
         return CategoryManager.GetCategoryById(_catId)
     }
 
-    func testAddPlan() 
+    func testAddPlan()
     {
         XCTAssertTrue(FinanceController.AddPlan("P1", _amount: 150, _repeatitiontype: PlanRepetitionType.Recurring, _repeatNumber: 5, _firstDate: NSDate(), _cat: CategoryItem(_id: 12, _name: "c1", _type: PlanType.Income)))
     }
