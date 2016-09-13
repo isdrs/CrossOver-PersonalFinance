@@ -15,10 +15,11 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var swhIsIncomeOutlet: UISwitch!
     @IBOutlet weak var swhRecurringOutlet: UISwitch!
     @IBOutlet weak var txtPlanAmount: UITextField!
+    @IBOutlet weak var btnAddOrUpdateOutlet: UIButton!
     @IBAction func swhRecurringAction(sender: UISwitch) {
     }
 
-    @IBAction func btnAddNewExpence(sender: AnyObject) {
+    @IBAction func btnAddOrUpdateNewPlan(sender: AnyObject) {
     }
     @IBAction func NewCtegoryAction(sender: AnyObject)
     {

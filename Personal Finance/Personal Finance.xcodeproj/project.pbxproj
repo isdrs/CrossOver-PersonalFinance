@@ -26,6 +26,8 @@
 		8429DD1A1D8688EF00FA6E77 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD0A1D8688EF00FA6E77 /* IQTitleBarButtonItem.swift */; };
 		8429DD1B1D8688EF00FA6E77 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD0B1D8688EF00FA6E77 /* IQToolbar.swift */; };
 		8429DD1C1D8688EF00FA6E77 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD0C1D8688EF00FA6E77 /* IQUIView+IQKeyboardToolbar.swift */; };
+		84AD60FB1D87C2E300D4ADB4 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AD60FA1D87C2E300D4ADB4 /* ShinobiCharts.framework */; };
+		84AD60FC1D87C2E300D4ADB4 /* ShinobiCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84AD60FA1D87C2E300D4ADB4 /* ShinobiCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84BB863A1D86BE9A00267519 /* Plans+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86321D86BE9A00267519 /* Plans+CoreDataProperties.swift */; };
 		84BB863B1D86BE9A00267519 /* Plans+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86321D86BE9A00267519 /* Plans+CoreDataProperties.swift */; };
 		84BB863C1D86BE9A00267519 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86331D86BE9A00267519 /* Plans.swift */; };
@@ -69,7 +71,6 @@
 		84F9F5EE1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5ED1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift */; };
 		84F9F5F41D85957600F3AA47 /* PlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F31D85957600F3AA47 /* PlanItem.swift */; };
 		84F9F5F61D859A3B00F3AA47 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F51D859A3B00F3AA47 /* DBManager.swift */; };
-		8D1BDC4A1D87B0BA0041920A /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1BDC491D87B0BA0041920A /* ShinobiCharts.framework */; };
 		8D1BDC4C1D87B0CD0041920A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1BDC4B1D87B0CD0041920A /* libc++.tbd */; };
 		8D1BDC4E1D87B1E70041920A /* FinanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC4D1D87B1E70041920A /* FinanceController.swift */; };
 		8D1BDC4F1D87B1E70041920A /* FinanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC4D1D87B1E70041920A /* FinanceController.swift */; };
@@ -90,15 +91,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8429DCF51D8679CE00FA6E77 /* Embed Frameworks */ = {
+		84AD60F91D87BD9100D4ADB4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				84AD60FC1D87C2E300D4ADB4 /* ShinobiCharts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -123,6 +125,7 @@
 		8429DD0A1D8688EF00FA6E77 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
 		8429DD0B1D8688EF00FA6E77 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		8429DD0C1D8688EF00FA6E77 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		84AD60FA1D87C2E300D4ADB4 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
 		84BB86321D86BE9A00267519 /* Plans+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Plans+CoreDataProperties.swift"; path = "ManagedObjects/Plans+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84BB86331D86BE9A00267519 /* Plans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plans.swift; path = ManagedObjects/Plans.swift; sourceTree = "<group>"; };
 		84BB86341D86BE9A00267519 /* Categories+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Categories+CoreDataProperties.swift"; path = "ManagedObjects/Categories+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -147,7 +150,6 @@
 		84F9F5ED1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenceCategoryAmountCell.swift; path = Items/ExpenceCategoryAmountCell.swift; sourceTree = "<group>"; };
 		84F9F5F31D85957600F3AA47 /* PlanItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlanItem.swift; path = Items/PlanItem.swift; sourceTree = "<group>"; };
 		84F9F5F51D859A3B00F3AA47 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBManager.swift; path = Managers/DBManager.swift; sourceTree = "<group>"; };
-		8D1BDC491D87B0BA0041920A /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
 		8D1BDC4B1D87B0CD0041920A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		8D1BDC4D1D87B1E70041920A /* FinanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinanceController.swift; path = Managers/FinanceController.swift; sourceTree = "<group>"; };
 		8D1F663F1D85AD16001F2178 /* CategoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryItem.swift; path = Items/CategoryItem.swift; sourceTree = "<group>"; };
@@ -161,8 +163,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AD60FB1D87C2E300D4ADB4 /* ShinobiCharts.framework in Frameworks */,
 				8D1BDC4C1D87B0CD0041920A /* libc++.tbd in Frameworks */,
-				8D1BDC4A1D87B0BA0041920A /* ShinobiCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +258,7 @@
 		84F9F5AF1D85125200F3AA47 = {
 			isa = PBXGroup;
 			children = (
+				84AD60FA1D87C2E300D4ADB4 /* ShinobiCharts.framework */,
 				8D1BDC4B1D87B0CD0041920A /* libc++.tbd */,
 				84F9F5BA1D85125200F3AA47 /* Personal Finance */,
 				84F9F5D21D85125200F3AA47 /* Personal FinanceTests */,
@@ -275,7 +278,6 @@
 		84F9F5BA1D85125200F3AA47 /* Personal Finance */ = {
 			isa = PBXGroup;
 			children = (
-				8D1BDC491D87B0BA0041920A /* ShinobiCharts.framework */,
 				84BB862F1D86BB3000267519 /* ManagedObjects */,
 				8429DCF71D8688EF00FA6E77 /* IQKeyboardManagerSwift */,
 				8429DCE81D866B2800FA6E77 /* Tools */,
@@ -347,7 +349,7 @@
 				84F9F5B41D85125200F3AA47 /* Sources */,
 				84F9F5B51D85125200F3AA47 /* Frameworks */,
 				84F9F5B61D85125200F3AA47 /* Resources */,
-				8429DCF51D8679CE00FA6E77 /* Embed Frameworks */,
+				84AD60F91D87BD9100D4ADB4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -641,12 +643,14 @@
 					Finance,
 					"$(PROJECT_DIR)/Personal",
 					Finance,
+					"$(PROJECT_DIR)/Personal",
+					Finance,
 				);
 				INFOPLIST_FILE = "Personal Finance/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Crossover.Personal-Finance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Personal Finance/ShinobiCharts.framework/Headers/ShinobiChart-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Library/Frameworks/ShinobiCharts.framework/Headers/ShinobiChart-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -664,12 +668,14 @@
 					Finance,
 					"$(PROJECT_DIR)/Personal",
 					Finance,
+					"$(PROJECT_DIR)/Personal",
+					Finance,
 				);
 				INFOPLIST_FILE = "Personal Finance/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Crossover.Personal-Finance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Personal Finance/ShinobiCharts.framework/Headers/ShinobiChart-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Library/Frameworks/ShinobiCharts.framework/Headers/ShinobiChart-Bridging-Header.h";
 			};
 			name = Release;
 		};

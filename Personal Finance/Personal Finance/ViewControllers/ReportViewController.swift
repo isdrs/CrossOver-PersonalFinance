@@ -8,16 +8,12 @@
 
 import UIKit
 
-class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ReportViewController: UIViewController{
 
     let languageData = ProgrammingLanguageDataStore.generate()
 
-
-
     @IBOutlet weak var chart: ShinobiChart!
     
-
-    @IBOutlet weak var tblExpenceCategoryAmount: UITableView!
     @IBOutlet weak var dpvDate: UIDatePicker!
     @IBAction func btnEstimateAction(sender: AnyObject) {
     }
@@ -37,29 +33,7 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ECACell") as! ExpenseCategoryAmountCell
 
-        
-        cell.lblCategoryName.text = "Category"
-        
-        cell.lblCategoryAmount.text = "1256 $"
-        
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Expences"
-    }
     /*
     // MARK: - Navigation
 
@@ -71,9 +45,6 @@ class ReportViewController: UIViewController, UITableViewDelegate, UITableViewDa
     */
 
 }
-
-
-
 
 
 struct ProgrammingLanguage {
