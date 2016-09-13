@@ -71,6 +71,8 @@
 		84F9F5F61D859A3B00F3AA47 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F51D859A3B00F3AA47 /* DBManager.swift */; };
 		8D1BDC4A1D87B0BA0041920A /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1BDC491D87B0BA0041920A /* ShinobiCharts.framework */; };
 		8D1BDC4C1D87B0CD0041920A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1BDC4B1D87B0CD0041920A /* libc++.tbd */; };
+		8D1BDC4E1D87B1E70041920A /* FinanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC4D1D87B1E70041920A /* FinanceController.swift */; };
+		8D1BDC4F1D87B1E70041920A /* FinanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC4D1D87B1E70041920A /* FinanceController.swift */; };
 		8D1F66401D85AD16001F2178 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F663F1D85AD16001F2178 /* CategoryItem.swift */; };
 		8D1F66441D85C752001F2178 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66431D85C752001F2178 /* AccountItem.swift */; };
 		8D1F66461D85CEEF001F2178 /* PlanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66451D85CEEF001F2178 /* PlanManager.swift */; };
@@ -147,6 +149,7 @@
 		84F9F5F51D859A3B00F3AA47 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBManager.swift; path = Managers/DBManager.swift; sourceTree = "<group>"; };
 		8D1BDC491D87B0BA0041920A /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
 		8D1BDC4B1D87B0CD0041920A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		8D1BDC4D1D87B1E70041920A /* FinanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinanceController.swift; path = Managers/FinanceController.swift; sourceTree = "<group>"; };
 		8D1F663F1D85AD16001F2178 /* CategoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryItem.swift; path = Items/CategoryItem.swift; sourceTree = "<group>"; };
 		8D1F66431D85C752001F2178 /* AccountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountItem.swift; path = Items/AccountItem.swift; sourceTree = "<group>"; };
 		8D1F66451D85CEEF001F2178 /* PlanManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlanManager.swift; path = Managers/PlanManager.swift; sourceTree = "<group>"; };
@@ -304,6 +307,7 @@
 				8D1F66451D85CEEF001F2178 /* PlanManager.swift */,
 				8D1F66491D85CF3E001F2178 /* AccountManager.swift */,
 				84F9F5F51D859A3B00F3AA47 /* DBManager.swift */,
+				8D1BDC4D1D87B1E70041920A /* FinanceController.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -437,6 +441,7 @@
 			files = (
 				8429DD161D8688EF00FA6E77 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				8429DD131D8688EF00FA6E77 /* IQKeyboardManagerConstants.swift in Sources */,
+				8D1BDC4E1D87B1E70041920A /* FinanceController.swift in Sources */,
 				8429DD181D8688EF00FA6E77 /* IQBarButtonItem.swift in Sources */,
 				84F9F5C41D85125200F3AA47 /* Personal_Finance.xcdatamodeld in Sources */,
 				84BB863C1D86BE9A00267519 /* Plans.swift in Sources */,
@@ -488,6 +493,7 @@
 				84BB86601D86E63100267519 /* Personal_Finance.xcdatamodeld in Sources */,
 				84BB86471D86D88600267519 /* SCLExtensions.swift in Sources */,
 				84BB865B1D86E61000267519 /* PlansViewController.swift in Sources */,
+				8D1BDC4F1D87B1E70041920A /* FinanceController.swift in Sources */,
 				84BB865C1D86E61500267519 /* PlanManager.swift in Sources */,
 				84BB86541D86E53300267519 /* PlanItem.swift in Sources */,
 				84BB865D1D86E61800267519 /* AccountManager.swift in Sources */,
