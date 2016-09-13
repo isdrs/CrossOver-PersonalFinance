@@ -85,8 +85,20 @@ class FinanceController{
         return res
     }
 
+    static func GetCategoriesByType(isIncome:Bool) -> [CategoryItem]
+    {
+        let _type = isIncome ? PlanType.Income :  PlanType.Expense
+
+        return CategoryManager.GetCategoryByType(_type)
+    }
+
+    static func GetCategoryById(_catId:Int) -> CategoryItem
+    {
+        return CategoryManager.GetCategoryById(_catId)
+    }
+
     static func AddPlan(_name:String,_amount:Double,_repeatitiontype:PlanRepetitionType,
-                        _repeatNumber:Int,_firstDate:NSDate,_categoryId:Int) -> Bool
+                        _repeatNumber:Int,_firstDate:NSDate,_cat:CategoryItem) -> Bool
     {
         let newPlan = PlanItem()
         newPlan.Name = _name
@@ -95,9 +107,7 @@ class FinanceController{
         newPlan.RepeatNumber = _repeatNumber
         newPlan.FirstTimeDate = _firstDate
 
-        let cat = CategoryManager.GetCategoryById(_categoryId)
-
-        newPlan.PlanCategory = cat
+        newPlan.PlanCategory = _cat
 
         if PlanManager.AddPlan(newPlan)
         {
