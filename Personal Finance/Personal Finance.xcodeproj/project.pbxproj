@@ -69,12 +69,12 @@
 		84F9F5EE1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5ED1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift */; };
 		84F9F5F41D85957600F3AA47 /* PlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F31D85957600F3AA47 /* PlanItem.swift */; };
 		84F9F5F61D859A3B00F3AA47 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F51D859A3B00F3AA47 /* DBManager.swift */; };
+		8D1BDC4A1D87B0BA0041920A /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1BDC491D87B0BA0041920A /* ShinobiCharts.framework */; };
+		8D1BDC4C1D87B0CD0041920A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1BDC4B1D87B0CD0041920A /* libc++.tbd */; };
 		8D1F66401D85AD16001F2178 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F663F1D85AD16001F2178 /* CategoryItem.swift */; };
 		8D1F66441D85C752001F2178 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66431D85C752001F2178 /* AccountItem.swift */; };
 		8D1F66461D85CEEF001F2178 /* PlanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66451D85CEEF001F2178 /* PlanManager.swift */; };
 		8D1F664A1D85CF3E001F2178 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66491D85CF3E001F2178 /* AccountManager.swift */; };
-		8D36EE5A1D87336600F87C6C /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D36EE591D87336600F87C6C /* ShinobiCharts.framework */; };
-		8D36EE5C1D87337B00F87C6C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D36EE5B1D87337B00F87C6C /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,12 +145,12 @@
 		84F9F5ED1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenceCategoryAmountCell.swift; path = Items/ExpenceCategoryAmountCell.swift; sourceTree = "<group>"; };
 		84F9F5F31D85957600F3AA47 /* PlanItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlanItem.swift; path = Items/PlanItem.swift; sourceTree = "<group>"; };
 		84F9F5F51D859A3B00F3AA47 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBManager.swift; path = Managers/DBManager.swift; sourceTree = "<group>"; };
+		8D1BDC491D87B0BA0041920A /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
+		8D1BDC4B1D87B0CD0041920A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		8D1F663F1D85AD16001F2178 /* CategoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryItem.swift; path = Items/CategoryItem.swift; sourceTree = "<group>"; };
 		8D1F66431D85C752001F2178 /* AccountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountItem.swift; path = Items/AccountItem.swift; sourceTree = "<group>"; };
 		8D1F66451D85CEEF001F2178 /* PlanManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlanManager.swift; path = Managers/PlanManager.swift; sourceTree = "<group>"; };
 		8D1F66491D85CF3E001F2178 /* AccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountManager.swift; path = Managers/AccountManager.swift; sourceTree = "<group>"; };
-		8D36EE591D87336600F87C6C /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
-		8D36EE5B1D87337B00F87C6C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +158,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D36EE5C1D87337B00F87C6C /* libc++.tbd in Frameworks */,
-				8D36EE5A1D87336600F87C6C /* ShinobiCharts.framework in Frameworks */,
+				8D1BDC4C1D87B0CD0041920A /* libc++.tbd in Frameworks */,
+				8D1BDC4A1D87B0BA0041920A /* ShinobiCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +253,7 @@
 		84F9F5AF1D85125200F3AA47 = {
 			isa = PBXGroup;
 			children = (
-				8D36EE5B1D87337B00F87C6C /* libc++.tbd */,
+				8D1BDC4B1D87B0CD0041920A /* libc++.tbd */,
 				84F9F5BA1D85125200F3AA47 /* Personal Finance */,
 				84F9F5D21D85125200F3AA47 /* Personal FinanceTests */,
 				84F9F5B91D85125200F3AA47 /* Products */,
@@ -272,7 +272,7 @@
 		84F9F5BA1D85125200F3AA47 /* Personal Finance */ = {
 			isa = PBXGroup;
 			children = (
-				8D36EE591D87336600F87C6C /* ShinobiCharts.framework */,
+				8D1BDC491D87B0BA0041920A /* ShinobiCharts.framework */,
 				84BB862F1D86BB3000267519 /* ManagedObjects */,
 				8429DCF71D8688EF00FA6E77 /* IQKeyboardManagerSwift */,
 				8429DCE81D866B2800FA6E77 /* Tools */,
@@ -625,11 +625,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Personal",
 					Finance/Frameworks,
+					"$(PROJECT_DIR)/Personal",
+					Finance,
 					"$(PROJECT_DIR)/Personal",
 					Finance,
 				);
@@ -645,11 +648,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Personal",
 					Finance/Frameworks,
+					"$(PROJECT_DIR)/Personal",
+					Finance,
 					"$(PROJECT_DIR)/Personal",
 					Finance,
 				);
