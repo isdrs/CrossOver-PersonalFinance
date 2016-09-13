@@ -89,7 +89,9 @@ class AccountManager: NSObject {
             }
             else
             {
-                exPensePlans![cat] = (exPensePlans![cat]! * 100.0 ) / totalExpense
+                let newValue = (exPensePlans![cat]! * 100.0 ) / totalExpense
+
+                exPensePlans![cat] = round(newValue)
             }
         }
         return exPensePlans!
