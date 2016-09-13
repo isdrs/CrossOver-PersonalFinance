@@ -44,6 +44,17 @@ extension NSNumber {
     }
 }
 
+extension Bool {
+    func PlanTypeValue() -> PlanType {
+        switch self {
+        case true:
+            return .Income
+        case false:
+            return .Expense
+        }
+    }
+}
+
 extension Int {
     func PlanTypeValue() -> Bool {
         switch self {
