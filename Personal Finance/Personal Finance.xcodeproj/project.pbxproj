@@ -39,6 +39,7 @@
 		84AD611D1D88764C00D4ADB4 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD611A1D88764C00D4ADB4 /* Plans.swift */; };
 		84AD611E1D88764C00D4ADB4 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD611A1D88764C00D4ADB4 /* Plans.swift */; };
 		84AD61201D887A8D00D4ADB4 /* FinanceControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD611F1D887A8D00D4ADB4 /* FinanceControllerTest.swift */; };
+		84AD61221D888A8600D4ADB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5BB1D85125200F3AA47 /* AppDelegate.swift */; };
 		84BB86441D86D88600267519 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86421D86D88600267519 /* SCLAlertView.swift */; };
 		84BB86451D86D88600267519 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86421D86D88600267519 /* SCLAlertView.swift */; };
 		84BB86461D86D88600267519 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86431D86D88600267519 /* SCLExtensions.swift */; };
@@ -59,7 +60,6 @@
 		84BB865C1D86E61500267519 /* PlanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66451D85CEEF001F2178 /* PlanManager.swift */; };
 		84BB865D1D86E61800267519 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66491D85CF3E001F2178 /* AccountManager.swift */; };
 		84BB865E1D86E61B00267519 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F51D859A3B00F3AA47 /* DBManager.swift */; };
-		84BB865F1D86E62800267519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5BB1D85125200F3AA47 /* AppDelegate.swift */; };
 		84BB86601D86E63100267519 /* Personal_Finance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5C21D85125200F3AA47 /* Personal_Finance.xcdatamodeld */; };
 		84F9F5BC1D85125200F3AA47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5BB1D85125200F3AA47 /* AppDelegate.swift */; };
 		84F9F5C11D85125200F3AA47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F9F5BF1D85125200F3AA47 /* Main.storyboard */; };
@@ -526,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AD61221D888A8600D4ADB4 /* AppDelegate.swift in Sources */,
 				84AD611C1D88764C00D4ADB4 /* Plans+CoreDataProperties.swift in Sources */,
 				8D732DFA1D88055B00B3520B /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				84AD611E1D88764C00D4ADB4 /* Plans.swift in Sources */,
@@ -569,7 +570,6 @@
 				84BB86581D86E60600267519 /* BankInfoViewController.swift in Sources */,
 				84F9F5D41D85125200F3AA47 /* Personal_FinanceTests.swift in Sources */,
 				84BB865E1D86E61B00267519 /* DBManager.swift in Sources */,
-				84BB865F1D86E62800267519 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

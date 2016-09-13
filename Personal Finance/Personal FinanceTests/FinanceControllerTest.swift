@@ -7,8 +7,19 @@
 //
 
 import XCTest
+@testable import Personal_Finance
 
 class FinanceControllerTest: XCTestCase {
+    
+    func testCheckBankAccountExist()  {
+        
+        XCTAssertTrue(FinanceController.CheckBankAccountExist())
+    }
+    
+    func testAddCategory()
+    {
+        XCTAssertTrue(FinanceController.AddCategory("TestCat", _catType: PlanType.Expense))
+    }
     
     override func setUp() {
         super.setUp()
