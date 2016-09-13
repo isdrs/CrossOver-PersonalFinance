@@ -62,7 +62,7 @@ class AccountManager: NSObject {
 
     static func GetTotalStimatedExpenenInCategory(_until:NSDate) -> [String: Double]
     {
-        var exPensePlans : [String : Double] = [:]
+        var exPensePlans : [String : Double]? = [:]
 
         let totalExpense = GetTotalExpense(_until)
 
@@ -70,25 +70,23 @@ class AccountManager: NSObject {
         {
             let totalAmount = item.GetPlanRemainingTotalAmount(_until)
 
-            
-
-            if let catvalue = exPensePlans[item.PlanCategory.Name] as? Double?
+            if let catvalue = exPensePlans![item.PlanCategory.Name]
             {
-                exPensePlans[item.PlanCategory.Name] = catvalue! + totalAmount
+                exPensePlans![item.PlanCategory.Name] = catvalue + totalAmount
             }
             else
             {
-                exPensePlans[item.PlanCategory.Name] = totalAmount
+                exPensePlans![item.PlanCategory.Name] = totalAmount
             }
 
 
 
         }
-        for cat in exPensePlans.keys
+        for cat in exPensePlans!.keys
         {
-            exPensePlans[cat] = (exPensePlans[cat]! * 100.0 ) / totalExpense
+            exPensePlans![cat] = (exPensePlans![cat]! * 100.0 ) / totalExpense
         }
-        return exPensePlans
+        return exPensePlans!
     }
 
     static func GetTotalStimatedIncomeInCategory(_until:NSDate) -> [String: Double]
