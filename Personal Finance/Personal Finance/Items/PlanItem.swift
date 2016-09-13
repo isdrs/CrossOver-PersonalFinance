@@ -145,18 +145,67 @@ class PlanItem: NSObject {
     {
         var count = 0
 
-        let now = NSDate()
-
         for plan in eventsDate
         {
-            if plan.compare(now) == NSComparisonResult.OrderedDescending //means plan is after now
+            if isEqualOrAfterDate(plan)
             {
                 count = count + 1
             }
         }
         return Double(count) * self.amount
     }
-    
+
+    private func isEqualOrAfterDate(_until:NSDate) -> Bool
+    {
+
+
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        var components = calendar.components([.Day , .Month , .Year], fromDate: date)
+
+        let nowYear =  components.year
+        let nowMonth = components.month
+        let nowDay = components.day
+
+
+        components = calendar.components([.Day , .Month , .Year], fromDate: _until)
+
+        let untilYear =  components.year
+        let untilMonth = components.month
+        let untilDay = components.day
+
+        if untilYear > nowYear
+        {
+            return true
+        }
+        else if untilYear == nowYear
+        {
+            if untilMonth > nowMonth
+            {
+                return true
+            }
+            else if untilMonth == nowMonth
+            {
+                if untilDay >= nowDay
+                {
+                    return true
+                }
+                else
+                {
+                    return false
+                }
+            }
+            else
+            {
+                return false
+            }
+        }
+        else
+        {
+            return false
+        }
+
+    }
 
     internal func CalcultePlanOccursDate() -> Void{
 
@@ -164,12 +213,13 @@ class PlanItem: NSObject {
 
         if self.repeatNumber > 1
         {
-        for  index in 1...self.repeatNumber - 1 {
+            for  index in 1...self.repeatNumber - 1
+            {
 
-            let calDate = NSCalendar.currentCalendar().dateByAddingUnit(.Month, value: index, toDate: self.FirstTimeDate, options: [])
+                let calDate = NSCalendar.currentCalendar().dateByAddingUnit(.Month, value: index, toDate: self.FirstTimeDate, options: [])
 
-            eventsDate.append(calDate!)
-        }
+                eventsDate.append(calDate!)
+            }
         }
     }
 

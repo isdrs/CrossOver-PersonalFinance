@@ -22,6 +22,13 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         // Do any additional setup after loading the view.
     }
+
+    override func viewWillAppear(animated: Bool) {
+
+        myPlans = FilterPlans()
+
+        tblPlans.reloadData()
+    }
     
     override func viewWillAppear(animated: Bool) {
         tblPlans.reloadData()

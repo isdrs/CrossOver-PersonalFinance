@@ -13,6 +13,8 @@ import UIKit
 class AccountManager: NSObject {
 
 
+    static let staticBalance = 1000.0
+
     static func UpdateBalance(_account:AccountItem) -> Bool
     {
         if DBManager.UpdateAccountBalance(_account)
@@ -25,7 +27,7 @@ class AccountManager: NSObject {
 
     static func GetEstimateAccountBalance(_unitl:NSDate) -> Double
     {
-        let balance = 0.0
+        let balance = staticBalance
 
         let inComes = PlanManager.GetAllIncomePlansTotalAmount(_unitl)
 
