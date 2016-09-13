@@ -29,7 +29,6 @@ class PlanManager: NSObject {
     {
         if DBManager.DeletePlan(_incomePlan)
         {
-
             totalPlans = DBManager.GetPlans()
 
             return true
