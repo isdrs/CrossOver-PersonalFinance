@@ -36,11 +36,7 @@ class ReportViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let date = NSDate().dateByAddingTimeInterval(10000000)
-
-        expensePlans = FinanceController.GetExpenseTotalEstimateAmount(date)
-
-
+        
         self.hideKeyboardWhenTappedAround()
 
         chart.datasource = self
