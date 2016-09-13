@@ -41,6 +41,8 @@ class ReportViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        dpvDate.minimumDate = NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: 0, toDate: NSDate(), options: [])
+
         
         self.hideKeyboardWhenTappedAround()
 
