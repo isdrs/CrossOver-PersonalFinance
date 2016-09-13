@@ -37,8 +37,7 @@ class FinanceController{
 
     static func UpdateBalance(_accountNumber:String) -> Double
     {
-
-        return 1000.0
+        return AccountManager.staticBalance
     }
     
     static func GetAccount() -> AccountItem {

@@ -80,6 +80,7 @@ extension ReportViewController : SChartDatasource
         let dataPoint = SChartRadialDataPoint()
 
         dataPoint.name = plan!.Name
+        
         dataPoint.value = expensePlans[plan!]
 
         return dataPoint

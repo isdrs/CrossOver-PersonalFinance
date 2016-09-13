@@ -44,6 +44,7 @@ class PlanManager: NSObject {
     static func GetAllIncomePlansTotalAmount(_until:NSDate) -> Double
     {
         var totalSum = 0.0
+        
         for item in GetPlansByType(PlanType.Income)
         {
 
