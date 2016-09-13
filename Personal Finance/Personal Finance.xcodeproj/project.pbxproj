@@ -31,35 +31,18 @@
 		84AD610B1D881B3B00D4ADB4 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD610A1D881B3B00D4ADB4 /* CategoryCell.swift */; };
 		84AD610C1D881B3B00D4ADB4 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD610A1D881B3B00D4ADB4 /* CategoryCell.swift */; };
 		84AD61111D882F4C00D4ADB4 /* Categories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD610D1D882F4C00D4ADB4 /* Categories+CoreDataProperties.swift */; };
-		84AD61121D882F4C00D4ADB4 /* Categories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD610D1D882F4C00D4ADB4 /* Categories+CoreDataProperties.swift */; };
 		84AD61131D882F4C00D4ADB4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD610E1D882F4C00D4ADB4 /* Categories.swift */; };
-		84AD61141D882F4C00D4ADB4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD610E1D882F4C00D4ADB4 /* Categories.swift */; };
 		84AD611B1D88764C00D4ADB4 /* Plans+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD61191D88764C00D4ADB4 /* Plans+CoreDataProperties.swift */; };
-		84AD611C1D88764C00D4ADB4 /* Plans+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD61191D88764C00D4ADB4 /* Plans+CoreDataProperties.swift */; };
 		84AD611D1D88764C00D4ADB4 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD611A1D88764C00D4ADB4 /* Plans.swift */; };
-		84AD611E1D88764C00D4ADB4 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD611A1D88764C00D4ADB4 /* Plans.swift */; };
 		84AD61201D887A8D00D4ADB4 /* FinanceControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD611F1D887A8D00D4ADB4 /* FinanceControllerTest.swift */; };
-		84AD61221D888A8600D4ADB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5BB1D85125200F3AA47 /* AppDelegate.swift */; };
 		84BB86441D86D88600267519 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86421D86D88600267519 /* SCLAlertView.swift */; };
 		84BB86451D86D88600267519 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86421D86D88600267519 /* SCLAlertView.swift */; };
 		84BB86461D86D88600267519 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86431D86D88600267519 /* SCLExtensions.swift */; };
 		84BB86471D86D88600267519 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB86431D86D88600267519 /* SCLExtensions.swift */; };
 		84BB864F1D86E01F00267519 /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB864E1D86E01F00267519 /* NewCategoryViewController.swift */; };
-		84BB86501D86E01F00267519 /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB864E1D86E01F00267519 /* NewCategoryViewController.swift */; };
-		84BB86511D86E52200267519 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F663F1D85AD16001F2178 /* CategoryItem.swift */; };
 		84BB86521D86E52B00267519 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66431D85C752001F2178 /* AccountItem.swift */; };
 		84BB86531D86E52F00267519 /* ExpenceCategoryAmountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5ED1D858DE800F3AA47 /* ExpenceCategoryAmountCell.swift */; };
-		84BB86541D86E53300267519 /* PlanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F31D85957600F3AA47 /* PlanItem.swift */; };
-		84BB86551D86E5F500267519 /* ProjectExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCE91D866B4E00FA6E77 /* ProjectExtentions.swift */; };
 		84BB86561D86E5FE00267519 /* PlansCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCED1D86719000FA6E77 /* PlansCell.swift */; };
-		84BB86571D86E60300267519 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5E21D8581A900F3AA47 /* HomeViewController.swift */; };
-		84BB86581D86E60600267519 /* BankInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5E41D8581CA00F3AA47 /* BankInfoViewController.swift */; };
-		84BB86591D86E60900267519 /* NewPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5E81D8581F000F3AA47 /* NewPlanViewController.swift */; };
-		84BB865A1D86E60D00267519 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5EA1D8581FF00F3AA47 /* ReportViewController.swift */; };
-		84BB865B1D86E61000267519 /* PlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCEB1D8670B900FA6E77 /* PlansViewController.swift */; };
-		84BB865C1D86E61500267519 /* PlanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66451D85CEEF001F2178 /* PlanManager.swift */; };
-		84BB865D1D86E61800267519 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66491D85CF3E001F2178 /* AccountManager.swift */; };
-		84BB865E1D86E61B00267519 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F51D859A3B00F3AA47 /* DBManager.swift */; };
 		84BB86601D86E63100267519 /* Personal_Finance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5C21D85125200F3AA47 /* Personal_Finance.xcdatamodeld */; };
 		84F9F5BC1D85125200F3AA47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5BB1D85125200F3AA47 /* AppDelegate.swift */; };
 		84F9F5C11D85125200F3AA47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F9F5BF1D85125200F3AA47 /* Main.storyboard */; };
@@ -76,29 +59,14 @@
 		84F9F5F61D859A3B00F3AA47 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9F5F51D859A3B00F3AA47 /* DBManager.swift */; };
 		8D1BDC4C1D87B0CD0041920A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1BDC4B1D87B0CD0041920A /* libc++.tbd */; };
 		8D1BDC4E1D87B1E70041920A /* FinanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC4D1D87B1E70041920A /* FinanceController.swift */; };
-		8D1BDC4F1D87B1E70041920A /* FinanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC4D1D87B1E70041920A /* FinanceController.swift */; };
 		8D1F66401D85AD16001F2178 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F663F1D85AD16001F2178 /* CategoryItem.swift */; };
 		8D1F66441D85C752001F2178 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66431D85C752001F2178 /* AccountItem.swift */; };
 		8D1F66461D85CEEF001F2178 /* PlanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66451D85CEEF001F2178 /* PlanManager.swift */; };
 		8D1F664A1D85CF3E001F2178 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F66491D85CF3E001F2178 /* AccountManager.swift */; };
 		8D732DE91D87FDC000B3520B /* NewPlanViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D732DE81D87FDC000B3520B /* NewPlanViewControllerTest.swift */; };
 		8D732DEA1D8804F500B3520B /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AD61071D87DF9D00D4ADB4 /* ShinobiCharts.framework */; };
-		8D732DEB1D88052500B3520B /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD021D8688EF00FA6E77 /* IQKeyboardManager.swift */; };
-		8D732DEC1D88053200B3520B /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD041D8688EF00FA6E77 /* IQKeyboardReturnKeyHandler.swift */; };
-		8D732DED1D88054100B3520B /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCF91D8688EF00FA6E77 /* IQNSArray+Sort.swift */; };
-		8D732DEE1D88054100B3520B /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCFA1D8688EF00FA6E77 /* IQUIScrollView+Additions.swift */; };
-		8D732DEF1D88054100B3520B /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCFB1D8688EF00FA6E77 /* IQUITextFieldView+Additions.swift */; };
-		8D732DF01D88054100B3520B /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCFC1D8688EF00FA6E77 /* IQUIView+Hierarchy.swift */; };
-		8D732DF11D88054100B3520B /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCFD1D8688EF00FA6E77 /* IQUIViewController+Additions.swift */; };
-		8D732DF21D88054100B3520B /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DCFE1D8688EF00FA6E77 /* IQUIWindow+Hierarchy.swift */; };
 		8D732DF31D88054A00B3520B /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD001D8688EF00FA6E77 /* IQKeyboardManagerConstants.swift */; };
 		8D732DF41D88054A00B3520B /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD011D8688EF00FA6E77 /* IQKeyboardManagerConstantsInternal.swift */; };
-		8D732DF51D88055200B3520B /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD061D8688EF00FA6E77 /* IQTextView.swift */; };
-		8D732DF61D88055B00B3520B /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD081D8688EF00FA6E77 /* IQBarButtonItem.swift */; };
-		8D732DF71D88055B00B3520B /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD091D8688EF00FA6E77 /* IQPreviousNextView.swift */; };
-		8D732DF81D88055B00B3520B /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD0A1D8688EF00FA6E77 /* IQTitleBarButtonItem.swift */; };
-		8D732DF91D88055B00B3520B /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD0B1D8688EF00FA6E77 /* IQToolbar.swift */; };
-		8D732DFA1D88055B00B3520B /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429DD0C1D8688EF00FA6E77 /* IQUIView+IQKeyboardToolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -526,50 +494,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84AD61221D888A8600D4ADB4 /* AppDelegate.swift in Sources */,
-				84AD611C1D88764C00D4ADB4 /* Plans+CoreDataProperties.swift in Sources */,
-				8D732DFA1D88055B00B3520B /* IQUIView+IQKeyboardToolbar.swift in Sources */,
-				84AD611E1D88764C00D4ADB4 /* Plans.swift in Sources */,
-				84BB86591D86E60900267519 /* NewPlanViewController.swift in Sources */,
-				8D732DEF1D88054100B3520B /* IQUITextFieldView+Additions.swift in Sources */,
-				8D732DF71D88055B00B3520B /* IQPreviousNextView.swift in Sources */,
 				84BB86561D86E5FE00267519 /* PlansCell.swift in Sources */,
-				8D732DF11D88054100B3520B /* IQUIViewController+Additions.swift in Sources */,
-				8D732DEC1D88053200B3520B /* IQKeyboardReturnKeyHandler.swift in Sources */,
-				8D732DF91D88055B00B3520B /* IQToolbar.swift in Sources */,
-				84BB86501D86E01F00267519 /* NewCategoryViewController.swift in Sources */,
 				84BB86601D86E63100267519 /* Personal_Finance.xcdatamodeld in Sources */,
-				8D732DF81D88055B00B3520B /* IQTitleBarButtonItem.swift in Sources */,
 				8D732DF31D88054A00B3520B /* IQKeyboardManagerConstants.swift in Sources */,
 				84AD61201D887A8D00D4ADB4 /* FinanceControllerTest.swift in Sources */,
 				84BB86471D86D88600267519 /* SCLExtensions.swift in Sources */,
-				84BB865B1D86E61000267519 /* PlansViewController.swift in Sources */,
 				8D732DF41D88054A00B3520B /* IQKeyboardManagerConstantsInternal.swift in Sources */,
-				8D732DF51D88055200B3520B /* IQTextView.swift in Sources */,
-				8D1BDC4F1D87B1E70041920A /* FinanceController.swift in Sources */,
-				84BB865C1D86E61500267519 /* PlanManager.swift in Sources */,
-				84BB86541D86E53300267519 /* PlanItem.swift in Sources */,
-				8D732DF21D88054100B3520B /* IQUIWindow+Hierarchy.swift in Sources */,
-				84BB865D1D86E61800267519 /* AccountManager.swift in Sources */,
-				84AD61141D882F4C00D4ADB4 /* Categories.swift in Sources */,
-				84BB86571D86E60300267519 /* HomeViewController.swift in Sources */,
-				84BB86511D86E52200267519 /* CategoryItem.swift in Sources */,
-				8D732DF01D88054100B3520B /* IQUIView+Hierarchy.swift in Sources */,
-				8D732DF61D88055B00B3520B /* IQBarButtonItem.swift in Sources */,
 				84AD610C1D881B3B00D4ADB4 /* CategoryCell.swift in Sources */,
-				8D732DEB1D88052500B3520B /* IQKeyboardManager.swift in Sources */,
 				84BB86521D86E52B00267519 /* AccountItem.swift in Sources */,
-				8D732DED1D88054100B3520B /* IQNSArray+Sort.swift in Sources */,
 				84BB86531D86E52F00267519 /* ExpenceCategoryAmountCell.swift in Sources */,
 				8D732DE91D87FDC000B3520B /* NewPlanViewControllerTest.swift in Sources */,
-				84AD61121D882F4C00D4ADB4 /* Categories+CoreDataProperties.swift in Sources */,
-				84BB86551D86E5F500267519 /* ProjectExtentions.swift in Sources */,
-				8D732DEE1D88054100B3520B /* IQUIScrollView+Additions.swift in Sources */,
-				84BB865A1D86E60D00267519 /* ReportViewController.swift in Sources */,
 				84BB86451D86D88600267519 /* SCLAlertView.swift in Sources */,
-				84BB86581D86E60600267519 /* BankInfoViewController.swift in Sources */,
 				84F9F5D41D85125200F3AA47 /* Personal_FinanceTests.swift in Sources */,
-				84BB865E1D86E61B00267519 /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

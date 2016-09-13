@@ -8,7 +8,7 @@
 
 import XCTest
 import UIKit
-
+@testable import Personal_Finance
 
 
 class NewPlanViewControllerTest: XCTestCase {
