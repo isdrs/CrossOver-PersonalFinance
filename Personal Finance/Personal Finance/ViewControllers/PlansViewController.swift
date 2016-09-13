@@ -75,6 +75,9 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PlansCell") as! PlansCell
         
+        cell.layer.cornerRadius = 10 //set corner radius here
+        cell.layer.borderColor = UIColor.lightGrayColor().CGColor  // set cell border color here
+        cell.layer.borderWidth = 1
         
         cell.lblName.text = myPlans![indexPath.row].Name
         
@@ -85,6 +88,21 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.lblAmount.text = String(myPlans![indexPath.row].Amount) + " $"
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            if DBManager.DeletePlan(myPlans![indexPath.row])
+            {
+                myPlans!.removeAtIndex(indexPath.row)
+                
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            }
+            else
+            {
+                SCLAlertView().showError("Error", subTitle: "Cannot delete Category")
+            }
+        }
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

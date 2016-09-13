@@ -2,7 +2,7 @@
 //  Categories+CoreDataProperties.swift
 //  Personal Finance
 //
-//  Created by Admin on ۱۳۹۵/۶/۲۲ ه‍.ش..
+//  Created by Admin on ۱۳۹۵/۶/۲۳ ه‍.ش..
 //  Copyright © ۱۳۹۵ ه‍.ش. Mohammad Lashgarbolouk. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,6 +17,5 @@ extension Categories {
     @NSManaged var id: NSNumber?
     @NSManaged var name: String?
     @NSManaged var type: NSNumber?
-    @NSManaged var category: Plans?
 
 }
