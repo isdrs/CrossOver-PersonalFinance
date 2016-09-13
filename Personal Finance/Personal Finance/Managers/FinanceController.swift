@@ -141,13 +141,7 @@ class FinanceController{
 
     }
 
-    static func GetIncomeTotalEstimateAmountInCategory(_unitl:NSDate) -> [String:Double]
-    {
-        let totalIncomes = AccountManager.GetTotalStimatedIncomeInCategory(_unitl)
-
-        return totalIncomes
-    }
-
+    
     static func GetTotalEstimateBalance(_until:NSDate) -> Double
     {
         let estimatedBalance = AccountManager.GetEstimateAccountBalance(_until)
