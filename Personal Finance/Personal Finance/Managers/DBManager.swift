@@ -40,7 +40,7 @@ class DBManager: NSObject
             {
                 for plan in myPlans {
                     
-                    let planItem = PlanItem(_id: plan.id!, _name: plan.desc!, _amount: plan.amount!.doubleValue, _repeatitiontype: plan.type!.PlanTypeValue(), _repeatNumber: plan.repeatnumber!.integerValue, _firstDate: plan.firstdate!, _category: GetCategoryItems(plan.category!.integerValue) )
+                    let planItem = PlanItem(_id: plan.id!, _name: plan.desc!, _amount: plan.amount!.doubleValue, _repeatitiontype: plan.type!.PlanTypeValue(), _repeatNumber: plan.repeatnumber!.integerValue, _firstDate: plan.firstdate!, _category: GetCategoryItem(plan.category!) )
                     
                     planItems.append(planItem)
                 }
@@ -53,34 +53,24 @@ class DBManager: NSObject
         return planItems
     }
     
-    static func GetCategoryItems(myID: Int) -> CategoryItem
+    static func GetCategoryItem(myCat: Categories) -> CategoryItem
+    {
+        return CategoryItem(_id: myCat.id!.integerValue, _name: myCat.name!, _type: myCat.type!.TransactionTypeValue())
+    }
+    
+    static func GetCategories(myCat: CategoryItem) -> Categories
     {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
         
-        //2
-        let fetchRequest = NSFetchRequest(entityName: CategoryEntityName)
+        let category = NSEntityDescription.insertNewObjectForEntityForName(CategoryEntityName, inManagedObjectContext: managedContext) as! Categories
         
-        fetchRequest.predicate = NSPredicate(format: "id == %@", myID)
-        
-        //3
-        do {
-            let results = try managedContext.executeFetchRequest(fetchRequest)
-            
-            if let myCats = results as? [Categories]
-            {
-                if myCats.count > 0
-                {
-                    return CategoryItem(_id: myCats[0].id!.integerValue, _name: myCats[0].name!, _type: myCats[0].type!.TransactionTypeValue())
-                }
-            }
-            
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
-        
-        return CategoryItem()
+        category.id = myCat.ID
+        category.name = myCat.Name
+        category.type = myCat.Type.rawValue
+
+        return category
     }
 
     static func GetCategoryItems() -> [CategoryItem]
@@ -138,7 +128,7 @@ class DBManager: NSObject
         
         plans.id = _plan.ID
         plans.amount = _plan.Amount
-        plans.category = _plan.PlanCategory.ID
+        plans.category = GetCategories(_plan.PlanCategory)
         plans.desc = _plan.Name
         plans.firstdate = _plan.FirstTimeDate
         plans.repeatnumber = _plan.RepeatNumber
@@ -184,27 +174,42 @@ class DBManager: NSObject
         
         return retVal
     }
+    
 
     static func DeletePlan(_plan:PlanItem) -> Bool
     {
         var retVal = false
         
-        let plan =  NSManagedObject() as! Plans
-        
-        plan.id = _plan.ID
-        plan.amount = _plan.Amount
-        plan.category = _plan.PlanCategory.ID
-        plan.desc = _plan.Name
-        plan.firstdate = _plan.FirstTimeDate
-        plan.repeatnumber = _plan.RepeatNumber
-        plan.type = _plan.RepeatitionType.rawValue
-        
-        
+        //1
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
         
-        managedContext.deleteObject(plan)
+        //2
+        let fetchRequest = NSFetchRequest(entityName: CategoryEntityName)
+        
+        fetchRequest.predicate = NSPredicate(format: "id == %@", String(_plan.ID))
+        
+        //3
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            
+            if let myPlans = results as? [Plans]
+            {
+                if myPlans.count > 0
+                {
+                    for myPlan in myPlans
+                    {
+                        managedContext.deleteObject(myPlan)
+                        
+                    }
+                    
+                }
+            }
+            
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
         
         
         do {
@@ -221,19 +226,37 @@ class DBManager: NSObject
     {
         var retVal = false
         
-        let category =  NSManagedObject() as! Categories
-        
-        category.id = _cat.ID
-        category.name = _cat.Name
-        category.type = _cat.Type.rawValue
-
-        
         //1
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
         
-        managedContext.deleteObject(category)
+        //2
+        let fetchRequest = NSFetchRequest(entityName: CategoryEntityName)
+        
+        fetchRequest.predicate = NSPredicate(format: "id == %@", String(_cat.ID))
+        
+        //3
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            
+            if let myCats = results as? [Categories]
+            {
+                if myCats.count > 0
+                {
+                    for myCat in myCats
+                    {
+                        managedContext.deleteObject(myCat)
+                
+                    }
+                    
+                }
+            }
+            
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+
         
         //4
         do {

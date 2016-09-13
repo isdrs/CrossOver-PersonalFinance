@@ -2,7 +2,7 @@
 //  Categories.swift
 //  Personal Finance
 //
-//  Created by Admin on ۱۳۹۵/۶/۲۲ ه‍.ش..
+//  Created by Admin on ۱۳۹۵/۶/۲۳ ه‍.ش..
 //  Copyright © ۱۳۹۵ ه‍.ش. Mohammad Lashgarbolouk. All rights reserved.
 //
 
