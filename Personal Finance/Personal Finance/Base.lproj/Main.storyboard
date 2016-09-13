@@ -589,8 +589,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4iP-Uy-fgO">
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-lM-s8O">
-                                        <rect key="frame" x="197" y="255" width="167" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-lM-s8O">
+                                        <rect key="frame" x="264" y="209" width="167" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="167" id="acI-CW-EFL"/>
                                         </constraints>
@@ -598,8 +598,18 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lqw-AN-25c">
+                                        <rect key="frame" x="129" y="66" width="302" height="131"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="302" id="3W2-V9-PxZ"/>
+                                            <constraint firstAttribute="height" constant="131" id="RhQ-Wz-0fo"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="495386680.555035">
+                                            <!--۱۳۹۵-۰۶-۲۲ ۱۵:۲۴:۴۰ +0000-->
+                                        </date>
+                                    </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOC-Ks-Bhx">
-                                        <rect key="frame" x="250" y="205" width="60" height="30"/>
+                                        <rect key="frame" x="129" y="205" width="60" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="93" id="ozW-yH-QHf"/>
                                         </constraints>
@@ -614,35 +624,25 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZP-Ko-Qkz" customClass="ShinobiChart">
-                                        <rect key="frame" x="143" y="284" width="276" height="276"/>
+                                        <rect key="frame" x="122" y="243" width="317" height="317"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="276" id="AYB-q1-ua5"/>
-                                            <constraint firstAttribute="height" constant="276" id="RxR-Au-mza"/>
+                                            <constraint firstAttribute="width" constant="317" id="AYB-q1-ua5"/>
+                                            <constraint firstAttribute="height" constant="317" id="RxR-Au-mza"/>
                                         </constraints>
                                     </view>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lqw-AN-25c">
-                                        <rect key="frame" x="129" y="66" width="302" height="131"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="302" id="3W2-V9-PxZ"/>
-                                            <constraint firstAttribute="height" constant="131" id="RhQ-Wz-0fo"/>
-                                        </constraints>
-                                        <date key="date" timeIntervalSinceReferenceDate="495386680.555035">
-                                            <!--۱۳۹۵-۰۶-۲۲ ۱۵:۲۴:۴۰ +0000-->
-                                        </date>
-                                    </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="3ZP-Ko-Qkz" firstAttribute="centerX" secondItem="4iP-Uy-fgO" secondAttribute="centerX" constant="1" id="6Q6-fc-jgB"/>
                                     <constraint firstAttribute="bottom" secondItem="3ZP-Ko-Qkz" secondAttribute="bottom" id="96d-cl-3jI"/>
                                     <constraint firstItem="AOC-Ks-Bhx" firstAttribute="top" secondItem="lqw-AN-25c" secondAttribute="bottom" constant="8" id="KT5-Hl-Yb7"/>
-                                    <constraint firstItem="ovf-lM-s8O" firstAttribute="centerX" secondItem="AOC-Ks-Bhx" secondAttribute="centerX" id="XQB-NJ-k32"/>
-                                    <constraint firstItem="3ZP-Ko-Qkz" firstAttribute="top" secondItem="ovf-lM-s8O" secondAttribute="bottom" constant="8" symbolic="YES" id="Zxd-mW-vMo"/>
-                                    <constraint firstItem="lqw-AN-25c" firstAttribute="centerX" secondItem="AOC-Ks-Bhx" secondAttribute="centerX" id="qwa-s8-aOa"/>
+                                    <constraint firstItem="ovf-lM-s8O" firstAttribute="centerX" secondItem="AOC-Ks-Bhx" secondAttribute="centerX" constant="188.5" id="XQB-NJ-k32"/>
+                                    <constraint firstItem="3ZP-Ko-Qkz" firstAttribute="top" secondItem="ovf-lM-s8O" secondAttribute="bottom" constant="13" id="Zxd-mW-vMo"/>
+                                    <constraint firstItem="lqw-AN-25c" firstAttribute="centerX" secondItem="AOC-Ks-Bhx" secondAttribute="centerX" constant="121" id="qwa-s8-aOa"/>
                                     <constraint firstItem="AOC-Ks-Bhx" firstAttribute="centerX" secondItem="4iP-Uy-fgO" secondAttribute="centerX" id="riJ-LT-yze"/>
                                     <constraint firstItem="lqw-AN-25c" firstAttribute="centerX" secondItem="4iP-Uy-fgO" secondAttribute="centerX" id="xjh-Yc-XsZ"/>
-                                    <constraint firstItem="ovf-lM-s8O" firstAttribute="top" secondItem="AOC-Ks-Bhx" secondAttribute="bottom" constant="20" id="yN0-hz-Y3c"/>
+                                    <constraint firstItem="ovf-lM-s8O" firstAttribute="top" secondItem="AOC-Ks-Bhx" secondAttribute="bottom" constant="-26" id="yN0-hz-Y3c"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
