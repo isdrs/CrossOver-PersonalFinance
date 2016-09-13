@@ -11,16 +11,17 @@ import XCTest
 
 class FinanceControllerTest: XCTestCase {
     
+    func testUpdateAllList()
+    {
+        FinanceController.UpdateAllList()
+        
+        XCTAssert(true)
+    }
+    
     func testCheckBankAccountExist()  {
         
         XCTAssertTrue(FinanceController.CheckBankAccountExist())
     }
-    
-    func testAddCategory()
-    {
-        XCTAssertTrue(FinanceController.AddCategory("TestCat", _catType: PlanType.Expense))
-    }
-
 
     func testAddBankAccount()
     {
@@ -31,80 +32,80 @@ class FinanceControllerTest: XCTestCase {
     {
         XCTAssertEqual(FinanceController.UpdateBalance("123431"),AccountManager.staticBalance)
     }
+    
+    func testAddPlan() {
+        let category = CategoryItem(_name: "TestCat2", _type: .Income)
+        
+        XCTAssertTrue(FinanceController.AddCategory(category.Name, _catType: category.Type))
+        
+        XCTAssertTrue(FinanceController.AddPlan("TestPlan", _amount: Double(114), _repeatitiontype: .Ad_hoc, _repeatNumber: 0, _firstDate: NSDate(), _cat: category))
+        
+    }
+    
 
-//    func testGetAccount()  {
-//
-//    }
+
+    func testGetAccount()  {
+        XCTAssertNotNil(FinanceController.GetAccount(), "Most have account")
+    }
 
 
-//    func testGetIncomePlans()
-//    {
-//        let incomePlans = PlanManager.GetPlansByType(PlanType.Income)
-//
-//        return incomePlans
-//    }
+    func testGetIncomePlans()
+    {
+        XCTAssertNotNil(FinanceController.GetIncomePlans(), "Most have income plans")
+    }
 
-//    func testGetExpensePlans()
-//    {
-//        let expensePlans = PlanManager.GetPlansByType(PlanType.Expense)
-//
-//        return expensePlans
-//    }
+    func testGetExpensePlans()
+    {
+        XCTAssertNotNil(FinanceController.GetExpensePlans(), "Most have expense plans")
+    }
 
     func testDeletePlan()
     {
-        XCTAssertTrue(FinanceController.DeletePlan("1232322"))
-
+        let expensePlans = FinanceController.GetExpensePlans()
+        
+        let incomePlans = FinanceController.GetIncomePlans()
+        
+        if expensePlans.count > 0 {
+            XCTAssertTrue(FinanceController.DeletePlan(expensePlans[0].ID))
+        }
+        else if incomePlans.count > 0
+        {
+            XCTAssertTrue(FinanceController.DeletePlan(incomePlans[0].ID))
+        }
+        else
+        {
+            XCTAssert(true, "No plan found to delete")
+        }
     }
 
-//    func testGetExpenseCategory()
-//    {
-//        let expenseCats = CategoryManager.GetCategoryByType(PlanType.Expense)
-//        return expenseCats
-//    }
+    func testGetExpenseCategory()
+    {
+        XCTAssertNotNil(FinanceController.GetCategoriesByType(.Expense), "Most have expense categories")
+    }
 
-//    func testGetIncomeCategory()
-//    {
-//        let incomeCats = CategoryManager.GetCategoryByType(PlanType.Income)
-//        return incomeCats
-//    }
+    func testGetIncomeCategory()
+    {
+        XCTAssertNotNil(FinanceController.GetCategoriesByType(.Income), "Most have expense categories")
+    }
 
 
     func testDeleteCategory()
     {
-        XCTAssertTrue(FinanceController.DeleteCategory(12))
+        
+        let expenseCats = FinanceController.GetCategoriesByType(.Expense)
+        
+        let incomeCats = FinanceController.GetCategoriesByType(.Income)
+        
+        if expenseCats.count > 0 {
+            XCTAssertTrue(FinanceController.DeleteCategory(expenseCats[0].ID))
+        }
+        else if incomeCats.count > 0
+        {
+            XCTAssertTrue(FinanceController.DeleteCategory(incomeCats[0].ID))
+        }
+        else
+        {
+            XCTAssert(true, "No category found to delete")
+        }
     }
-
-    func testGetCategoriesByType(_type:PlanType) -> [CategoryItem]
-    {
-
-        return CategoryManager.GetCategoryByType(_type)
-    }
-
-    func testGetCategoryById(_catId:Int) -> CategoryItem
-    {
-        return CategoryManager.GetCategoryById(_catId)
-    }
-
-    func testAddPlan() 
-    {
-        XCTAssertTrue(FinanceController.AddPlan("P1", _amount: 150, _repeatitiontype: PlanRepetitionType.Recurring, _repeatNumber: 5, _firstDate: NSDate(), _cat: CategoryItem(_id: 12, _name: "c1", _type: PlanType.Income)))
-    }
-
-
-
-    
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-
-    
 }
