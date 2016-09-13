@@ -10,14 +10,8 @@ import UIKit
 
 class PlansViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
     @IBOutlet weak var tblPlans: UITableView!
-    @IBOutlet weak var tbrPlans: UITabBar!
-    
-    var isIncome = true
-    
-    let incomeItemTag = 1002
 
-    let expenseItemTag = 1003
-    
+    var isIncome = true
 
     var myPlans : [PlanItem]?
 
@@ -25,28 +19,8 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
 
         self.hideKeyboardWhenTappedAround()
-
-
         
-        myPlans = FilterPlans()
         // Do any additional setup after loading the view.
-    }
-    
-    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-        
-        switch item.tag
-        {
-        case incomeItemTag:
-            isIncome = true
-        case expenseItemTag:
-            isIncome = false
-        default:
-            break
-        }
-        
-        myPlans = FilterPlans()
-        
-        tblPlans.reloadData()
     }
     
     func FilterPlans() -> [PlanItem] {
@@ -68,6 +42,9 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        myPlans = FilterPlans()
+        
         return myPlans!.count
     }
     
@@ -94,8 +71,6 @@ class PlansViewController: UIViewController, UITableViewDataSource, UITableViewD
 
             if FinanceController.DeletePlan(myPlans![indexPath.row].ID)
             {
-                myPlans = FilterPlans()
-                
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             }
             else
