@@ -17,6 +17,7 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var txtPlanAmount: UITextField!
     @IBOutlet weak var txtRepeatNo: UITextField!
     @IBOutlet weak var btnAddOrUpdateOutlet: UIButton!
+
     @IBAction func swhIsIncome(sender: AnyObject)
     {
         planCategories = FilterPlans()
@@ -38,6 +39,7 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 
     @IBAction func btnAddOrUpdateNewPlan(sender: AnyObject) {
     }
+
     @IBAction func NewCtegoryAction(sender: AnyObject)
     {
         
@@ -82,6 +84,7 @@ class NewPlanViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func FilterPlans() -> [CategoryItem] {
+
         var filteredCats = [CategoryItem]()
         
         for cat in allCategries! {
