@@ -133,17 +133,17 @@ class FinanceController{
 
     
 
-    static func GetExpenseTotalEstimateAmount(_unitl:NSDate) -> [PlanItem:Double]
+    static func GetExpenseTotalEstimateAmountInCategory(_unitl:NSDate) -> [String:Double]
     {
-        let totalExpense = AccountManager.GetTotalStimatedExpenen(_unitl)
+        let totalExpense = AccountManager.GetTotalStimatedExpenenInCategory(_unitl)
 
         return totalExpense
 
     }
 
-    static func GetIncomeTotalEstimateAmount(_unitl:NSDate) -> [PlanItem:Double]
+    static func GetIncomeTotalEstimateAmountInCategory(_unitl:NSDate) -> [String:Double]
     {
-        let totalIncomes = AccountManager.GetTotalStimatedIncome(_unitl)
+        let totalIncomes = AccountManager.GetTotalStimatedIncomeInCategory(_unitl)
 
         return totalIncomes
     }

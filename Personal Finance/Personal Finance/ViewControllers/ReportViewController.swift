@@ -10,8 +10,8 @@ import UIKit
 
 class ReportViewController: UIViewController{
 
-    var expensePlans : [PlanItem:Double] = [:]
-    let incomePlans : [PlanItem:Double] = [:]
+    var expensePlans : [String:Double] = [:]
+    let incomePlans : [String:Double] = [:]
 
     @IBOutlet weak var lblEstimate: UILabel!
 
@@ -23,7 +23,7 @@ class ReportViewController: UIViewController{
 
         let _until = dpvDate.date
 
-        expensePlans = FinanceController.GetExpenseTotalEstimateAmount(_until)
+        expensePlans = FinanceController.GetExpenseTotalEstimateAmountInCategory(_until)
 
         let totalEstimate = FinanceController.GetTotalEstimateBalance(_until)
 
@@ -81,7 +81,7 @@ extension ReportViewController : SChartDatasource
 
         let dataPoint = SChartRadialDataPoint()
 
-        dataPoint.name = plan!.Name
+        dataPoint.name = plan!
         
         dataPoint.value = expensePlans[plan!]
 
