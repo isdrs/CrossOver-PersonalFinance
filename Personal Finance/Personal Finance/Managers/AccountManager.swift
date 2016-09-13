@@ -8,6 +8,7 @@
 
 
 import UIKit
+import Foundation
 
 
 class AccountManager: NSObject {
@@ -82,7 +83,14 @@ class AccountManager: NSObject {
         }
         for cat in exPensePlans!.keys
         {
-            exPensePlans![cat] = (exPensePlans![cat]! * 100.0 ) / totalExpense
+            if exPensePlans![cat] == 0.0
+            {
+                exPensePlans?.removeValueForKey(cat)
+            }
+            else
+            {
+                exPensePlans![cat] = (exPensePlans![cat]! * 100.0 ) / totalExpense
+            }
         }
         return exPensePlans!
     }
@@ -104,7 +112,14 @@ class AccountManager: NSObject {
 
         for cat in inComePlans.keys
         {
-            inComePlans[cat] = (inComePlans[cat]! * 100.0 ) / totalIncome
+            if inComePlans[cat] == 0.0
+            {
+                inComePlans.removeValueForKey(cat)
+            }
+            else
+            {
+                inComePlans[cat] = (inComePlans[cat]! * 100.0 ) / totalIncome
+            }
         }
         return inComePlans
     }
