@@ -21,6 +21,7 @@ class FinanceControllerTest: XCTestCase {
         XCTAssertTrue(FinanceController.AddCategory("TestCat", _catType: PlanType.Expense))
     }
     
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
