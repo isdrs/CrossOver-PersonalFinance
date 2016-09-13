@@ -412,25 +412,6 @@
                                             <outlet property="delegate" destination="znF-3C-koc" id="1yc-MU-4QG"/>
                                         </connections>
                                     </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo5-Ij-SBi">
-                                        <rect key="frame" x="225" y="506" width="110" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="42" id="MIc-TT-Pe4"/>
-                                            <constraint firstAttribute="width" constant="110" id="lDX-q0-CQB"/>
-                                        </constraints>
-                                        <state key="normal" title="Add">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="MIc-TT-Pe4"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="btnAddOrUpdateNewPlan:" destination="znF-3C-koc" eventType="touchUpInside" id="LbP-EL-57O"/>
-                                        </connections>
-                                    </button>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyY-4u-eob">
                                         <rect key="frame" x="490" y="281" width="51" height="31"/>
                                         <connections>
@@ -494,13 +475,32 @@
                                             </mask>
                                         </variation>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo5-Ij-SBi">
+                                        <rect key="frame" x="225" y="487" width="110" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="MIc-TT-Pe4"/>
+                                            <constraint firstAttribute="width" constant="110" id="lDX-q0-CQB"/>
+                                        </constraints>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="MIc-TT-Pe4"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="btnAddOrUpdateNewPlan:" destination="znF-3C-koc" eventType="touchUpInside" id="LbP-EL-57O"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="1bF-UC-Xer" firstAttribute="centerX" secondItem="Vtl-A9-LFY" secondAttribute="centerX" id="2i4-FW-smS"/>
                                     <constraint firstItem="QqM-yD-0Eh" firstAttribute="centerX" secondItem="fVe-Tl-2hi" secondAttribute="centerX" id="9Mp-tb-a2t"/>
                                     <constraint firstItem="KEC-ds-Bai" firstAttribute="top" secondItem="fVe-Tl-2hi" secondAttribute="top" constant="242" id="9vL-dy-ye4"/>
-                                    <constraint firstItem="fo5-Ij-SBi" firstAttribute="top" secondItem="1bF-UC-Xer" secondAttribute="bottom" constant="44" id="AZB-nQ-4Zb"/>
+                                    <constraint firstItem="fo5-Ij-SBi" firstAttribute="top" secondItem="1bF-UC-Xer" secondAttribute="bottom" constant="25" id="AZB-nQ-4Zb"/>
                                     <constraint firstItem="1bF-UC-Xer" firstAttribute="top" secondItem="Vtl-A9-LFY" secondAttribute="bottom" constant="13" id="D72-fb-SLh"/>
                                     <constraint firstItem="U68-hN-yHW" firstAttribute="top" secondItem="fVe-Tl-2hi" secondAttribute="top" constant="242" id="Evx-nG-xu8"/>
                                     <constraint firstItem="KEC-ds-Bai" firstAttribute="leading" secondItem="fVe-Tl-2hi" secondAttribute="leading" constant="19" id="IGD-Wd-ykr"/>

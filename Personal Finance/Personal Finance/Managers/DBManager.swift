@@ -186,9 +186,9 @@ class DBManager: NSObject
         let managedContext = appDelegate.managedObjectContext
         
         //2
-        let fetchRequest = NSFetchRequest(entityName: CategoryEntityName)
+        let fetchRequest = NSFetchRequest(entityName: PlansEntityName)
         
-        fetchRequest.predicate = NSPredicate(format: "id == %@", String(_plan.ID))
+        fetchRequest.predicate = NSPredicate(format: "id == %@", _plan.ID)
         
         //3
         do {
@@ -202,6 +202,12 @@ class DBManager: NSObject
                     {
                         managedContext.deleteObject(myPlan)
                         
+                        do {
+                            try managedContext.save()
+                            retVal = true
+                        } catch let error as NSError  {
+                            print("Could not save \(error), \(error.userInfo)")
+                        }
                     }
                     
                 }
@@ -209,14 +215,6 @@ class DBManager: NSObject
             
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
-        }
-        
-        
-        do {
-            try managedContext.save()
-            retVal = true
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
         }
         
         return retVal
@@ -248,6 +246,13 @@ class DBManager: NSObject
                     {
                         managedContext.deleteObject(myCat)
                 
+                        //4
+                        do {
+                            try managedContext.save()
+                            retVal = true
+                        } catch let error as NSError  {
+                            print("Could not save \(error), \(error.userInfo)")
+                        }
                     }
                     
                 }
@@ -258,13 +263,7 @@ class DBManager: NSObject
         }
 
         
-        //4
-        do {
-            try managedContext.save()
-            retVal = true
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
+
         
         return retVal
     }
